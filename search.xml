@@ -4,17 +4,17 @@
   
     
     <entry>
-      <title></title>
-      <link href="/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(4)/"/>
-      <url>/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(4)/</url>
+      <title>追剧天堂！MoonTV Docker 部署！</title>
+      <link href="/2025/07/06/%E8%BF%BD%E5%89%A7%E5%A4%A9%E5%A0%82!MoonTV%20Docker%20%E9%83%A8%E7%BD%B2!/"/>
+      <url>/2025/07/06/%E8%BF%BD%E5%89%A7%E5%A4%A9%E5%A0%82!MoonTV%20Docker%20%E9%83%A8%E7%BD%B2!/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>追剧天堂！MoonTV Docker 部署！</p><p>本项目是一个影视聚合型播放站点，可以聚合全网影视资源，实现在一个页面内搜索和观看。本次教程将演示如何在 NAS 上通过 Docker 进行部署。</p><p>项目来源: GitHub 上的开源项目： <a href="https://github.com/senshinya/MoonTV">https://github.com/senshinya/MoonTV</a><br>支持平台:<br>NAS (通过 Docker)<br>Vercel<br>Cloudflare</p><p>部署：<br>1.直接运行：docker run -d –name moontv -p 3000:3000 ghcr.io&#x2F;senshinya&#x2F;moontv:latest<br>访问 http:&#x2F;&#x2F;服务器 IP:3000 即可</p><p>默认端口为 3000，部署前需确认3000 端口未被其他服务占用。<br>如果端口被占用，需要修改映射端口，例如将 3000:3000 修改为 3001:3000。</p><p>2.使用 docker compose 部署</p><p>部署步骤：<a href="https://www.youtube.com/watch?v=riHqCnc221M">https://www.youtube.com/watch?v=riHqCnc221M</a></p><ol><li>创建文件夹</li></ol><p>在系统的文件管理器中，创建一个新的文件夹用于存放项目文件，名称可自定义。</p><ol start="2"><li>准备 config.json 文件</li></ol><p>访问项目的 GitHub 页面，找到 config.json 文件并下载<br>将下载好的 config.json 文件上传到创建的文件夹内</p><p>{<br>  “cache_time”: 7200,<br>  “api_site”: {<br>    “dyttzy”: {<br>      “api”: “<a href="http://caiji.dyttzyapi.com/api.php/provide/vod">http://caiji.dyttzyapi.com/api.php/provide/vod</a>“,<br>      “name”: “电影天堂资源”,<br>      “detail”: “<a href="http://caiji.dyttzyapi.com/">http://caiji.dyttzyapi.com</a>“<br>    },<br>    “heimuer”: {<br>      “api”: “<a href="https://json.heimuer.xyz/api.php/provide/vod">https://json.heimuer.xyz/api.php/provide/vod</a>“,<br>      “name”: “黑木耳”,<br>      “detail”: “<a href="https://heimuer.tv/">https://heimuer.tv</a>“<br>    },<br>    “ruyi”: {<br>      “api”: “<a href="https://cj.rycjapi.com/api.php/provide/vod">https://cj.rycjapi.com/api.php/provide/vod</a>“,<br>      “name”: “如意资源”<br>    },<br>    “bfzy”: {<br>      “api”: “<a href="https://bfzyapi.com/api.php/provide/vod">https://bfzyapi.com/api.php/provide/vod</a>“,<br>      “name”: “暴风资源”<br>    },<br>    “tyyszy”: {<br>      “api”: “<a href="https://tyyszy.com/api.php/provide/vod">https://tyyszy.com/api.php/provide/vod</a>“,<br>      “name”: “天涯资源”<br>    },<br>    “ffzy”: {<br>      “api”: “<a href="http://ffzy5.tv/api.php/provide/vod">http://ffzy5.tv/api.php/provide/vod</a>“,<br>      “name”: “非凡影视”,<br>      “detail”: “<a href="http://ffzy5.tv/">http://ffzy5.tv</a>“<br>    },<br>    “zy360”: {<br>      “api”: “<a href="https://360zy.com/api.php/provide/vod">https://360zy.com/api.php/provide/vod</a>“,<br>      “name”: “360资源”<br>    },<br>    “iqiyi”: {<br>      “api”: “<a href="https://www.iqiyizyapi.com/api.php/provide/vod">https://www.iqiyizyapi.com/api.php/provide/vod</a>“,<br>      “name”: “iqiyi资源”<br>    },<br>    “wolong”: {<br>      “api”: “<a href="https://wolongzyw.com/api.php/provide/vod">https://wolongzyw.com/api.php/provide/vod</a>“,<br>      “name”: “卧龙资源”<br>    },<br>    “jisu”: {<br>      “api”: “<a href="https://jszyapi.com/api.php/provide/vod">https://jszyapi.com/api.php/provide/vod</a>“,<br>      “name”: “极速资源”,<br>      “detail”: “<a href="https://jszyapi.com/">https://jszyapi.com</a>“<br>    },<br>    “dbzy”: {<br>      “api”: “<a href="https://dbzy.tv/api.php/provide/vod">https://dbzy.tv/api.php/provide/vod</a>“,<br>      “name”: “豆瓣资源”<br>    },<br>    “mozhua”: {<br>      “api”: “<a href="https://mozhuazy.com/api.php/provide/vod">https://mozhuazy.com/api.php/provide/vod</a>“,<br>      “name”: “魔爪资源”<br>    },<br>    “mdzy”: {<br>      “api”: “<a href="https://www.mdzyapi.com/api.php/provide/vod">https://www.mdzyapi.com/api.php/provide/vod</a>“,<br>      “name”: “魔都资源”<br>    },<br>    “zuid”: {<br>      “api”: “<a href="https://api.zuidapi.com/api.php/provide/vod">https://api.zuidapi.com/api.php/provide/vod</a>“,<br>      “name”: “最大资源”<br>    },<br>    “yinghua”: {<br>      “api”: “<a href="https://m3u8.apiyhzy.com/api.php/provide/vod">https://m3u8.apiyhzy.com/api.php/provide/vod</a>“,<br>      “name”: “樱花资源”<br>    },<br>    “wujin”: {<br>      “api”: “<a href="https://api.wujinapi.me/api.php/provide/vod">https://api.wujinapi.me/api.php/provide/vod</a>“,<br>      “name”: “无尽资源”<br>    },<br>    “wwzy”: {<br>      “api”: “<a href="https://wwzy.tv/api.php/provide/vod">https://wwzy.tv/api.php/provide/vod</a>“,<br>      “name”: “旺旺短剧”<br>    },<br>    “ikun”: {<br>      “api”: “<a href="https://ikunzyapi.com/api.php/provide/vod">https://ikunzyapi.com/api.php/provide/vod</a>“,<br>      “name”: “iKun资源”<br>    }<br>  }<br>}</p><ol start="3"><li>设置文件权限</li></ol><p>使用 SSH 工具连接<br>进入（cd）到存放 config.json 的文件夹。<br>执行以下命令赋予文件权限：<br>复制代码chmod 777 config.json</p><ol start="4"><li>创建 Docker Compose 项目</li></ol><p>进入 Docker 管理界面，选择新增项目，项目名称可自定义。<br>将项目路径指向第一步创建的文件夹。<br>选择“创建 Compose 文件”的方式。</p><ol start="5"><li>配置并启动容器</li></ol><p>将 docker-compose.yml 文件的内容复制并粘贴到配置框中:</p><p>services:<br>  moontv-core:<br>    image: ghcr.io&#x2F;senshinya&#x2F;moontv:latest<br>    container_name: moontv<br>    restart: unless-stopped<br>    ports:<br>      - ‘3000:3000’<br>    environment:<br>      - USERNAME&#x3D;admin<br>      - PASSWORD&#x3D;admin_password<br>      - NEXT_PUBLIC_STORAGE_TYPE&#x3D;redis<br>      - REDIS_URL&#x3D;redis:&#x2F;&#x2F;moontv-redis:6379<br>      - NEXT_PUBLIC_ENABLE_REGISTER&#x3D;true<br>    networks:<br>      - moontv-network<br>    depends_on:<br>      - moontv-redis<br>    # 如需自定义配置，可挂载文件<br>    # volumes:<br>    #   - .&#x2F;config.json:&#x2F;app&#x2F;config.json:ro<br>  moontv-redis:<br>    image: redis<br>    container_name: moontv-redis<br>    restart: unless-stopped<br>    networks:<br>      - moontv-network<br>    # 如需持久化<br>    # volumes:<br>    #   - .&#x2F;data:&#x2F;data<br>networks:<br>  moontv-network:<br>    driver: bridge</p><p>修改配置:<br>端口：根据需要修改为未被占用的端口。<br>用户名&#x2F;密码：根据需要修改。<br>自定义配置：如果你选择自定义接口，请取消 volumes 部分关于 config.json 的注释。<br>注意：取消注释后，必须确保代码对齐（缩进）正确，否则会出错。<br>点击确定保存配置。<br>在项目列表中，点击“构建”或“启动”来拉取镜像并运行容器。</p><p>访问站点<br>当容器成功运行后，通过浏览器访问 http:&#x2F;&#x2F;&lt;你的NAS_IP&gt;:&lt;你设置的端口&gt;。<br>输入你设置的用户名和密码即可登录。</p><p>LibreTV Compose 文件代码：</p><p>version: ‘3’<br>services:<br>  libretv:<br>    image: bestzwei&#x2F;libretv:latest  # 使用 libretv 的最新镜像<br>    container_name: libretv         # 容器名称为 libretv<br>    ports:<br>      - “8899:80”                   # 将主机的 8899 端口映射到容器的 80 端口<br>    environment:<br>      - PASSWORD&#x3D;123456             # 设置访问密码（留空表示不启用密码保护）<br>    restart: always                 # 容器异常退出后自动重启</p><p>自定义接口地址<br>视频数据采集站<br>非凡采集站：<a href="http://ffzy5.tv/">http://ffzy5.tv/</a></p><p>爱坤资源：<a href="https://www.ikunzy.com/ikun/help.html">https://www.ikunzy.com/ikun/help.html</a></p><p>暴风资源：<a href="https://bfzy.tv/help/?home">https://bfzy.tv/help/?home</a></p><p>苹果cms官方：<a href="https://www.applecms.cc/">https://www.applecms.cc</a></p><p>赞片cms官网：<a href="https://www.zanpiancms.com/">https://www.zanpiancms.com/</a></p><p>量子资源网：<a href="http://lzizy.net/help/">http://lzizy.net/help/</a></p><p>新浪资源网：<a href="https://www.xinlangzy.com/help/">https://www.xinlangzy.com/help/</a></p><p>虎牙资源网：<a href="http://huyazy.net/help/">http://huyazy.net/help/</a></p><p>光速资源网：<a href="https://www.guangsuzy.com/help/">https://www.guangsuzy.com/help/</a></p><p>极速资源网：<a href="https://www.jisuzy.com/index.php/help/index.html">https://www.jisuzy.com/index.php/help/index.html</a></p><p>红牛资源网：<a href="https://hongniuzy.net/help/">https://hongniuzy.net/help/</a></p><p>如意资源网：<a href="https://www.ryzy3.tv/">https://www.ryzy3.tv/</a></p><p>魔爪资源网：<a href="https://mzzy.me/">https://mzzy.me/</a></p><p>华为吧资源：<a href="https://huawei8.live/">https://huawei8.live/</a></p><p>豆瓣资源站：<a href="https://dbzy.com/">https://dbzy.com/</a></p><p>茅台资源站：<a href="https://mtzy.me/">https://mtzy.me/</a></p><p>索尼资源：<a href="https://suonizy.net/">https://suonizy.net/</a></p><p>U酷资源站：<a href="https://ukuzy0.com/">https://ukuzy0.com/</a></p><p>快车资源站：<a href="https://kuaichezy.com/">https://kuaichezy.com/</a></p><p>金鹰资源站：<a href="https://jinyingzy.com/">https://jinyingzy.com/</a></p><p>淘片资源站：<a href="https://www.taopianzy.com/">https://www.taopianzy.com/</a></p><p>卧龙资源站：<a href="https://wolongzyw.com/">https://wolongzyw.com/</a></p><p>牛牛资源站：<a href="https://niuniuzy.cc/">https://niuniuzy.cc/</a></p><p>小绵羊资源站：<a href="https://vs.okcdn100.top/">https://vs.okcdn100.top/</a></p><p>虾米资源站：<a href="https://zy.hls.one/">https://zy.hls.one/</a></p><p>麒麟资源站：<a href="https://www.qilinzyz.com/">https://www.qilinzyz.com/</a></p><p>蜂巢资源站：<a href="https://fczy908.com/">https://fczy908.com/</a></p><p>豪华资源站：<a href="https://haohuazy.com/">https://haohuazy.com/</a></p><p>魔都资源站：<a href="https://moduzy.com/">https://moduzy.com/</a></p><p>火花资源站：<a href="https://cj.huohua.live/">https://cj.huohua.live/</a></p><p>速播资源站：<a href="https://www.suboziyuan.net/">https://www.suboziyuan.net/</a></p><p>黑木耳资源站：<a href="https://heimuer.tv/">https://heimuer.tv/</a></p>]]></content>
       
       
       
         <tags>
             
-            <tag> 诗词 </tag>
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -45,6 +45,25 @@
       <title></title>
       <link href="/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(3)/"/>
       <url>/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(3)/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(4)/"/>
+      <url>/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(4)/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -151,6 +170,25 @@
     
     <entry>
       <title></title>
+      <link href="/2025/07/06/0008/"/>
+      <url>/2025/07/06/0008/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(9)/"/>
       <url>/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(9)/</url>
       
@@ -173,32 +211,13 @@
       <link href="/2025/07/06/hello-world/"/>
       <url>/2025/07/06/hello-world/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><p><a href="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg">https://bu.dusays.com/2023/04/27/64496e511b09c.jpg</a></p><p><a href="https://bu.dusays.com/2023/05/08/645907596997d.gif">https://bu.dusays.com/2023/05/08/645907596997d.gif</a></p><p><a href="https://ii.hellus.dedyn.io/file/1752988030559_a006.jpg">https://ii.hellus.dedyn.io/file/1752988030559_a006.jpg</a></p><p><a href="https://ii.hellus.dedyn.io/file/1752988033866_aa01.jpg">https://ii.hellus.dedyn.io/file/1752988033866_aa01.jpg</a></p><p><a href="https://ii.hellus.dedyn.io/file/1752979633570_a003.jpg">https://ii.hellus.dedyn.io/file/1752979633570_a003.jpg</a></p><p><a href="https://ii.hellus.dedyn.io/file/1752979617352_a005.jpg">https://ii.hellus.dedyn.io/file/1752979617352_a005.jpg</a></p><p>&#x2F;&#x2F;本地预览</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl; hexo s</span><br></pre></td></tr></table></figure><p>&#x2F;&#x2F;推送更新上线</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl; hexo g; hexo d</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<img src="https://ii.hellus.dedyn.io/file/1751604607448_00121.jfif" alt="00121.jfif" width=60%><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><p><a href="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg">https://bu.dusays.com/2023/04/27/64496e511b09c.jpg</a></p><p><a href="https://bu.dusays.com/2023/05/08/645907596997d.gif">https://bu.dusays.com/2023/05/08/645907596997d.gif</a></p><p><a href="https://ii.hellus.dedyn.io/file/1752988030559_a006.jpg">https://ii.hellus.dedyn.io/file/1752988030559_a006.jpg</a></p><p><a href="https://ii.hellus.dedyn.io/file/1752988033866_aa01.jpg">https://ii.hellus.dedyn.io/file/1752988033866_aa01.jpg</a></p><p><a href="https://ii.hellus.dedyn.io/file/1752979633570_a003.jpg">https://ii.hellus.dedyn.io/file/1752979633570_a003.jpg</a></p><p><a href="https://ii.hellus.dedyn.io/file/1752979617352_a005.jpg">https://ii.hellus.dedyn.io/file/1752979617352_a005.jpg</a></p><p>&#x2F;&#x2F;本地预览</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl; hexo s</span><br></pre></td></tr></table></figure><p>&#x2F;&#x2F;推送更新上线</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl; hexo g; hexo d</span><br></pre></td></tr></table></figure>]]></content>
       
       
       
         <tags>
             
             <tag> 技术 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2025/07/06/0008/"/>
-      <url>/2025/07/06/0008/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 诗词 </tag>
             
         </tags>
       
@@ -264,25 +283,6 @@
     
     
     <entry>
-      <title>木兰花·令拟古决绝词</title>
-      <link href="/2025/07/06/%E6%9C%A8%E5%85%B0%E8%8A%B1%C2%B7%E4%BB%A4%E6%8B%9F%E5%8F%A4%E5%86%B3%E7%BB%9D%E8%AF%8D/"/>
-      <url>/2025/07/06/%E6%9C%A8%E5%85%B0%E8%8A%B1%C2%B7%E4%BB%A4%E6%8B%9F%E5%8F%A4%E5%86%B3%E7%BB%9D%E8%AF%8D/</url>
-      
-        <content type="html"><![CDATA[<h3 id="木兰花·令拟古决绝词"><a href="#木兰花·令拟古决绝词" class="headerlink" title="木兰花·令拟古决绝词"></a>木兰花·令拟古决绝词</h3><p>词牌名：木兰花|朝代：清朝|作者：纳兰容若</p><p>人生若只如初见，何事秋风悲画扇。</p><p>等闲变却故人心，却道故心人易变。</p><p>骊山语罢清宵半，泪雨霖铃终不怨。</p><p>何如薄幸锦衣郎，比翼连枝当日愿。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《木兰词·拟古决绝词柬友》是清代词人纳兰性德的作品。此词描写了一个为情所伤的女子和伤害她的男子坚决分手的情景，借用班婕妤被弃以及唐玄宗与杨贵妃的爱情悲剧的典故，通过“秋扇”“骊山语”“雨霖铃”“比翼连枝”这些意象，营造了一种幽怨、凄楚、悲凉的意境，抒写了女子被男子抛弃的幽怨之情。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>与意中人相处应当总像刚刚相识的时候，是那样地甜蜜，那样地温馨，那样地深情和快乐。但你我本应当相亲相爱，却为何成了今日的相离相弃？如今轻易地变了心，你却反而说情人间就是容易变心的。</p><p>当年杨贵妃和唐明皇在骊山上盟誓要生生世世，不料在马嵬坡杨贵妃却被唐明皇缢死，但杨贵妃始终没有怨恨。这哪像薄幸的唐明皇，比翼连枝的话只是在甜蜜之时说说而已。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>⑴柬：给……信札。</p><p>⑵“何事”句：用汉朝班婕妤被弃的典故。班婕妤为汉成帝妃，被赵飞燕谗害，退居冷宫，后有诗《怨歌行》，以秋扇闲置为喻抒发被弃之怨情。南北朝梁刘孝绰《班婕妤怨》诗又点明“妾身似秋扇”，后遂以秋扇见捐喻女子被弃。这里是说本应当相亲相爱，但却成了相离相弃。唐代诗人王昌龄做《长信秋词五首》来怜惜她。</p><p>⑶故人：指情人。却道故人心易变（出自娱园本），一作“却道故心人易变”。看似白话，其为用典，出处就在南朝齐国山水诗人谢朓的《同王主簿怨情》后两句“故人心尚永，故心人不见”。汪元治本《纳兰词》误刻后句“故心人”为“故人心”，这一错误常被现代选本沿袭。</p><p>⑷“骊山”二句：用唐明皇与杨玉环的爱情典故。《太真外传》载，唐明皇与杨玉环曾于七月七日夜，在骊山华清宫长生殿里盟誓，愿世世为夫妻。白居易《长恨歌》：“在天愿作比翼鸟，在地愿作连理枝。”对此作了生动的描写。后安史乱起，明皇入蜀，于马嵬坡赐死杨玉环。杨死前云：“妾诚负国恩，死无恨矣。”又，明皇此后于途中闻雨声、铃声而悲伤，遂作《雨霖铃》曲以寄哀思。这里借用此典说即使是最后作决绝之别，也不生怨。</p><p>⑸“何如”二句：化用唐李商隐《马嵬》诗中“如何四纪为天子，不及卢家有莫愁”之句意。薄幸：薄情。锦衣郎：指唐明皇。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 诗词 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>梦江南·昏鸦尽</title>
       <link href="/2025/07/06/%E6%A2%A6%E6%B1%9F%E5%8D%97%C2%B7%E6%98%8F%E9%B8%A6%E5%B0%BD/"/>
       <url>/2025/07/06/%E6%A2%A6%E6%B1%9F%E5%8D%97%C2%B7%E6%98%8F%E9%B8%A6%E5%B0%BD/</url>
@@ -302,11 +302,11 @@
     
     
     <entry>
-      <title>江城子·咏史</title>
-      <link href="/2025/07/06/%E6%B1%9F%E5%9F%8E%E5%AD%90%C2%B7%E5%92%8F%E5%8F%B2/"/>
-      <url>/2025/07/06/%E6%B1%9F%E5%9F%8E%E5%AD%90%C2%B7%E5%92%8F%E5%8F%B2/</url>
+      <title>木兰花·令拟古决绝词</title>
+      <link href="/2025/07/06/%E6%9C%A8%E5%85%B0%E8%8A%B1%C2%B7%E4%BB%A4%E6%8B%9F%E5%8F%A4%E5%86%B3%E7%BB%9D%E8%AF%8D/"/>
+      <url>/2025/07/06/%E6%9C%A8%E5%85%B0%E8%8A%B1%C2%B7%E4%BB%A4%E6%8B%9F%E5%8F%A4%E5%86%B3%E7%BB%9D%E8%AF%8D/</url>
       
-        <content type="html"><![CDATA[<h3 id="江城子·咏史"><a href="#江城子·咏史" class="headerlink" title="江城子·咏史"></a>江城子·咏史</h3><p>词牌名：江城子|朝代：清朝|作者：纳兰容若</p><p>湿云全压数峰低。影凄迷，望中疑。<br>非雾非烟，神女欲来时、若问生涯原是梦，除梦里，没人知。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="木兰花·令拟古决绝词"><a href="#木兰花·令拟古决绝词" class="headerlink" title="木兰花·令拟古决绝词"></a>木兰花·令拟古决绝词</h3><p>词牌名：木兰花|朝代：清朝|作者：纳兰容若</p><p>人生若只如初见，何事秋风悲画扇。</p><p>等闲变却故人心，却道故心人易变。</p><p>骊山语罢清宵半，泪雨霖铃终不怨。</p><p>何如薄幸锦衣郎，比翼连枝当日愿。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《木兰词·拟古决绝词柬友》是清代词人纳兰性德的作品。此词描写了一个为情所伤的女子和伤害她的男子坚决分手的情景，借用班婕妤被弃以及唐玄宗与杨贵妃的爱情悲剧的典故，通过“秋扇”“骊山语”“雨霖铃”“比翼连枝”这些意象，营造了一种幽怨、凄楚、悲凉的意境，抒写了女子被男子抛弃的幽怨之情。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>与意中人相处应当总像刚刚相识的时候，是那样地甜蜜，那样地温馨，那样地深情和快乐。但你我本应当相亲相爱，却为何成了今日的相离相弃？如今轻易地变了心，你却反而说情人间就是容易变心的。</p><p>当年杨贵妃和唐明皇在骊山上盟誓要生生世世，不料在马嵬坡杨贵妃却被唐明皇缢死，但杨贵妃始终没有怨恨。这哪像薄幸的唐明皇，比翼连枝的话只是在甜蜜之时说说而已。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>⑴柬：给……信札。</p><p>⑵“何事”句：用汉朝班婕妤被弃的典故。班婕妤为汉成帝妃，被赵飞燕谗害，退居冷宫，后有诗《怨歌行》，以秋扇闲置为喻抒发被弃之怨情。南北朝梁刘孝绰《班婕妤怨》诗又点明“妾身似秋扇”，后遂以秋扇见捐喻女子被弃。这里是说本应当相亲相爱，但却成了相离相弃。唐代诗人王昌龄做《长信秋词五首》来怜惜她。</p><p>⑶故人：指情人。却道故人心易变（出自娱园本），一作“却道故心人易变”。看似白话，其为用典，出处就在南朝齐国山水诗人谢朓的《同王主簿怨情》后两句“故人心尚永，故心人不见”。汪元治本《纳兰词》误刻后句“故心人”为“故人心”，这一错误常被现代选本沿袭。</p><p>⑷“骊山”二句：用唐明皇与杨玉环的爱情典故。《太真外传》载，唐明皇与杨玉环曾于七月七日夜，在骊山华清宫长生殿里盟誓，愿世世为夫妻。白居易《长恨歌》：“在天愿作比翼鸟，在地愿作连理枝。”对此作了生动的描写。后安史乱起，明皇入蜀，于马嵬坡赐死杨玉环。杨死前云：“妾诚负国恩，死无恨矣。”又，明皇此后于途中闻雨声、铃声而悲伤，遂作《雨霖铃》曲以寄哀思。这里借用此典说即使是最后作决绝之别，也不生怨。</p><p>⑸“何如”二句：化用唐李商隐《马嵬》诗中“如何四纪为天子，不及卢家有莫愁”之句意。薄幸：薄情。锦衣郎：指唐明皇。</p>]]></content>
       
       
       
@@ -321,11 +321,11 @@
     
     
     <entry>
-      <title>浣溪沙·残雪凝辉冷画屏</title>
-      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E6%AE%8B%E9%9B%AA%E5%87%9D%E8%BE%89%E5%86%B7%E7%94%BB%E5%B1%8F/"/>
-      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E6%AE%8B%E9%9B%AA%E5%87%9D%E8%BE%89%E5%86%B7%E7%94%BB%E5%B1%8F/</url>
+      <title>江城子·咏史</title>
+      <link href="/2025/07/06/%E6%B1%9F%E5%9F%8E%E5%AD%90%C2%B7%E5%92%8F%E5%8F%B2/"/>
+      <url>/2025/07/06/%E6%B1%9F%E5%9F%8E%E5%AD%90%C2%B7%E5%92%8F%E5%8F%B2/</url>
       
-        <content type="html"><![CDATA[<h3 id="浣溪沙·残雪凝辉冷画屏"><a href="#浣溪沙·残雪凝辉冷画屏" class="headerlink" title="浣溪沙·残雪凝辉冷画屏"></a>浣溪沙·残雪凝辉冷画屏</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>残雪凝辉冷画屏，落梅横笛已三更，更无人处月胧明。</p><p>我是人间惆怅客，知君何事泪纵横，断肠声里忆平生。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《浣溪沙·残雪凝辉冷画屏》这首词运用了老套的上阕写景，下阕抒情的手法，但景清情切，颇令人动容。<br>就如同面对同样的材料，高明的厨师和平庸的厨师却能做出天壤之别的两种味道来。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>残雪凝辉让温暖的画屏变得冰冷。梅花随凉风飘落，忧伤的笛声传来，已是寂寞黄昏。深夜想起了往事，<br>月色于无人处也好象朦胧起来。（世人皆醉我独醒）\我，世间哀愁的过客，身世凄凉。为何我在知道你的故事后泪流满面？<br>（你此指容若本人，自言自语）痛彻心扉地哭泣，在断肠声里，回忆自己凄凉的一生。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>画屏：绘有彩画的屏风。</p><p>落梅：古代羌族乐曲名，又名《梅花落》，以横笛吹奏。</p><p>月胧明：指月色朦胧，不甚分明。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="江城子·咏史"><a href="#江城子·咏史" class="headerlink" title="江城子·咏史"></a>江城子·咏史</h3><p>词牌名：江城子|朝代：清朝|作者：纳兰容若</p><p>湿云全压数峰低。影凄迷，望中疑。<br>非雾非烟，神女欲来时、若问生涯原是梦，除梦里，没人知。</p>]]></content>
       
       
       
@@ -378,11 +378,11 @@
     
     
     <entry>
-      <title>浣溪沙·郊游联句</title>
-      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E9%83%8A%E6%B8%B8%E8%81%94%E5%8F%A5/"/>
-      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E9%83%8A%E6%B8%B8%E8%81%94%E5%8F%A5/</url>
+      <title>浣溪沙·残雪凝辉冷画屏</title>
+      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E6%AE%8B%E9%9B%AA%E5%87%9D%E8%BE%89%E5%86%B7%E7%94%BB%E5%B1%8F/"/>
+      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E6%AE%8B%E9%9B%AA%E5%87%9D%E8%BE%89%E5%86%B7%E7%94%BB%E5%B1%8F/</url>
       
-        <content type="html"><![CDATA[<h3 id="浣溪沙·郊游联句"><a href="#浣溪沙·郊游联句" class="headerlink" title="浣溪沙·郊游联句"></a>浣溪沙·郊游联句</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>出郭寻春春已阑(陈维崧)，东风吹面不成寒(秦松龄)，青村几曲到西山(严绳孙)。　</p><p>并马未须愁路远(姜宸英)，看花且莫放杯闲(朱彝尊)，人生别易会常难(纳兰性德)。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>此篇是纳兰与友人合作的一首词。见冯统《天风阁丛书·饮水词》补遗。此次“郊游”是在何年何地，未详。<br>从词意看，大约是在北京西郊的一次春游。词共六句，陈、秦、严、姜、朱、纳兰各成一句。<br>这一首联句之作既可以看出诗人之间亲密的友清，亦可看到纳兰在其中所表现出的伤感意绪。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="浣溪沙·残雪凝辉冷画屏"><a href="#浣溪沙·残雪凝辉冷画屏" class="headerlink" title="浣溪沙·残雪凝辉冷画屏"></a>浣溪沙·残雪凝辉冷画屏</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>残雪凝辉冷画屏，落梅横笛已三更，更无人处月胧明。</p><p>我是人间惆怅客，知君何事泪纵横，断肠声里忆平生。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《浣溪沙·残雪凝辉冷画屏》这首词运用了老套的上阕写景，下阕抒情的手法，但景清情切，颇令人动容。<br>就如同面对同样的材料，高明的厨师和平庸的厨师却能做出天壤之别的两种味道来。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>残雪凝辉让温暖的画屏变得冰冷。梅花随凉风飘落，忧伤的笛声传来，已是寂寞黄昏。深夜想起了往事，<br>月色于无人处也好象朦胧起来。（世人皆醉我独醒）\我，世间哀愁的过客，身世凄凉。为何我在知道你的故事后泪流满面？<br>（你此指容若本人，自言自语）痛彻心扉地哭泣，在断肠声里，回忆自己凄凉的一生。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>画屏：绘有彩画的屏风。</p><p>落梅：古代羌族乐曲名，又名《梅花落》，以横笛吹奏。</p><p>月胧明：指月色朦胧，不甚分明。</p>]]></content>
       
       
       
@@ -435,6 +435,25 @@
     
     
     <entry>
+      <title>浣溪沙·郊游联句</title>
+      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E9%83%8A%E6%B8%B8%E8%81%94%E5%8F%A5/"/>
+      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E9%83%8A%E6%B8%B8%E8%81%94%E5%8F%A5/</url>
+      
+        <content type="html"><![CDATA[<h3 id="浣溪沙·郊游联句"><a href="#浣溪沙·郊游联句" class="headerlink" title="浣溪沙·郊游联句"></a>浣溪沙·郊游联句</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>出郭寻春春已阑(陈维崧)，东风吹面不成寒(秦松龄)，青村几曲到西山(严绳孙)。　</p><p>并马未须愁路远(姜宸英)，看花且莫放杯闲(朱彝尊)，人生别易会常难(纳兰性德)。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>此篇是纳兰与友人合作的一首词。见冯统《天风阁丛书·饮水词》补遗。此次“郊游”是在何年何地，未详。<br>从词意看，大约是在北京西郊的一次春游。词共六句，陈、秦、严、姜、朱、纳兰各成一句。<br>这一首联句之作既可以看出诗人之间亲密的友清，亦可看到纳兰在其中所表现出的伤感意绪。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>浣溪沙·谁念西风独自凉</title>
       <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E8%B0%81%E5%BF%B5%E8%A5%BF%E9%A3%8E%E7%8B%AC%E8%87%AA%E5%87%89/"/>
       <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E8%B0%81%E5%BF%B5%E8%A5%BF%E9%A3%8E%E7%8B%AC%E8%87%AA%E5%87%89/</url>
@@ -454,11 +473,11 @@
     
     
     <entry>
-      <title>点绛唇·一种蛾眉</title>
-      <link href="/2025/07/06/%E7%82%B9%E7%BB%9B%E5%94%87%C2%B7%E4%B8%80%E7%A7%8D%E8%9B%BE%E7%9C%89/"/>
-      <url>/2025/07/06/%E7%82%B9%E7%BB%9B%E5%94%87%C2%B7%E4%B8%80%E7%A7%8D%E8%9B%BE%E7%9C%89/</url>
+      <title>满江红·怒发冲冠</title>
+      <link href="/2025/07/06/%E6%BB%A1%E6%B1%9F%E7%BA%A2%C2%B7%E6%80%92%E5%8F%91%E5%86%B2%E5%86%A0/"/>
+      <url>/2025/07/06/%E6%BB%A1%E6%B1%9F%E7%BA%A2%C2%B7%E6%80%92%E5%8F%91%E5%86%B2%E5%86%A0/</url>
       
-        <content type="html"><![CDATA[<h3 id="点绛唇·一种蛾眉"><a href="#点绛唇·一种蛾眉" class="headerlink" title="点绛唇·一种蛾眉"></a>点绛唇·一种蛾眉</h3><p>词牌名：点绛唇|朝代：清朝|作者：纳兰容若</p><p>一种蛾眉，下弦不似初弦好。<br>庾郎未老，何事伤心早？</p><p>素壁斜辉，竹影横窗扫。<br>空房悄，乌啼欲晓，又下西楼了。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①一种二句：蛾眉，指蛾眉月，谓同样的蛾眉月，但下弦之月不如上弦月好。又，下弦，下弦月，即农历每月二十三日前后之月亮。<br>初弦，即上弦月，谓农历每月初七、初八日之月亮。古人以蛾眉代指女人的眉毛，又以上弦、下弦之月代指女人的眉毛下垂或上弯。<br>故此处是说那下垂的眉毛不如上弯的眉毛好，即愁苦之时的眉毛不如欢乐时的好，意思是说此时的离怀愁绪不如欢聚之快乐。此解亦通。</p><p>②庾郎二句：庾郎，指南朝梁诗人庾信。信出使西魏，值梁为西魏所灭，遂留异乡。后仕北周，常愁思故国。作《哀江南赋》等以抒愁愁情。<br>宋周密《秋霁》：“愁损庾郎，霜点鬓华白。”此二句云，庾郎未老，却过早地伤心了。这里是借庾信而自指，谓客居异地而起乡情，<br>以至伤心惆怅，难以排遗。</p><h4 id="赏析-鉴赏"><a href="#赏析-鉴赏" class="headerlink" title="赏析&#x2F;鉴赏"></a>赏析&#x2F;鉴赏</h4><p>此篇汪刻本有副题《对月》。从词中所抒写之情景看确是一首对月伤怀、凄凉幽怨之作。<br>开头以“蛾眉”、“下弦”、“初弦”等形象隐喻所思之人的情貌，清新而婉曲。下片皆以景语出之，化情思为景句，又含蕴要眇之至。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="满江红·怒发冲冠"><a href="#满江红·怒发冲冠" class="headerlink" title="满江红·怒发冲冠"></a>满江红·怒发冲冠</h3><p>词牌名：满江红|朝代：宋朝|作者：岳飞</p><p>怒发（髪）冲冠，凭栏（阑)处、潇潇雨歇。</p><p>抬望眼，仰天长啸，壮怀激烈。</p><p>三十功名尘与土，八千里路云和月。</p><p>莫等闲、白了少年头，空悲切！</p><p>靖康耻，犹未雪。臣子恨，何时灭！</p><p>驾长车，踏破贺兰山缺。</p><p>壮志饥餐胡虏肉，笑谈渴饮匈奴血。</p><p>待从头、收拾旧山河，朝天阙。</p><p>注释<br>①怒发冲冠：气得头发竖起，以至于将帽子顶起。<br>形容愤怒至极，冠是指帽子而不是头发竖起。</p><p>②潇潇：形容雨势急骤。</p><p>③长啸：大声呼叫。汉·司马相如《上林赋》：“长啸哀鸣，翩幡互经。”<br>宋·岳飞《满江红》词：“抬望眼、仰天长啸，壮怀激烈。”<br>许地山《空山灵雨·生》：“它在竹林里长着的时候，许多好鸟歌唱给它听，许多猛兽长啸给它听。”</p><p>④三十功名尘与土：三十年来，建立了一些功名，如同尘土。</p><p>⑤八千里路云和月：形容南征北战、路途遥远、披星戴月。</p><p>⑥等闲：轻易，随便。</p><p>⑦靖康耻：宋钦宗靖康二年（1127年），金兵攻陷汴京，虏走徽、钦二帝。</p><p>⑧贺兰山：贺兰山脉位于宁夏回族自治区与内蒙古自治区交界处。<br>一说是位于邯郸市磁县境内的贺兰山。</p><p>⑨朝天阙：朝见皇帝。天阙：本指宫殿前的楼观，此指皇帝生活的地方。<br>又，明·王熙书《满江红》词碑作“朝金阙”。</p>]]></content>
       
       
       
@@ -473,11 +492,11 @@
     
     
     <entry>
-      <title>满江红·怒发冲冠</title>
-      <link href="/2025/07/06/%E6%BB%A1%E6%B1%9F%E7%BA%A2%C2%B7%E6%80%92%E5%8F%91%E5%86%B2%E5%86%A0/"/>
-      <url>/2025/07/06/%E6%BB%A1%E6%B1%9F%E7%BA%A2%C2%B7%E6%80%92%E5%8F%91%E5%86%B2%E5%86%A0/</url>
+      <title>点绛唇·一种蛾眉</title>
+      <link href="/2025/07/06/%E7%82%B9%E7%BB%9B%E5%94%87%C2%B7%E4%B8%80%E7%A7%8D%E8%9B%BE%E7%9C%89/"/>
+      <url>/2025/07/06/%E7%82%B9%E7%BB%9B%E5%94%87%C2%B7%E4%B8%80%E7%A7%8D%E8%9B%BE%E7%9C%89/</url>
       
-        <content type="html"><![CDATA[<h3 id="满江红·怒发冲冠"><a href="#满江红·怒发冲冠" class="headerlink" title="满江红·怒发冲冠"></a>满江红·怒发冲冠</h3><p>词牌名：满江红|朝代：宋朝|作者：岳飞</p><p>怒发（髪）冲冠，凭栏（阑)处、潇潇雨歇。</p><p>抬望眼，仰天长啸，壮怀激烈。</p><p>三十功名尘与土，八千里路云和月。</p><p>莫等闲、白了少年头，空悲切！</p><p>靖康耻，犹未雪。臣子恨，何时灭！</p><p>驾长车，踏破贺兰山缺。</p><p>壮志饥餐胡虏肉，笑谈渴饮匈奴血。</p><p>待从头、收拾旧山河，朝天阙。</p><p>注释<br>①怒发冲冠：气得头发竖起，以至于将帽子顶起。<br>形容愤怒至极，冠是指帽子而不是头发竖起。</p><p>②潇潇：形容雨势急骤。</p><p>③长啸：大声呼叫。汉·司马相如《上林赋》：“长啸哀鸣，翩幡互经。”<br>宋·岳飞《满江红》词：“抬望眼、仰天长啸，壮怀激烈。”<br>许地山《空山灵雨·生》：“它在竹林里长着的时候，许多好鸟歌唱给它听，许多猛兽长啸给它听。”</p><p>④三十功名尘与土：三十年来，建立了一些功名，如同尘土。</p><p>⑤八千里路云和月：形容南征北战、路途遥远、披星戴月。</p><p>⑥等闲：轻易，随便。</p><p>⑦靖康耻：宋钦宗靖康二年（1127年），金兵攻陷汴京，虏走徽、钦二帝。</p><p>⑧贺兰山：贺兰山脉位于宁夏回族自治区与内蒙古自治区交界处。<br>一说是位于邯郸市磁县境内的贺兰山。</p><p>⑨朝天阙：朝见皇帝。天阙：本指宫殿前的楼观，此指皇帝生活的地方。<br>又，明·王熙书《满江红》词碑作“朝金阙”。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="点绛唇·一种蛾眉"><a href="#点绛唇·一种蛾眉" class="headerlink" title="点绛唇·一种蛾眉"></a>点绛唇·一种蛾眉</h3><p>词牌名：点绛唇|朝代：清朝|作者：纳兰容若</p><p>一种蛾眉，下弦不似初弦好。<br>庾郎未老，何事伤心早？</p><p>素壁斜辉，竹影横窗扫。<br>空房悄，乌啼欲晓，又下西楼了。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①一种二句：蛾眉，指蛾眉月，谓同样的蛾眉月，但下弦之月不如上弦月好。又，下弦，下弦月，即农历每月二十三日前后之月亮。<br>初弦，即上弦月，谓农历每月初七、初八日之月亮。古人以蛾眉代指女人的眉毛，又以上弦、下弦之月代指女人的眉毛下垂或上弯。<br>故此处是说那下垂的眉毛不如上弯的眉毛好，即愁苦之时的眉毛不如欢乐时的好，意思是说此时的离怀愁绪不如欢聚之快乐。此解亦通。</p><p>②庾郎二句：庾郎，指南朝梁诗人庾信。信出使西魏，值梁为西魏所灭，遂留异乡。后仕北周，常愁思故国。作《哀江南赋》等以抒愁愁情。<br>宋周密《秋霁》：“愁损庾郎，霜点鬓华白。”此二句云，庾郎未老，却过早地伤心了。这里是借庾信而自指，谓客居异地而起乡情，<br>以至伤心惆怅，难以排遗。</p><h4 id="赏析-鉴赏"><a href="#赏析-鉴赏" class="headerlink" title="赏析&#x2F;鉴赏"></a>赏析&#x2F;鉴赏</h4><p>此篇汪刻本有副题《对月》。从词中所抒写之情景看确是一首对月伤怀、凄凉幽怨之作。<br>开头以“蛾眉”、“下弦”、“初弦”等形象隐喻所思之人的情貌，清新而婉曲。下片皆以景语出之，化情思为景句，又含蕴要眇之至。</p>]]></content>
       
       
       
@@ -530,11 +549,11 @@
     
     
     <entry>
-      <title>生查子·东风不解愁</title>
-      <link href="/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E4%B8%9C%E9%A3%8E%E4%B8%8D%E8%A7%A3%E6%84%81/"/>
-      <url>/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E4%B8%9C%E9%A3%8E%E4%B8%8D%E8%A7%A3%E6%84%81/</url>
+      <title>生查子·惆怅彩云飞</title>
+      <link href="/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E6%83%86%E6%80%85%E5%BD%A9%E4%BA%91%E9%A3%9E/"/>
+      <url>/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E6%83%86%E6%80%85%E5%BD%A9%E4%BA%91%E9%A3%9E/</url>
       
-        <content type="html"><![CDATA[<h3 id="生查子·东风不解愁"><a href="#生查子·东风不解愁" class="headerlink" title="生查子·东风不解愁"></a>生查子·东风不解愁</h3><p>词牌名：生查子|朝代：清朝|作者：纳兰容若</p><p>东风不解愁，偷展湘裙衩。</p><p>独夜背纱笼，影著纤腰画。</p><p>爇尽水沉烟，露滴鸳鸯瓦。</p><p>花骨冷宜香，小立樱桃下。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>是谁，把心事的倒影，描摹成哀愁的形状？</p><p>是谁，在春风中借着朦胧的星光，含蓄地编织着，穿越烟雨的忧伤？</p><p>有人说，最凄凉最弄人的不是你知道，失去所爱的那一刻，而是你还在徘徊，犹未知道已经失去。</p><p>所以从此，只有相思无尽处。</p><p>只有，此恨绵绵无绝期。</p><p>而那最后深情的一吻，便是：</p><p>为伊消得人憔悴。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①湘裙视：指用湘地丝绸制做的裙衩。</p><p>②纱笼：灯笼。</p><p>③”爇（ruò）尽”句：谓沉香已经燃尽。爇，燃烧。水沉，即水沉香、沉香。</p><p>④花骨句：意谓夜来天寒露冷，而花蕾却发出宜人的香气。花骨，花骨朵，即花蕾。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="生查子·惆怅彩云飞"><a href="#生查子·惆怅彩云飞" class="headerlink" title="生查子·惆怅彩云飞"></a>生查子·惆怅彩云飞</h3><p>词牌名：生查子|朝代：清朝|作者：纳兰容若</p><p>惆怅彩云飞，碧落知何许。</p><p>不见合欢花，空倚相思树。</p><p>总是别时情，那待分明语。</p><p>判得最长宵，数尽厌厌雨。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《生查子·惆怅彩云飞》写长夜怀思的苦情。上片说彩云飞逝，不知飘落高天何处，这显然是托比之法，意在说所爱之人踪影全无，而今只落得空倚相思树的悲凉情境了。下片则说别时之情景长存，而使他彻夜不眠，辗转反侧，并甘愿忍受着这凄清孤独之苦。词重在心理刻画，婉转深细，是一首悼亡之作。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>那天，和你分别，彩云飞处，轻轻挥手。</p><p>千言万语，在心中……那得分明语？</p><p>人生，最浓最痛，当是爱到血肉相连，却不得不分开。</p><p>有时，是没有在合适的时间合适的地点遇到，有时，是不能爱，不可以爱。</p><p>欲言又止，欲说还休，万千心事，谁与共？只随浮云掠过。</p><p>不见合欢花，空倚相思树。</p><p>悄无人处，宿雨厌厌，空庭乍歇。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①合欢花：与下句的相思树对举，均有双关意。相思树，见《减字木兰花》(花丛冷眼)注②。</p><p>②判得：甘心情愿地。判，同“拚”、“拌”。</p><p>③厌厌：绵长之意。南唐冯延已《长相思》：“红满枝，绿满枝，宿雨厌厌睡起迟。”</p>]]></content>
       
       
       
@@ -549,11 +568,11 @@
     
     
     <entry>
-      <title>生查子·惆怅彩云飞</title>
-      <link href="/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E6%83%86%E6%80%85%E5%BD%A9%E4%BA%91%E9%A3%9E/"/>
-      <url>/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E6%83%86%E6%80%85%E5%BD%A9%E4%BA%91%E9%A3%9E/</url>
+      <title>生查子·东风不解愁</title>
+      <link href="/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E4%B8%9C%E9%A3%8E%E4%B8%8D%E8%A7%A3%E6%84%81/"/>
+      <url>/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E4%B8%9C%E9%A3%8E%E4%B8%8D%E8%A7%A3%E6%84%81/</url>
       
-        <content type="html"><![CDATA[<h3 id="生查子·惆怅彩云飞"><a href="#生查子·惆怅彩云飞" class="headerlink" title="生查子·惆怅彩云飞"></a>生查子·惆怅彩云飞</h3><p>词牌名：生查子|朝代：清朝|作者：纳兰容若</p><p>惆怅彩云飞，碧落知何许。</p><p>不见合欢花，空倚相思树。</p><p>总是别时情，那待分明语。</p><p>判得最长宵，数尽厌厌雨。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《生查子·惆怅彩云飞》写长夜怀思的苦情。上片说彩云飞逝，不知飘落高天何处，这显然是托比之法，意在说所爱之人踪影全无，而今只落得空倚相思树的悲凉情境了。下片则说别时之情景长存，而使他彻夜不眠，辗转反侧，并甘愿忍受着这凄清孤独之苦。词重在心理刻画，婉转深细，是一首悼亡之作。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>那天，和你分别，彩云飞处，轻轻挥手。</p><p>千言万语，在心中……那得分明语？</p><p>人生，最浓最痛，当是爱到血肉相连，却不得不分开。</p><p>有时，是没有在合适的时间合适的地点遇到，有时，是不能爱，不可以爱。</p><p>欲言又止，欲说还休，万千心事，谁与共？只随浮云掠过。</p><p>不见合欢花，空倚相思树。</p><p>悄无人处，宿雨厌厌，空庭乍歇。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①合欢花：与下句的相思树对举，均有双关意。相思树，见《减字木兰花》(花丛冷眼)注②。</p><p>②判得：甘心情愿地。判，同“拚”、“拌”。</p><p>③厌厌：绵长之意。南唐冯延已《长相思》：“红满枝，绿满枝，宿雨厌厌睡起迟。”</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="生查子·东风不解愁"><a href="#生查子·东风不解愁" class="headerlink" title="生查子·东风不解愁"></a>生查子·东风不解愁</h3><p>词牌名：生查子|朝代：清朝|作者：纳兰容若</p><p>东风不解愁，偷展湘裙衩。</p><p>独夜背纱笼，影著纤腰画。</p><p>爇尽水沉烟，露滴鸳鸯瓦。</p><p>花骨冷宜香，小立樱桃下。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>是谁，把心事的倒影，描摹成哀愁的形状？</p><p>是谁，在春风中借着朦胧的星光，含蓄地编织着，穿越烟雨的忧伤？</p><p>有人说，最凄凉最弄人的不是你知道，失去所爱的那一刻，而是你还在徘徊，犹未知道已经失去。</p><p>所以从此，只有相思无尽处。</p><p>只有，此恨绵绵无绝期。</p><p>而那最后深情的一吻，便是：</p><p>为伊消得人憔悴。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①湘裙视：指用湘地丝绸制做的裙衩。</p><p>②纱笼：灯笼。</p><p>③”爇（ruò）尽”句：谓沉香已经燃尽。爇，燃烧。水沉，即水沉香、沉香。</p><p>④花骨句：意谓夜来天寒露冷，而花蕾却发出宜人的香气。花骨，花骨朵，即花蕾。</p>]]></content>
       
       
       
@@ -625,6 +644,25 @@
     
     
     <entry>
+      <title>菩萨蛮·问君何事轻离别</title>
+      <link href="/2025/07/06/%E8%8F%A9%E8%90%A8%E8%9B%AE%C2%B7%E9%97%AE%E5%90%9B%E4%BD%95%E4%BA%8B%E8%BD%BB%E7%A6%BB%E5%88%AB/"/>
+      <url>/2025/07/06/%E8%8F%A9%E8%90%A8%E8%9B%AE%C2%B7%E9%97%AE%E5%90%9B%E4%BD%95%E4%BA%8B%E8%BD%BB%E7%A6%BB%E5%88%AB/</url>
+      
+        <content type="html"><![CDATA[<h3 id="菩萨蛮·问君何事轻离别"><a href="#菩萨蛮·问君何事轻离别" class="headerlink" title="菩萨蛮·问君何事轻离别"></a>菩萨蛮·问君何事轻离别</h3><p>词牌名：菩萨蛮|朝代：清朝|作者：纳兰容若</p><p>问君何事轻离别，一年能几团圆月。<br>杨柳乍如丝。故园春尽时。</p><p>春归归不得，两桨松花隔。<br>旧事逐寒潮，啼鹃恨未消。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《菩萨蛮·问君何事轻离别》是清代词人纳兰性德所写的一首词。该词上阕描写了词人对亲人的思念，发出了离多会少的喟叹，下阕则通过啼鹃、旧事等语词，使感慨更为深沉。全词行文凄婉闲丽，抒发了词人身处他乡的孤独、伤感之情。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>试问我为何轻易地离别？一年能有几次圆月。北国的杨柳刚刚如长丝，家园已是三春过尽时。<br>春天归去我却不能归，行船松花江被江阻隔。往事悠悠像寒冷的江潮，裹啼的杜鹃怨恨未消。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>⑴菩萨蛮：唐教坊曲名，后用为词牌，也用作曲牌。亦作《菩萨鬘》，又名《子夜歌》、《重叠金》等。<br>⑵问君：词人自问。<br>⑶一年能几团圆月：指自己与家人一年能团聚多久。<br>⑷乍（zhà）如丝：指刚刚吐出新绿时。<br>⑸故园：指词人家所在的北京。<br>⑹春归：乘春而归家。<br>⑺松花：松花江。<br>⑻啼鹃（tíjuān）：鹃，杜鹃，传说杜鹃啼叫声为“不如归去”。<br>⑼恨：遗憾。</p><h4 id="创作背景"><a href="#创作背景" class="headerlink" title="创作背景"></a>创作背景</h4><p>康熙二十一年（1682）二月份，词人随从康熙到盛京告祭祖陵，并巡视吉林等地。当时天气还很寒冷，词人想起了远在北京的妻子，心有所感，写下这首词，抒写了对闺中妻子的思念。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>网络技术</title>
       <link href="/2025/07/06/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
       <url>/2025/07/06/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/</url>
@@ -663,49 +701,11 @@
     
     
     <entry>
-      <title>追剧天堂！MoonTV Docker 部署！</title>
-      <link href="/2025/07/06/%E8%BF%BD%E5%89%A7%E5%A4%A9%E5%A0%82!MoonTV%20Docker%20%E9%83%A8%E7%BD%B2!/"/>
-      <url>/2025/07/06/%E8%BF%BD%E5%89%A7%E5%A4%A9%E5%A0%82!MoonTV%20Docker%20%E9%83%A8%E7%BD%B2!/</url>
-      
-        <content type="html"><![CDATA[<p>追剧天堂！MoonTV Docker 部署！</p><p>本项目是一个影视聚合型播放站点，可以聚合全网影视资源，实现在一个页面内搜索和观看。本次教程将演示如何在 NAS 上通过 Docker 进行部署。</p><p>项目来源: GitHub 上的开源项目： <a href="https://github.com/senshinya/MoonTV">https://github.com/senshinya/MoonTV</a><br>支持平台:<br>NAS (通过 Docker)<br>Vercel<br>Cloudflare</p><p>部署：<br>1.直接运行：docker run -d –name moontv -p 3000:3000 ghcr.io&#x2F;senshinya&#x2F;moontv:latest<br>访问 http:&#x2F;&#x2F;服务器 IP:3000 即可</p><p>默认端口为 3000，部署前需确认3000 端口未被其他服务占用。<br>如果端口被占用，需要修改映射端口，例如将 3000:3000 修改为 3001:3000。</p><p>2.使用 docker compose 部署</p><p>部署步骤：<a href="https://www.youtube.com/watch?v=riHqCnc221M">https://www.youtube.com/watch?v=riHqCnc221M</a></p><ol><li>创建文件夹</li></ol><p>在系统的文件管理器中，创建一个新的文件夹用于存放项目文件，名称可自定义。</p><ol start="2"><li>准备 config.json 文件</li></ol><p>访问项目的 GitHub 页面，找到 config.json 文件并下载<br>将下载好的 config.json 文件上传到创建的文件夹内</p><p>{<br>  “cache_time”: 7200,<br>  “api_site”: {<br>    “dyttzy”: {<br>      “api”: “<a href="http://caiji.dyttzyapi.com/api.php/provide/vod">http://caiji.dyttzyapi.com/api.php/provide/vod</a>“,<br>      “name”: “电影天堂资源”,<br>      “detail”: “<a href="http://caiji.dyttzyapi.com/">http://caiji.dyttzyapi.com</a>“<br>    },<br>    “heimuer”: {<br>      “api”: “<a href="https://json.heimuer.xyz/api.php/provide/vod">https://json.heimuer.xyz/api.php/provide/vod</a>“,<br>      “name”: “黑木耳”,<br>      “detail”: “<a href="https://heimuer.tv/">https://heimuer.tv</a>“<br>    },<br>    “ruyi”: {<br>      “api”: “<a href="https://cj.rycjapi.com/api.php/provide/vod">https://cj.rycjapi.com/api.php/provide/vod</a>“,<br>      “name”: “如意资源”<br>    },<br>    “bfzy”: {<br>      “api”: “<a href="https://bfzyapi.com/api.php/provide/vod">https://bfzyapi.com/api.php/provide/vod</a>“,<br>      “name”: “暴风资源”<br>    },<br>    “tyyszy”: {<br>      “api”: “<a href="https://tyyszy.com/api.php/provide/vod">https://tyyszy.com/api.php/provide/vod</a>“,<br>      “name”: “天涯资源”<br>    },<br>    “ffzy”: {<br>      “api”: “<a href="http://ffzy5.tv/api.php/provide/vod">http://ffzy5.tv/api.php/provide/vod</a>“,<br>      “name”: “非凡影视”,<br>      “detail”: “<a href="http://ffzy5.tv/">http://ffzy5.tv</a>“<br>    },<br>    “zy360”: {<br>      “api”: “<a href="https://360zy.com/api.php/provide/vod">https://360zy.com/api.php/provide/vod</a>“,<br>      “name”: “360资源”<br>    },<br>    “iqiyi”: {<br>      “api”: “<a href="https://www.iqiyizyapi.com/api.php/provide/vod">https://www.iqiyizyapi.com/api.php/provide/vod</a>“,<br>      “name”: “iqiyi资源”<br>    },<br>    “wolong”: {<br>      “api”: “<a href="https://wolongzyw.com/api.php/provide/vod">https://wolongzyw.com/api.php/provide/vod</a>“,<br>      “name”: “卧龙资源”<br>    },<br>    “jisu”: {<br>      “api”: “<a href="https://jszyapi.com/api.php/provide/vod">https://jszyapi.com/api.php/provide/vod</a>“,<br>      “name”: “极速资源”,<br>      “detail”: “<a href="https://jszyapi.com/">https://jszyapi.com</a>“<br>    },<br>    “dbzy”: {<br>      “api”: “<a href="https://dbzy.tv/api.php/provide/vod">https://dbzy.tv/api.php/provide/vod</a>“,<br>      “name”: “豆瓣资源”<br>    },<br>    “mozhua”: {<br>      “api”: “<a href="https://mozhuazy.com/api.php/provide/vod">https://mozhuazy.com/api.php/provide/vod</a>“,<br>      “name”: “魔爪资源”<br>    },<br>    “mdzy”: {<br>      “api”: “<a href="https://www.mdzyapi.com/api.php/provide/vod">https://www.mdzyapi.com/api.php/provide/vod</a>“,<br>      “name”: “魔都资源”<br>    },<br>    “zuid”: {<br>      “api”: “<a href="https://api.zuidapi.com/api.php/provide/vod">https://api.zuidapi.com/api.php/provide/vod</a>“,<br>      “name”: “最大资源”<br>    },<br>    “yinghua”: {<br>      “api”: “<a href="https://m3u8.apiyhzy.com/api.php/provide/vod">https://m3u8.apiyhzy.com/api.php/provide/vod</a>“,<br>      “name”: “樱花资源”<br>    },<br>    “wujin”: {<br>      “api”: “<a href="https://api.wujinapi.me/api.php/provide/vod">https://api.wujinapi.me/api.php/provide/vod</a>“,<br>      “name”: “无尽资源”<br>    },<br>    “wwzy”: {<br>      “api”: “<a href="https://wwzy.tv/api.php/provide/vod">https://wwzy.tv/api.php/provide/vod</a>“,<br>      “name”: “旺旺短剧”<br>    },<br>    “ikun”: {<br>      “api”: “<a href="https://ikunzyapi.com/api.php/provide/vod">https://ikunzyapi.com/api.php/provide/vod</a>“,<br>      “name”: “iKun资源”<br>    }<br>  }<br>}</p><ol start="3"><li>设置文件权限</li></ol><p>使用 SSH 工具连接<br>进入（cd）到存放 config.json 的文件夹。<br>执行以下命令赋予文件权限：<br>复制代码chmod 777 config.json</p><ol start="4"><li>创建 Docker Compose 项目</li></ol><p>进入 Docker 管理界面，选择新增项目，项目名称可自定义。<br>将项目路径指向第一步创建的文件夹。<br>选择“创建 Compose 文件”的方式。</p><ol start="5"><li>配置并启动容器</li></ol><p>将 docker-compose.yml 文件的内容复制并粘贴到配置框中:</p><p>services:<br>  moontv-core:<br>    image: ghcr.io&#x2F;senshinya&#x2F;moontv:latest<br>    container_name: moontv<br>    restart: unless-stopped<br>    ports:<br>      - ‘3000:3000’<br>    environment:<br>      - USERNAME&#x3D;admin<br>      - PASSWORD&#x3D;admin_password<br>      - NEXT_PUBLIC_STORAGE_TYPE&#x3D;redis<br>      - REDIS_URL&#x3D;redis:&#x2F;&#x2F;moontv-redis:6379<br>      - NEXT_PUBLIC_ENABLE_REGISTER&#x3D;true<br>    networks:<br>      - moontv-network<br>    depends_on:<br>      - moontv-redis<br>    # 如需自定义配置，可挂载文件<br>    # volumes:<br>    #   - .&#x2F;config.json:&#x2F;app&#x2F;config.json:ro<br>  moontv-redis:<br>    image: redis<br>    container_name: moontv-redis<br>    restart: unless-stopped<br>    networks:<br>      - moontv-network<br>    # 如需持久化<br>    # volumes:<br>    #   - .&#x2F;data:&#x2F;data<br>networks:<br>  moontv-network:<br>    driver: bridge</p><p>修改配置:<br>端口：根据需要修改为未被占用的端口。<br>用户名&#x2F;密码：根据需要修改。<br>自定义配置：如果你选择自定义接口，请取消 volumes 部分关于 config.json 的注释。<br>注意：取消注释后，必须确保代码对齐（缩进）正确，否则会出错。<br>点击确定保存配置。<br>在项目列表中，点击“构建”或“启动”来拉取镜像并运行容器。</p><p>访问站点<br>当容器成功运行后，通过浏览器访问 http:&#x2F;&#x2F;&lt;你的NAS_IP&gt;:&lt;你设置的端口&gt;。<br>输入你设置的用户名和密码即可登录。</p><p>LibreTV Compose 文件代码：</p><p>version: ‘3’<br>services:<br>  libretv:<br>    image: bestzwei&#x2F;libretv:latest  # 使用 libretv 的最新镜像<br>    container_name: libretv         # 容器名称为 libretv<br>    ports:<br>      - “8899:80”                   # 将主机的 8899 端口映射到容器的 80 端口<br>    environment:<br>      - PASSWORD&#x3D;123456             # 设置访问密码（留空表示不启用密码保护）<br>    restart: always                 # 容器异常退出后自动重启</p><p>自定义接口地址<br>视频数据采集站<br>非凡采集站：<a href="http://ffzy5.tv/">http://ffzy5.tv/</a></p><p>爱坤资源：<a href="https://www.ikunzy.com/ikun/help.html">https://www.ikunzy.com/ikun/help.html</a></p><p>暴风资源：<a href="https://bfzy.tv/help/?home">https://bfzy.tv/help/?home</a></p><p>苹果cms官方：<a href="https://www.applecms.cc/">https://www.applecms.cc</a></p><p>赞片cms官网：<a href="https://www.zanpiancms.com/">https://www.zanpiancms.com/</a></p><p>量子资源网：<a href="http://lzizy.net/help/">http://lzizy.net/help/</a></p><p>新浪资源网：<a href="https://www.xinlangzy.com/help/">https://www.xinlangzy.com/help/</a></p><p>虎牙资源网：<a href="http://huyazy.net/help/">http://huyazy.net/help/</a></p><p>光速资源网：<a href="https://www.guangsuzy.com/help/">https://www.guangsuzy.com/help/</a></p><p>极速资源网：<a href="https://www.jisuzy.com/index.php/help/index.html">https://www.jisuzy.com/index.php/help/index.html</a></p><p>红牛资源网：<a href="https://hongniuzy.net/help/">https://hongniuzy.net/help/</a></p><p>如意资源网：<a href="https://www.ryzy3.tv/">https://www.ryzy3.tv/</a></p><p>魔爪资源网：<a href="https://mzzy.me/">https://mzzy.me/</a></p><p>华为吧资源：<a href="https://huawei8.live/">https://huawei8.live/</a></p><p>豆瓣资源站：<a href="https://dbzy.com/">https://dbzy.com/</a></p><p>茅台资源站：<a href="https://mtzy.me/">https://mtzy.me/</a></p><p>索尼资源：<a href="https://suonizy.net/">https://suonizy.net/</a></p><p>U酷资源站：<a href="https://ukuzy0.com/">https://ukuzy0.com/</a></p><p>快车资源站：<a href="https://kuaichezy.com/">https://kuaichezy.com/</a></p><p>金鹰资源站：<a href="https://jinyingzy.com/">https://jinyingzy.com/</a></p><p>淘片资源站：<a href="https://www.taopianzy.com/">https://www.taopianzy.com/</a></p><p>卧龙资源站：<a href="https://wolongzyw.com/">https://wolongzyw.com/</a></p><p>牛牛资源站：<a href="https://niuniuzy.cc/">https://niuniuzy.cc/</a></p><p>小绵羊资源站：<a href="https://vs.okcdn100.top/">https://vs.okcdn100.top/</a></p><p>虾米资源站：<a href="https://zy.hls.one/">https://zy.hls.one/</a></p><p>麒麟资源站：<a href="https://www.qilinzyz.com/">https://www.qilinzyz.com/</a></p><p>蜂巢资源站：<a href="https://fczy908.com/">https://fczy908.com/</a></p><p>豪华资源站：<a href="https://haohuazy.com/">https://haohuazy.com/</a></p><p>魔都资源站：<a href="https://moduzy.com/">https://moduzy.com/</a></p><p>火花资源站：<a href="https://cj.huohua.live/">https://cj.huohua.live/</a></p><p>速播资源站：<a href="https://www.suboziyuan.net/">https://www.suboziyuan.net/</a></p><p>黑木耳资源站：<a href="https://heimuer.tv/">https://heimuer.tv/</a></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 技术 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>酒泉子·谢却荼蘼</title>
       <link href="/2025/07/06/%E9%85%92%E6%B3%89%E5%AD%90%C2%B7%E8%B0%A2%E5%8D%B4%E8%8D%BC%E8%98%BC/"/>
       <url>/2025/07/06/%E9%85%92%E6%B3%89%E5%AD%90%C2%B7%E8%B0%A2%E5%8D%B4%E8%8D%BC%E8%98%BC/</url>
       
         <content type="html"><![CDATA[<h3 id="酒泉子·谢却荼蘼"><a href="#酒泉子·谢却荼蘼" class="headerlink" title="酒泉子·谢却荼蘼"></a>酒泉子·谢却荼蘼</h3><p>词牌名：酒泉子|朝代：清朝|作者：纳兰容若</p><p>谢却荼蘼，一片月明如水。<br>篆香消，犹未睡，早鸦啼。</p><p>嫩寒无赖罗衣薄，休傍阑干角。<br>最愁人，灯欲落，雁还飞。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《酒泉子·谢却荼蘼》是清代词人纳兰性德之作，写夏夜主人公倚栏远望伤感怀人。全词以清新流畅的白描笔调，表达情感真挚而深沉的感情。词句有穷，而意蕴难尽，直写情怀，却郁结难解，真挚可怜。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>在那一片月明如水的夜里，白色的茶蘼花凋谢了。篆香已经燃尽，可是我却还没有睡着，早起的乌鸦已经开始啼叫，又是一夜不成眠。丝丝的寒冷透过微薄的锦衣，不要再倚靠栏杆远望了。那灯要燃尽，鸿雁犹飞的情景是最让人伤怀的啊！</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>⑴谢却茶蘼（túmí）：荼蘼：落叶或半常绿蔓生小灌木，攀缘茎，茎绿色，茎上有钩状的刺，上面有多个侧脉，形似皱纹，夏季开白花。王琪《春暮游小园》：“开到荼蘼花事了，丝丝天棘出莓墙。”</p><p>⑵篆香（zhuànxiānɡ）：盘香，为篆字形状。</p><p>⑶嫩寒：轻寒，春寒。秦观《浣溪沙》：“漠漠轻寒上小楼，晓阴无赖似穷秋。”</p><p>⑷无赖：无奈。</p><p>⑸阑干：同“栏杆”。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 诗词 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>长相思·山一程</title>
-      <link href="/2025/07/06/%E9%95%BF%E7%9B%B8%E6%80%9D%C2%B7%E5%B1%B1%E4%B8%80%E7%A8%8B/"/>
-      <url>/2025/07/06/%E9%95%BF%E7%9B%B8%E6%80%9D%C2%B7%E5%B1%B1%E4%B8%80%E7%A8%8B/</url>
-      
-        <content type="html"><![CDATA[<h3 id="长相思·山一程"><a href="#长相思·山一程" class="headerlink" title="长相思·山一程"></a>长相思·山一程</h3><p>词牌名：长相思|朝代：清朝|作者：纳兰容若</p><p>山一程，水一程，身向榆关那畔行，夜深千帐灯。</p><p>风一更，雪一更，聒碎乡心梦不成，故园无此声。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《长相思·山一程》是清代词人纳兰性德的作品。词中描写将士在外对故乡的思念，抒露着情思深苦的绵长心境。全词纯用自然真切、简朴清爽的白描语句，写得天然浑成，毫无雕琢之处，却格外真切感人。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>将士们不辞辛苦地跋山涉水，马不停蹄地向着山海关进发。夜已经深了，千万个帐篷里都点起了灯。</p><p>外面正刮着风、下着雪，惊醒了睡梦中的将士们，勾起了他们对故乡的思念，故乡是多么的温暖宁静呀，哪有这般狂风呼啸、雪花乱舞的聒噪之声。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>⑴长相思。唐教坊曲，双翅小令。又名《双红豆》。</p><p>⑵程：道路、路程，山一程、水一程，即山长水远。</p><p>⑶榆关：即今山海关，在今河北秦皇岛东北；那畔：即山海关的另一边，指身处关外。</p><p>⑷千帐灯：皇帝出巡临时住宿的行帐的灯火。千帐言军营之多。</p><p>⑸更：旧时一夜分五更，每更大约两小时。风一更、雪一更，即言整夜风雪交加也。</p><p>⑹聒（guō）：声音嘈杂，这里指风雪声。</p><p>⑺故园：故乡，这里指北京；此声：指风雪交加的声音。</p>]]></content>
       
       
       
@@ -739,11 +739,11 @@
     
     
     <entry>
-      <title>青衫湿·悼亡</title>
-      <link href="/2025/07/06/%E9%9D%92%E8%A1%AB%E6%B9%BF%C2%B7%E6%82%BC%E4%BA%A1/"/>
-      <url>/2025/07/06/%E9%9D%92%E8%A1%AB%E6%B9%BF%C2%B7%E6%82%BC%E4%BA%A1/</url>
+      <title>长相思·山一程</title>
+      <link href="/2025/07/06/%E9%95%BF%E7%9B%B8%E6%80%9D%C2%B7%E5%B1%B1%E4%B8%80%E7%A8%8B/"/>
+      <url>/2025/07/06/%E9%95%BF%E7%9B%B8%E6%80%9D%C2%B7%E5%B1%B1%E4%B8%80%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<h3 id="青衫湿·悼亡"><a href="#青衫湿·悼亡" class="headerlink" title="青衫湿·悼亡"></a>青衫湿·悼亡</h3><p>词牌名：青衫湿|朝代：清朝|作者：纳兰容若</p><p>近来无限伤心事，谁与话长更？<br>从教分付，绿窗红泪，早雁初莺。</p><p>当时领略，而今断送，总负多情。<br>忽疑君到，漆灯风飐，痴数春星。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>词以小令见长，多感伤情调，间有雄浑之作。也能诗。有《通志堂集》。<br>这么美的景，我是多么爱慕，恬静，幽雅，轻灵，可是，可是，没有你，这一切的存在又有何意义！<br>你才是我的一切，才是我灵魂可以安逸，美丽，快乐的所在。你在我晶莹的泪光中浮现，那么美地笑着，<br>袭着前世的爱，袭今生的眷念，雁飞了，莺也飞了，只有一滴滴的泪水，在我的脸颊流淌。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>最近有太多的伤心事，我能与谁倾诉于这漫漫长夜？一切听从命运的安排，<br>早春时节，窗外绿影婆娑，大雁归来，黄莺歌舞，任凭泪流满面。</p><p>当年与你欣赏美景，如今却丧失了，辜负了往日的一片深情。<br>忽然一阵风吹，明灯随风摇动，我以为是你的魂魄回来了，罢了，我只能痴情地数星等待。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①从教分付：意思是一切都听任其安排。张元干《念奴娇》：“有谁伴我凄凉，除非分付，与杯中醽醁。”</p><p>②红泪：指伤离或死别的眼泪。参见《转应曲》(明月) 注①。</p><p>③漆灯：灯明亮如漆谓之“漆灯”。《世说新语》谓王羲之见杜宏治，叹曰：“面如凝脂，目如点漆，此真神仙中人。”<br>这里之““漆灯”语出唐李贺《南山田中行》：“石脉水流泉滴沙，鬼灯如漆点松花。”风飐（zhǎn)，风吹之意。<br>五代词人喜用此语。毛文锡《临江仙》：“岸泊渔灯风飐碎，白苹远散浓香。”</p><p>④痴数春星:谓痴情地数着天上的星斗。梁简文帝《神山寺碑》:“澄明离日，照影春星。”</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="长相思·山一程"><a href="#长相思·山一程" class="headerlink" title="长相思·山一程"></a>长相思·山一程</h3><p>词牌名：长相思|朝代：清朝|作者：纳兰容若</p><p>山一程，水一程，身向榆关那畔行，夜深千帐灯。</p><p>风一更，雪一更，聒碎乡心梦不成，故园无此声。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《长相思·山一程》是清代词人纳兰性德的作品。词中描写将士在外对故乡的思念，抒露着情思深苦的绵长心境。全词纯用自然真切、简朴清爽的白描语句，写得天然浑成，毫无雕琢之处，却格外真切感人。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>将士们不辞辛苦地跋山涉水，马不停蹄地向着山海关进发。夜已经深了，千万个帐篷里都点起了灯。</p><p>外面正刮着风、下着雪，惊醒了睡梦中的将士们，勾起了他们对故乡的思念，故乡是多么的温暖宁静呀，哪有这般狂风呼啸、雪花乱舞的聒噪之声。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>⑴长相思。唐教坊曲，双翅小令。又名《双红豆》。</p><p>⑵程：道路、路程，山一程、水一程，即山长水远。</p><p>⑶榆关：即今山海关，在今河北秦皇岛东北；那畔：即山海关的另一边，指身处关外。</p><p>⑷千帐灯：皇帝出巡临时住宿的行帐的灯火。千帐言军营之多。</p><p>⑸更：旧时一夜分五更，每更大约两小时。风一更、雪一更，即言整夜风雪交加也。</p><p>⑹聒（guō）：声音嘈杂，这里指风雪声。</p><p>⑺故园：故乡，这里指北京；此声：指风雪交加的声音。</p>]]></content>
       
       
       
@@ -758,11 +758,11 @@
     
     
     <entry>
-      <title>菩萨蛮·问君何事轻离别</title>
-      <link href="/2025/07/06/%E8%8F%A9%E8%90%A8%E8%9B%AE%C2%B7%E9%97%AE%E5%90%9B%E4%BD%95%E4%BA%8B%E8%BD%BB%E7%A6%BB%E5%88%AB/"/>
-      <url>/2025/07/06/%E8%8F%A9%E8%90%A8%E8%9B%AE%C2%B7%E9%97%AE%E5%90%9B%E4%BD%95%E4%BA%8B%E8%BD%BB%E7%A6%BB%E5%88%AB/</url>
+      <title>青衫湿·悼亡</title>
+      <link href="/2025/07/06/%E9%9D%92%E8%A1%AB%E6%B9%BF%C2%B7%E6%82%BC%E4%BA%A1/"/>
+      <url>/2025/07/06/%E9%9D%92%E8%A1%AB%E6%B9%BF%C2%B7%E6%82%BC%E4%BA%A1/</url>
       
-        <content type="html"><![CDATA[<h3 id="菩萨蛮·问君何事轻离别"><a href="#菩萨蛮·问君何事轻离别" class="headerlink" title="菩萨蛮·问君何事轻离别"></a>菩萨蛮·问君何事轻离别</h3><p>词牌名：菩萨蛮|朝代：清朝|作者：纳兰容若</p><p>问君何事轻离别，一年能几团圆月。<br>杨柳乍如丝。故园春尽时。</p><p>春归归不得，两桨松花隔。<br>旧事逐寒潮，啼鹃恨未消。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《菩萨蛮·问君何事轻离别》是清代词人纳兰性德所写的一首词。该词上阕描写了词人对亲人的思念，发出了离多会少的喟叹，下阕则通过啼鹃、旧事等语词，使感慨更为深沉。全词行文凄婉闲丽，抒发了词人身处他乡的孤独、伤感之情。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>试问我为何轻易地离别？一年能有几次圆月。北国的杨柳刚刚如长丝，家园已是三春过尽时。<br>春天归去我却不能归，行船松花江被江阻隔。往事悠悠像寒冷的江潮，裹啼的杜鹃怨恨未消。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>⑴菩萨蛮：唐教坊曲名，后用为词牌，也用作曲牌。亦作《菩萨鬘》，又名《子夜歌》、《重叠金》等。<br>⑵问君：词人自问。<br>⑶一年能几团圆月：指自己与家人一年能团聚多久。<br>⑷乍（zhà）如丝：指刚刚吐出新绿时。<br>⑸故园：指词人家所在的北京。<br>⑹春归：乘春而归家。<br>⑺松花：松花江。<br>⑻啼鹃（tíjuān）：鹃，杜鹃，传说杜鹃啼叫声为“不如归去”。<br>⑼恨：遗憾。</p><h4 id="创作背景"><a href="#创作背景" class="headerlink" title="创作背景"></a>创作背景</h4><p>康熙二十一年（1682）二月份，词人随从康熙到盛京告祭祖陵，并巡视吉林等地。当时天气还很寒冷，词人想起了远在北京的妻子，心有所感，写下这首词，抒写了对闺中妻子的思念。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="青衫湿·悼亡"><a href="#青衫湿·悼亡" class="headerlink" title="青衫湿·悼亡"></a>青衫湿·悼亡</h3><p>词牌名：青衫湿|朝代：清朝|作者：纳兰容若</p><p>近来无限伤心事，谁与话长更？<br>从教分付，绿窗红泪，早雁初莺。</p><p>当时领略，而今断送，总负多情。<br>忽疑君到，漆灯风飐，痴数春星。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>词以小令见长，多感伤情调，间有雄浑之作。也能诗。有《通志堂集》。<br>这么美的景，我是多么爱慕，恬静，幽雅，轻灵，可是，可是，没有你，这一切的存在又有何意义！<br>你才是我的一切，才是我灵魂可以安逸，美丽，快乐的所在。你在我晶莹的泪光中浮现，那么美地笑着，<br>袭着前世的爱，袭今生的眷念，雁飞了，莺也飞了，只有一滴滴的泪水，在我的脸颊流淌。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>最近有太多的伤心事，我能与谁倾诉于这漫漫长夜？一切听从命运的安排，<br>早春时节，窗外绿影婆娑，大雁归来，黄莺歌舞，任凭泪流满面。</p><p>当年与你欣赏美景，如今却丧失了，辜负了往日的一片深情。<br>忽然一阵风吹，明灯随风摇动，我以为是你的魂魄回来了，罢了，我只能痴情地数星等待。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①从教分付：意思是一切都听任其安排。张元干《念奴娇》：“有谁伴我凄凉，除非分付，与杯中醽醁。”</p><p>②红泪：指伤离或死别的眼泪。参见《转应曲》(明月) 注①。</p><p>③漆灯：灯明亮如漆谓之“漆灯”。《世说新语》谓王羲之见杜宏治，叹曰：“面如凝脂，目如点漆，此真神仙中人。”<br>这里之““漆灯”语出唐李贺《南山田中行》：“石脉水流泉滴沙，鬼灯如漆点松花。”风飐（zhǎn)，风吹之意。<br>五代词人喜用此语。毛文锡《临江仙》：“岸泊渔灯风飐碎，白苹远散浓香。”</p><p>④痴数春星:谓痴情地数着天上的星斗。梁简文帝《神山寺碑》:“澄明离日，照影春星。”</p>]]></content>
       
       
       
