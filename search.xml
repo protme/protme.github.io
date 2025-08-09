@@ -4,17 +4,17 @@
   
     
     <entry>
-      <title></title>
-      <link href="/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(2)/"/>
-      <url>/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(2)/</url>
+      <title>Hello World</title>
+      <link href="/2025/07/06/hello-world/"/>
+      <url>/2025/07/06/hello-world/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<img src="https://ii.hellus.dedyn.io/file/1751604607448_00121.jfif" alt="00121.jfif" width=60%><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><p><a href="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg">https://bu.dusays.com/2023/04/27/64496e511b09c.jpg</a></p><p><a href="https://bu.dusays.com/2023/05/08/645907596997d.gif">https://bu.dusays.com/2023/05/08/645907596997d.gif</a></p><p><a href="https://ii.hellus.dedyn.io/file/1752988030559_a006.jpg">https://ii.hellus.dedyn.io/file/1752988030559_a006.jpg</a></p><p><a href="https://ii.hellus.dedyn.io/file/1752988033866_aa01.jpg">https://ii.hellus.dedyn.io/file/1752988033866_aa01.jpg</a></p><p><a href="https://ii.hellus.dedyn.io/file/1752979633570_a003.jpg">https://ii.hellus.dedyn.io/file/1752979633570_a003.jpg</a></p><p><a href="https://ii.hellus.dedyn.io/file/1752979617352_a005.jpg">https://ii.hellus.dedyn.io/file/1752979617352_a005.jpg</a></p><p>&#x2F;&#x2F;本地预览</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl; hexo s</span><br></pre></td></tr></table></figure><p>&#x2F;&#x2F;推送更新上线</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl; hexo g; hexo d</span><br></pre></td></tr></table></figure>]]></content>
       
       
       
         <tags>
             
-            <tag> 诗词 </tag>
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -26,44 +26,6 @@
       <title></title>
       <link href="/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(4)/"/>
       <url>/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(4)/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 诗词 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(3)/"/>
-      <url>/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(3)/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 诗词 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(5)/"/>
-      <url>/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(5)/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -99,17 +61,74 @@
     
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2025/07/06/hello-world/"/>
-      <url>/2025/07/06/hello-world/</url>
+      <title>好事近·何路向家园</title>
+      <link href="/2025/07/06/%E5%A5%BD%E4%BA%8B%E8%BF%91%C2%B7%E4%BD%95%E8%B7%AF%E5%90%91%E5%AE%B6%E5%9B%AD/"/>
+      <url>/2025/07/06/%E5%A5%BD%E4%BA%8B%E8%BF%91%C2%B7%E4%BD%95%E8%B7%AF%E5%90%91%E5%AE%B6%E5%9B%AD/</url>
       
-        <content type="html"><![CDATA[<img src="https://ii.hellus.dedyn.io/file/1751604607448_00121.jfif" alt="00121.jfif" width=60%><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><p><a href="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg">https://bu.dusays.com/2023/04/27/64496e511b09c.jpg</a></p><p><a href="https://bu.dusays.com/2023/05/08/645907596997d.gif">https://bu.dusays.com/2023/05/08/645907596997d.gif</a></p><p><a href="https://ii.hellus.dedyn.io/file/1752988030559_a006.jpg">https://ii.hellus.dedyn.io/file/1752988030559_a006.jpg</a></p><p><a href="https://ii.hellus.dedyn.io/file/1752988033866_aa01.jpg">https://ii.hellus.dedyn.io/file/1752988033866_aa01.jpg</a></p><p><a href="https://ii.hellus.dedyn.io/file/1752979633570_a003.jpg">https://ii.hellus.dedyn.io/file/1752979633570_a003.jpg</a></p><p><a href="https://ii.hellus.dedyn.io/file/1752979617352_a005.jpg">https://ii.hellus.dedyn.io/file/1752979617352_a005.jpg</a></p><p>&#x2F;&#x2F;本地预览</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl; hexo s</span><br></pre></td></tr></table></figure><p>&#x2F;&#x2F;推送更新上线</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl; hexo g; hexo d</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h3 id="好事近·何路向家园"><a href="#好事近·何路向家园" class="headerlink" title="好事近·何路向家园"></a>好事近·何路向家园</h3><p>词牌名：好事近|朝代：清朝|作者：纳兰容若</p><p>何路向家园，历历残山剩水。都把一春冷淡，到麦秋天气。</p><p>料应重发隔年花，莫问花前事。纵使东风依旧，怕红颜不似。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①历历：零落貌。</p><p>②麦秋天气：谓农历四五月麦熟时节。</p><p>③隔年花：去年之花。</p>]]></content>
       
       
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(2)/"/>
+      <url>/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(2)/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如梦令·正是辘轳金井</title>
+      <link href="/2025/07/06/%E5%A6%82%E6%A2%A6%E4%BB%A4%C2%B7%E6%AD%A3%E6%98%AF%E8%BE%98%E8%BD%B3%E9%87%91%E4%BA%95/"/>
+      <url>/2025/07/06/%E5%A6%82%E6%A2%A6%E4%BB%A4%C2%B7%E6%AD%A3%E6%98%AF%E8%BE%98%E8%BD%B3%E9%87%91%E4%BA%95/</url>
+      
+        <content type="html"><![CDATA[<h3 id="如梦令·正是辘轳金井"><a href="#如梦令·正是辘轳金井" class="headerlink" title="如梦令·正是辘轳金井"></a>如梦令·正是辘轳金井</h3><p>词牌名：如梦令|朝代：清朝|作者：纳兰容若</p><p>正是辘轳金井，满砌落花红冷。</p><p>蓦地一相逢，心事眼波难定。</p><p>谁省，谁省。从此簟纹灯影。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>辘轳金井：谓装有辘轳的水井。辘轳，井上汲水的起重装置。金井，指施有金碧辉煌的雕栏之井。</p><p>簟纹灯影：意思是说，空房独处，寂寞无聊。簟(diàn)纹，指竹席之纹络，这里借指孤眠幽独的景况。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(3)/"/>
+      <url>/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(3)/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
             
         </tags>
       
@@ -137,11 +156,11 @@
     
     
     <entry>
-      <title>好事近·何路向家园</title>
-      <link href="/2025/07/06/%E5%A5%BD%E4%BA%8B%E8%BF%91%C2%B7%E4%BD%95%E8%B7%AF%E5%90%91%E5%AE%B6%E5%9B%AD/"/>
-      <url>/2025/07/06/%E5%A5%BD%E4%BA%8B%E8%BF%91%C2%B7%E4%BD%95%E8%B7%AF%E5%90%91%E5%AE%B6%E5%9B%AD/</url>
+      <title>忆秦娥·山重叠</title>
+      <link href="/2025/07/06/%E5%BF%86%E7%A7%A6%E5%A8%A5%C2%B7%E5%B1%B1%E9%87%8D%E5%8F%A0/"/>
+      <url>/2025/07/06/%E5%BF%86%E7%A7%A6%E5%A8%A5%C2%B7%E5%B1%B1%E9%87%8D%E5%8F%A0/</url>
       
-        <content type="html"><![CDATA[<h3 id="好事近·何路向家园"><a href="#好事近·何路向家园" class="headerlink" title="好事近·何路向家园"></a>好事近·何路向家园</h3><p>词牌名：好事近|朝代：清朝|作者：纳兰容若</p><p>何路向家园，历历残山剩水。都把一春冷淡，到麦秋天气。</p><p>料应重发隔年花，莫问花前事。纵使东风依旧，怕红颜不似。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①历历：零落貌。</p><p>②麦秋天气：谓农历四五月麦熟时节。</p><p>③隔年花：去年之花。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="忆秦娥·山重叠"><a href="#忆秦娥·山重叠" class="headerlink" title="忆秦娥·山重叠"></a>忆秦娥·山重叠</h3><p>词牌名：忆秦娥|朝代：清朝|作者：纳兰容若</p><p>山重叠。悬崖一线天疑裂。天疑裂。断碑题字，苔痕横啮。</p><p>风声雷动鸣金铁。阴森潭底蛟龙窟。蛟龙窟。兴亡满眼，旧时明月。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①龙潭口：龙潭山口，地在清代吉林府伊通州西南，即今吉林市东郊龙潭山。此处有“龙潭印月”之胜景。<br>康熙二十一年(1682)春，作者扈驾东巡过经此地。又，今山西省盂县北之盂山亦有“龙潭”，又称“黑龙池”。<br>作者曾几度赴山西五台山，本篇所指或为此地。　　</p><p>②悬崖句：谓群山环绕，举头望去，天空只露一线，仿佛是天幕裂开了。</p><p>③古苔横啮：意谓断碑上长满了苍苔，那苍苔好像是啃咬着碑文。</p><p>④风声句：谓龙潭口处如同风雷大作，发出了金征戈矛撞击般的巨大声响、　鸣金铁，<br>形容风雷声如同金征戈矛撞击之声。</p>]]></content>
       
       
       
@@ -264,25 +283,6 @@
     
     
     <entry>
-      <title>梦江南·昏鸦尽</title>
-      <link href="/2025/07/06/%E6%A2%A6%E6%B1%9F%E5%8D%97%C2%B7%E6%98%8F%E9%B8%A6%E5%B0%BD/"/>
-      <url>/2025/07/06/%E6%A2%A6%E6%B1%9F%E5%8D%97%C2%B7%E6%98%8F%E9%B8%A6%E5%B0%BD/</url>
-      
-        <content type="html"><![CDATA[<h3 id="梦江南·昏鸦尽"><a href="#梦江南·昏鸦尽" class="headerlink" title="梦江南·昏鸦尽"></a>梦江南·昏鸦尽</h3><p>词牌名：梦江南|朝代：清朝|作者：纳兰容若</p><p>昏鸦尽，小立恨因谁？</p><p>急雪乍翻香阁絮，轻风吹到胆瓶梅，心字已成灰。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《梦江南·昏鸦尽》这首小词营造了一个意境，由几个意象组成：黄昏、乌鸦、柳絮、春阁、瓶梅、心香。<br>把相思的凄苦与灰色的景物融合一起，既有实景的描画，又有心如死灰的暗喻。这是一个何等伤感的画面。<br>清代人把纳兰爱情词概括为“哀感顽艳”，这首就体现了这一特点。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>黄昏的鸦群飞远了，为什么还站在那里呆望？像急雪一样的柳絮飘落到香阁里，<br>晚风轻轻地吹拂着花瓶里的梅花，心字香已经烧成了灰烬。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>⑴昏鸦：黄昏时归巢的乌鸦。</p><p>⑵香阁：青年女子所居之内室。</p><p>⑶胆瓶：长颈大腹，形同悬胆之花瓶。</p><p>⑷心：即心字香。明朝杨慎的《词品·心字香》写到“范石湖《骖鸾录》云：‘番禺人作心字香，<br>用素馨茉莉半开者著净器中，以沉香薄劈层层相间，密封之，日一易，不待花蔫，花过香成。’<br>所谓心字香者，以香末索篆成心字也。”宋朝蒋捷的《一剪梅·舟过吴江》写到“何日归家洗客袍，<br>银字笙调，心字香烧。”</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 诗词 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>江城子·咏史</title>
       <link href="/2025/07/06/%E6%B1%9F%E5%9F%8E%E5%AD%90%C2%B7%E5%92%8F%E5%8F%B2/"/>
       <url>/2025/07/06/%E6%B1%9F%E5%9F%8E%E5%AD%90%C2%B7%E5%92%8F%E5%8F%B2/</url>
@@ -302,49 +302,11 @@
     
     
     <entry>
-      <title>忆王孙·西风一夜剪芭蕉</title>
-      <link href="/2025/07/06/%E5%BF%86%E7%8E%8B%E5%AD%99%C2%B7%E8%A5%BF%E9%A3%8E%E4%B8%80%E5%A4%9C%E5%89%AA%E8%8A%AD%E8%95%89/"/>
-      <url>/2025/07/06/%E5%BF%86%E7%8E%8B%E5%AD%99%C2%B7%E8%A5%BF%E9%A3%8E%E4%B8%80%E5%A4%9C%E5%89%AA%E8%8A%AD%E8%95%89/</url>
+      <title>梦江南·昏鸦尽</title>
+      <link href="/2025/07/06/%E6%A2%A6%E6%B1%9F%E5%8D%97%C2%B7%E6%98%8F%E9%B8%A6%E5%B0%BD/"/>
+      <url>/2025/07/06/%E6%A2%A6%E6%B1%9F%E5%8D%97%C2%B7%E6%98%8F%E9%B8%A6%E5%B0%BD/</url>
       
-        <content type="html"><![CDATA[<h3 id="忆王孙·西风一夜剪芭蕉"><a href="#忆王孙·西风一夜剪芭蕉" class="headerlink" title="忆王孙·西风一夜剪芭蕉"></a>忆王孙·西风一夜剪芭蕉</h3><p>词牌名：忆王孙|朝代：清朝|作者：纳兰容若</p><p>西风一夜剪芭蕉，倦眼经秋耐寂寥？　</p><p>强把心情付浊醪。读《离骚》。愁似湘江日夜潮。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 诗词 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>浣溪沙·凤髻抛残秋草生</title>
-      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E5%87%A4%E9%AB%BB%E6%8A%9B%E6%AE%8B%E7%A7%8B%E8%8D%89%E7%94%9F/"/>
-      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E5%87%A4%E9%AB%BB%E6%8A%9B%E6%AE%8B%E7%A7%8B%E8%8D%89%E7%94%9F/</url>
-      
-        <content type="html"><![CDATA[<h3 id="浣溪沙·凤髻抛残秋草生"><a href="#浣溪沙·凤髻抛残秋草生" class="headerlink" title="浣溪沙·凤髻抛残秋草生"></a>浣溪沙·凤髻抛残秋草生</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>凤髻抛残秋草生。高梧湿月冷无声。当时七夕记深盟。</p><p>信得羽衣传钿合，悔教罗袜葬倾城。人间空唱雨淋铃。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①凤髻抛残：谓凤髻散乱。比喻为爱妻逝去，掩埋了。凤髻，古代女子的一种发型。<br>唐宇文氏《妆台记》载：“周文王于髻上加珠翠翘花，傅之铅粉，其髻高名曰凤髻。”此处借指亡妻。</p><p>②湿月：湿润之月。形容月亮给人以湿润的感觉。</p><p>③信得二句：意谓原来相信仙人可以传递亡妻的信物，但后悔的是她的遗物都与她一同埋葬了。　<br>羽衣，原指鸟羽毛所织之衣，后代指道士或神仙所著之衣，此处借指神仙。钿合，镶有金、银、玉、贝等之首饰合。<br>古代常以之作为表示爱情的信物。白居易《长恨歌》：“唯将旧物表深情，钿合金钗寄将去。”罗袜，丝罗织成之袜。<br>此处代指亡妻的遗物。倾城，美女之代称，语出《汉书·外戚传上·李夫人》。这里代指亡妻。</p><p>④雨淋铃：即雨霖铃。唐教坊曲名。据唐郑处诲《唐明皇杂录补遗》云：“明皇既幸蜀，西南行初入斜谷，属霖雨涉旬，<br>于栈道雨中闻铃，音与山相应。上既悼念贵妃，采其声为《雨霖铃》曲，以寄恨焉。”这里是说亡妻已逝，如今唯有自己空自怅痛了。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 诗词 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>如梦令·正是辘轳金井</title>
-      <link href="/2025/07/06/%E5%A6%82%E6%A2%A6%E4%BB%A4%C2%B7%E6%AD%A3%E6%98%AF%E8%BE%98%E8%BD%B3%E9%87%91%E4%BA%95/"/>
-      <url>/2025/07/06/%E5%A6%82%E6%A2%A6%E4%BB%A4%C2%B7%E6%AD%A3%E6%98%AF%E8%BE%98%E8%BD%B3%E9%87%91%E4%BA%95/</url>
-      
-        <content type="html"><![CDATA[<h3 id="如梦令·正是辘轳金井"><a href="#如梦令·正是辘轳金井" class="headerlink" title="如梦令·正是辘轳金井"></a>如梦令·正是辘轳金井</h3><p>词牌名：如梦令|朝代：清朝|作者：纳兰容若</p><p>正是辘轳金井，满砌落花红冷。</p><p>蓦地一相逢，心事眼波难定。</p><p>谁省，谁省。从此簟纹灯影。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>辘轳金井：谓装有辘轳的水井。辘轳，井上汲水的起重装置。金井，指施有金碧辉煌的雕栏之井。</p><p>簟纹灯影：意思是说，空房独处，寂寞无聊。簟(diàn)纹，指竹席之纹络，这里借指孤眠幽独的景况。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="梦江南·昏鸦尽"><a href="#梦江南·昏鸦尽" class="headerlink" title="梦江南·昏鸦尽"></a>梦江南·昏鸦尽</h3><p>词牌名：梦江南|朝代：清朝|作者：纳兰容若</p><p>昏鸦尽，小立恨因谁？</p><p>急雪乍翻香阁絮，轻风吹到胆瓶梅，心字已成灰。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《梦江南·昏鸦尽》这首小词营造了一个意境，由几个意象组成：黄昏、乌鸦、柳絮、春阁、瓶梅、心香。<br>把相思的凄苦与灰色的景物融合一起，既有实景的描画，又有心如死灰的暗喻。这是一个何等伤感的画面。<br>清代人把纳兰爱情词概括为“哀感顽艳”，这首就体现了这一特点。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>黄昏的鸦群飞远了，为什么还站在那里呆望？像急雪一样的柳絮飘落到香阁里，<br>晚风轻轻地吹拂着花瓶里的梅花，心字香已经烧成了灰烬。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>⑴昏鸦：黄昏时归巢的乌鸦。</p><p>⑵香阁：青年女子所居之内室。</p><p>⑶胆瓶：长颈大腹，形同悬胆之花瓶。</p><p>⑷心：即心字香。明朝杨慎的《词品·心字香》写到“范石湖《骖鸾录》云：‘番禺人作心字香，<br>用素馨茉莉半开者著净器中，以沉香薄劈层层相间，密封之，日一易，不待花蔫，花过香成。’<br>所谓心字香者，以香末索篆成心字也。”宋朝蒋捷的《一剪梅·舟过吴江》写到“何日归家洗客袍，<br>银字笙调，心字香烧。”</p>]]></content>
       
       
       
@@ -364,6 +326,25 @@
       <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E4%B8%80%E5%8D%8A%E6%AE%8B%E9%98%B3%E4%B8%8B%E5%B0%8F%E6%A5%BC/</url>
       
         <content type="html"><![CDATA[<h3 id="浣溪沙·一半残阳下小楼"><a href="#浣溪沙·一半残阳下小楼" class="headerlink" title="浣溪沙·一半残阳下小楼"></a>浣溪沙·一半残阳下小楼</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>一半残阳下小楼，朱帘斜控软金钩。倚阑无绪不能愁。</p><p>有个盈盈骑马过，薄妆浅黛亦风流。见人羞涩却回头。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①斜控：斜斜地垂挂。控，下垂、弯曲貌。</p><p>②倚阑句：意谓倚靠着阑杆，心绪无聊，，又不能控制心中的忧愁。</p><p>③盈盈：谓仪态美好。此处代指仪态美好之人。盈，与“赢”同，容貌之意。<br>《玉台新咏·日出东南隅行》：“盈盈公府步，冉冉府中趋。”</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>浣溪沙·凤髻抛残秋草生</title>
+      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E5%87%A4%E9%AB%BB%E6%8A%9B%E6%AE%8B%E7%A7%8B%E8%8D%89%E7%94%9F/"/>
+      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E5%87%A4%E9%AB%BB%E6%8A%9B%E6%AE%8B%E7%A7%8B%E8%8D%89%E7%94%9F/</url>
+      
+        <content type="html"><![CDATA[<h3 id="浣溪沙·凤髻抛残秋草生"><a href="#浣溪沙·凤髻抛残秋草生" class="headerlink" title="浣溪沙·凤髻抛残秋草生"></a>浣溪沙·凤髻抛残秋草生</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>凤髻抛残秋草生。高梧湿月冷无声。当时七夕记深盟。</p><p>信得羽衣传钿合，悔教罗袜葬倾城。人间空唱雨淋铃。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①凤髻抛残：谓凤髻散乱。比喻为爱妻逝去，掩埋了。凤髻，古代女子的一种发型。<br>唐宇文氏《妆台记》载：“周文王于髻上加珠翠翘花，傅之铅粉，其髻高名曰凤髻。”此处借指亡妻。</p><p>②湿月：湿润之月。形容月亮给人以湿润的感觉。</p><p>③信得二句：意谓原来相信仙人可以传递亡妻的信物，但后悔的是她的遗物都与她一同埋葬了。　<br>羽衣，原指鸟羽毛所织之衣，后代指道士或神仙所著之衣，此处借指神仙。钿合，镶有金、银、玉、贝等之首饰合。<br>古代常以之作为表示爱情的信物。白居易《长恨歌》：“唯将旧物表深情，钿合金钗寄将去。”罗袜，丝罗织成之袜。<br>此处代指亡妻的遗物。倾城，美女之代称，语出《汉书·外戚传上·李夫人》。这里代指亡妻。</p><p>④雨淋铃：即雨霖铃。唐教坊曲名。据唐郑处诲《唐明皇杂录补遗》云：“明皇既幸蜀，西南行初入斜谷，属霖雨涉旬，<br>于栈道雨中闻铃，音与山相应。上既悼念贵妃，采其声为《雨霖铃》曲，以寄恨焉。”这里是说亡妻已逝，如今唯有自己空自怅痛了。</p>]]></content>
       
       
       
@@ -416,6 +397,25 @@
     
     
     <entry>
+      <title>忆王孙·西风一夜剪芭蕉</title>
+      <link href="/2025/07/06/%E5%BF%86%E7%8E%8B%E5%AD%99%C2%B7%E8%A5%BF%E9%A3%8E%E4%B8%80%E5%A4%9C%E5%89%AA%E8%8A%AD%E8%95%89/"/>
+      <url>/2025/07/06/%E5%BF%86%E7%8E%8B%E5%AD%99%C2%B7%E8%A5%BF%E9%A3%8E%E4%B8%80%E5%A4%9C%E5%89%AA%E8%8A%AD%E8%95%89/</url>
+      
+        <content type="html"><![CDATA[<h3 id="忆王孙·西风一夜剪芭蕉"><a href="#忆王孙·西风一夜剪芭蕉" class="headerlink" title="忆王孙·西风一夜剪芭蕉"></a>忆王孙·西风一夜剪芭蕉</h3><p>词牌名：忆王孙|朝代：清朝|作者：纳兰容若</p><p>西风一夜剪芭蕉，倦眼经秋耐寂寥？　</p><p>强把心情付浊醪。读《离骚》。愁似湘江日夜潮。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>浣溪沙·脂粉塘空遍绿苔</title>
       <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E8%84%82%E7%B2%89%E5%A1%98%E7%A9%BA%E9%81%8D%E7%BB%BF%E8%8B%94/"/>
       <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E8%84%82%E7%B2%89%E5%A1%98%E7%A9%BA%E9%81%8D%E7%BB%BF%E8%8B%94/</url>
@@ -435,11 +435,11 @@
     
     
     <entry>
-      <title>浣溪沙·残雪凝辉冷画屏</title>
-      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E6%AE%8B%E9%9B%AA%E5%87%9D%E8%BE%89%E5%86%B7%E7%94%BB%E5%B1%8F/"/>
-      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E6%AE%8B%E9%9B%AA%E5%87%9D%E8%BE%89%E5%86%B7%E7%94%BB%E5%B1%8F/</url>
+      <title>浣溪沙·郊游联句</title>
+      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E9%83%8A%E6%B8%B8%E8%81%94%E5%8F%A5/"/>
+      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E9%83%8A%E6%B8%B8%E8%81%94%E5%8F%A5/</url>
       
-        <content type="html"><![CDATA[<h3 id="浣溪沙·残雪凝辉冷画屏"><a href="#浣溪沙·残雪凝辉冷画屏" class="headerlink" title="浣溪沙·残雪凝辉冷画屏"></a>浣溪沙·残雪凝辉冷画屏</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>残雪凝辉冷画屏，落梅横笛已三更，更无人处月胧明。</p><p>我是人间惆怅客，知君何事泪纵横，断肠声里忆平生。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《浣溪沙·残雪凝辉冷画屏》这首词运用了老套的上阕写景，下阕抒情的手法，但景清情切，颇令人动容。<br>就如同面对同样的材料，高明的厨师和平庸的厨师却能做出天壤之别的两种味道来。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>残雪凝辉让温暖的画屏变得冰冷。梅花随凉风飘落，忧伤的笛声传来，已是寂寞黄昏。深夜想起了往事，<br>月色于无人处也好象朦胧起来。（世人皆醉我独醒）\我，世间哀愁的过客，身世凄凉。为何我在知道你的故事后泪流满面？<br>（你此指容若本人，自言自语）痛彻心扉地哭泣，在断肠声里，回忆自己凄凉的一生。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>画屏：绘有彩画的屏风。</p><p>落梅：古代羌族乐曲名，又名《梅花落》，以横笛吹奏。</p><p>月胧明：指月色朦胧，不甚分明。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="浣溪沙·郊游联句"><a href="#浣溪沙·郊游联句" class="headerlink" title="浣溪沙·郊游联句"></a>浣溪沙·郊游联句</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>出郭寻春春已阑(陈维崧)，东风吹面不成寒(秦松龄)，青村几曲到西山(严绳孙)。　</p><p>并马未须愁路远(姜宸英)，看花且莫放杯闲(朱彝尊)，人生别易会常难(纳兰性德)。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>此篇是纳兰与友人合作的一首词。见冯统《天风阁丛书·饮水词》补遗。此次“郊游”是在何年何地，未详。<br>从词意看，大约是在北京西郊的一次春游。词共六句，陈、秦、严、姜、朱、纳兰各成一句。<br>这一首联句之作既可以看出诗人之间亲密的友清，亦可看到纳兰在其中所表现出的伤感意绪。</p>]]></content>
       
       
       
@@ -459,44 +459,6 @@
       <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E8%B0%81%E5%BF%B5%E8%A5%BF%E9%A3%8E%E7%8B%AC%E8%87%AA%E5%87%89/</url>
       
         <content type="html"><![CDATA[<h3 id="浣溪沙·谁念西风独自凉"><a href="#浣溪沙·谁念西风独自凉" class="headerlink" title="浣溪沙·谁念西风独自凉"></a>浣溪沙·谁念西风独自凉</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳。</p><p>被酒莫惊春睡重，赌书消得泼茶香，当时只道是寻常。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《浣溪沙·谁念西风独自凉》是纳兰性德悼念亡妻的作品。词中感怀前尘往事。上片写一个孤独的人在秋风中夕阳下沉思往昔。“西风”、“凉”、“黄叶”、“残阳”等词渲染了一幅凄凉的氛围。下片追忆当年醉酒、赌书的情形，这些在过去看来很平淡的旧事今天却无法重温了。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>秋风吹冷，孤独的情怀有谁惦念？看片片黄叶飞舞遮掩了疏窗，伫立夕阳下，往事追忆茫茫。酒后小睡，春日好景正长，闺中赌赛，衣襟满带茶香，昔日平常往事，已不能如愿以偿。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①谁：此处指亡妻。</p><p>②萧萧：风吹叶落发出的声音。</p><p>③疏窗：刻有花纹的窗户。</p><p>④被酒：中酒、酒醉。</p><p>⑤春睡：醉困沉睡，脸上如春色。</p><p>⑥赌书：此处为李清照和赵明诚的典故。李清照《金石录后序》云：“余性偶强记，每饭罢，坐归来堂，烹茶，指堆积书史，言某事在某书某卷第几页第几行，以中否角胜负，为饮茶先后。中即举杯大笑，至茶倾覆怀中，反不得饮而起，甘心老是乡矣！故虽处优患困穷而志不屈。”此句以此典为喻说明往日与亡妻有着像李清照一样的美满的夫妻生活。</p><p>⑦消得：消受，享受。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 诗词 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>浣溪沙·睡起惺忪强自支</title>
-      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E7%9D%A1%E8%B5%B7%E6%83%BA%E5%BF%AA%E5%BC%BA%E8%87%AA%E6%94%AF/"/>
-      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E7%9D%A1%E8%B5%B7%E6%83%BA%E5%BF%AA%E5%BC%BA%E8%87%AA%E6%94%AF/</url>
-      
-        <content type="html"><![CDATA[<h3 id="浣溪沙·睡起惺忪强自支"><a href="#浣溪沙·睡起惺忪强自支" class="headerlink" title="浣溪沙·睡起惺忪强自支"></a>浣溪沙·睡起惺忪强自支</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>睡起惺忪强自支。绿倾蝉鬓下帘时。夜来愁损小腰肢。</p><p>远信不归空伫望，幽期细数却参差。更兼何事耐寻思。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①惺松：清醒之意。</p><p>②绿倾蝉鬓：谓乌黑发亮的秀发覆盖下来。</p><p>③愁损：犹愁杀，过度之愁而令身体受损。</p><p>④幽期句：幽期，指男女间之幽会。参差，依约、仿佛，意谓不甚分明。<br>此句是说由于思念而暗自数着相会的时日，但心思太乱，故而数了又数，还是数不清。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 诗词 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>浣溪沙·郊游联句</title>
-      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E9%83%8A%E6%B8%B8%E8%81%94%E5%8F%A5/"/>
-      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E9%83%8A%E6%B8%B8%E8%81%94%E5%8F%A5/</url>
-      
-        <content type="html"><![CDATA[<h3 id="浣溪沙·郊游联句"><a href="#浣溪沙·郊游联句" class="headerlink" title="浣溪沙·郊游联句"></a>浣溪沙·郊游联句</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>出郭寻春春已阑(陈维崧)，东风吹面不成寒(秦松龄)，青村几曲到西山(严绳孙)。　</p><p>并马未须愁路远(姜宸英)，看花且莫放杯闲(朱彝尊)，人生别易会常难(纳兰性德)。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>此篇是纳兰与友人合作的一首词。见冯统《天风阁丛书·饮水词》补遗。此次“郊游”是在何年何地，未详。<br>从词意看，大约是在北京西郊的一次春游。词共六句，陈、秦、严、姜、朱、纳兰各成一句。<br>这一首联句之作既可以看出诗人之间亲密的友清，亦可看到纳兰在其中所表现出的伤感意绪。</p>]]></content>
       
       
       
@@ -549,6 +511,25 @@
     
     
     <entry>
+      <title>浣溪沙·残雪凝辉冷画屏</title>
+      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E6%AE%8B%E9%9B%AA%E5%87%9D%E8%BE%89%E5%86%B7%E7%94%BB%E5%B1%8F/"/>
+      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E6%AE%8B%E9%9B%AA%E5%87%9D%E8%BE%89%E5%86%B7%E7%94%BB%E5%B1%8F/</url>
+      
+        <content type="html"><![CDATA[<h3 id="浣溪沙·残雪凝辉冷画屏"><a href="#浣溪沙·残雪凝辉冷画屏" class="headerlink" title="浣溪沙·残雪凝辉冷画屏"></a>浣溪沙·残雪凝辉冷画屏</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>残雪凝辉冷画屏，落梅横笛已三更，更无人处月胧明。</p><p>我是人间惆怅客，知君何事泪纵横，断肠声里忆平生。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《浣溪沙·残雪凝辉冷画屏》这首词运用了老套的上阕写景，下阕抒情的手法，但景清情切，颇令人动容。<br>就如同面对同样的材料，高明的厨师和平庸的厨师却能做出天壤之别的两种味道来。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>残雪凝辉让温暖的画屏变得冰冷。梅花随凉风飘落，忧伤的笛声传来，已是寂寞黄昏。深夜想起了往事，<br>月色于无人处也好象朦胧起来。（世人皆醉我独醒）\我，世间哀愁的过客，身世凄凉。为何我在知道你的故事后泪流满面？<br>（你此指容若本人，自言自语）痛彻心扉地哭泣，在断肠声里，回忆自己凄凉的一生。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>画屏：绘有彩画的屏风。</p><p>落梅：古代羌族乐曲名，又名《梅花落》，以横笛吹奏。</p><p>月胧明：指月色朦胧，不甚分明。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>点绛唇·五夜光寒</title>
       <link href="/2025/07/06/%E7%82%B9%E7%BB%9B%E5%94%87%C2%B7%E4%BA%94%E5%A4%9C%E5%85%89%E5%AF%92/"/>
       <url>/2025/07/06/%E7%82%B9%E7%BB%9B%E5%94%87%C2%B7%E4%BA%94%E5%A4%9C%E5%85%89%E5%AF%92/</url>
@@ -587,25 +568,6 @@
     
     
     <entry>
-      <title>生查子·东风不解愁</title>
-      <link href="/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E4%B8%9C%E9%A3%8E%E4%B8%8D%E8%A7%A3%E6%84%81/"/>
-      <url>/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E4%B8%9C%E9%A3%8E%E4%B8%8D%E8%A7%A3%E6%84%81/</url>
-      
-        <content type="html"><![CDATA[<h3 id="生查子·东风不解愁"><a href="#生查子·东风不解愁" class="headerlink" title="生查子·东风不解愁"></a>生查子·东风不解愁</h3><p>词牌名：生查子|朝代：清朝|作者：纳兰容若</p><p>东风不解愁，偷展湘裙衩。</p><p>独夜背纱笼，影著纤腰画。</p><p>爇尽水沉烟，露滴鸳鸯瓦。</p><p>花骨冷宜香，小立樱桃下。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>是谁，把心事的倒影，描摹成哀愁的形状？</p><p>是谁，在春风中借着朦胧的星光，含蓄地编织着，穿越烟雨的忧伤？</p><p>有人说，最凄凉最弄人的不是你知道，失去所爱的那一刻，而是你还在徘徊，犹未知道已经失去。</p><p>所以从此，只有相思无尽处。</p><p>只有，此恨绵绵无绝期。</p><p>而那最后深情的一吻，便是：</p><p>为伊消得人憔悴。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①湘裙视：指用湘地丝绸制做的裙衩。</p><p>②纱笼：灯笼。</p><p>③”爇（ruò）尽”句：谓沉香已经燃尽。爇，燃烧。水沉，即水沉香、沉香。</p><p>④花骨句：意谓夜来天寒露冷，而花蕾却发出宜人的香气。花骨，花骨朵，即花蕾。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 诗词 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>生查子·惆怅彩云飞</title>
       <link href="/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E6%83%86%E6%80%85%E5%BD%A9%E4%BA%91%E9%A3%9E/"/>
       <url>/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E6%83%86%E6%80%85%E5%BD%A9%E4%BA%91%E9%A3%9E/</url>
@@ -625,11 +587,11 @@
     
     
     <entry>
-      <title>生查子·短焰剔残花</title>
-      <link href="/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E7%9F%AD%E7%84%B0%E5%89%94%E6%AE%8B%E8%8A%B1/"/>
-      <url>/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E7%9F%AD%E7%84%B0%E5%89%94%E6%AE%8B%E8%8A%B1/</url>
+      <title>生查子·东风不解愁</title>
+      <link href="/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E4%B8%9C%E9%A3%8E%E4%B8%8D%E8%A7%A3%E6%84%81/"/>
+      <url>/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E4%B8%9C%E9%A3%8E%E4%B8%8D%E8%A7%A3%E6%84%81/</url>
       
-        <content type="html"><![CDATA[<h3 id="生查子·短焰剔残花"><a href="#生查子·短焰剔残花" class="headerlink" title="生查子·短焰剔残花"></a>生查子·短焰剔残花</h3><p>词牌名：生查子|朝代：清朝|作者：纳兰容若</p><p>短焰剔残花，夜久边声寂。</p><p>倦舞却闻鸡，暗觉青绫湿。</p><p>天水接冥蒙，一角西南白。</p><p>欲渡浣花溪，远梦轻无力。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①边声：参见《满江红》(代北燕南)注①。　②倦舞句：《晋书·祖逖传》：“(祖逖)与司空刘琨俱为司州主簿，情好绸缪，共被同寝。中夜闻荒鸡鸣，蹴琨觉曰：‘此恶声也。’因起舞。”后以此作为壮士奋发之典。这里则谓倦于“起舞”却偏偏“闻鸡”的矛盾心情。</p><p>③青绫：青色的有花纹的丝织物。古代贵族常以之制作被服帷帐等。</p><p>④冥蒙：幽暗不明。江淹《杂体诗·效颜延之侍宴》：“青林结冥蒙，丹嵘被葱蒨。”</p><h4 id="赏析-鉴赏"><a href="#赏析-鉴赏" class="headerlink" title="赏析&#x2F;鉴赏"></a>赏析&#x2F;鉴赏</h4><p>诗人身在边地，入夜起徘徊，离忧难禁，惆怅难眠。上片“倦舞”句用典出新出奇，深藏了诗人的隐怨。下片以浪漫之笔法出之，写梦里情景，于迷离倘恍中表达了怨情与离忧交织的款曲。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="生查子·东风不解愁"><a href="#生查子·东风不解愁" class="headerlink" title="生查子·东风不解愁"></a>生查子·东风不解愁</h3><p>词牌名：生查子|朝代：清朝|作者：纳兰容若</p><p>东风不解愁，偷展湘裙衩。</p><p>独夜背纱笼，影著纤腰画。</p><p>爇尽水沉烟，露滴鸳鸯瓦。</p><p>花骨冷宜香，小立樱桃下。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>是谁，把心事的倒影，描摹成哀愁的形状？</p><p>是谁，在春风中借着朦胧的星光，含蓄地编织着，穿越烟雨的忧伤？</p><p>有人说，最凄凉最弄人的不是你知道，失去所爱的那一刻，而是你还在徘徊，犹未知道已经失去。</p><p>所以从此，只有相思无尽处。</p><p>只有，此恨绵绵无绝期。</p><p>而那最后深情的一吻，便是：</p><p>为伊消得人憔悴。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①湘裙视：指用湘地丝绸制做的裙衩。</p><p>②纱笼：灯笼。</p><p>③”爇（ruò）尽”句：谓沉香已经燃尽。爇，燃烧。水沉，即水沉香、沉香。</p><p>④花骨句：意谓夜来天寒露冷，而花蕾却发出宜人的香气。花骨，花骨朵，即花蕾。</p>]]></content>
       
       
       
@@ -644,11 +606,11 @@
     
     
     <entry>
-      <title>画堂春·一生一代一双人</title>
-      <link href="/2025/07/06/%E7%94%BB%E5%A0%82%E6%98%A5%C2%B7%E4%B8%80%E7%94%9F%E4%B8%80%E4%BB%A3%E4%B8%80%E5%8F%8C%E4%BA%BA/"/>
-      <url>/2025/07/06/%E7%94%BB%E5%A0%82%E6%98%A5%C2%B7%E4%B8%80%E7%94%9F%E4%B8%80%E4%BB%A3%E4%B8%80%E5%8F%8C%E4%BA%BA/</url>
+      <title>浣溪沙·睡起惺忪强自支</title>
+      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E7%9D%A1%E8%B5%B7%E6%83%BA%E5%BF%AA%E5%BC%BA%E8%87%AA%E6%94%AF/"/>
+      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E7%9D%A1%E8%B5%B7%E6%83%BA%E5%BF%AA%E5%BC%BA%E8%87%AA%E6%94%AF/</url>
       
-        <content type="html"><![CDATA[<h4 id="画堂春·一生一代一双人"><a href="#画堂春·一生一代一双人" class="headerlink" title="画堂春·一生一代一双人"></a>画堂春·一生一代一双人</h4><p>词牌名：画堂春|朝代：清朝|作者：纳兰容若</p><p>一生一代一双人，争教两处销魂。<br>相思相望不相亲，天为谁春。</p><p>浆向蓝桥易乞，药成碧海难奔。<br>若容相访饮牛津，相对忘贫。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>纳兰性德曾多次表达过他愿意追随卢氏而去的心情，如这首《画堂春》。他和卢氏虽不能同生，但却能同死。他死的那天正好也是5月30日，卢氏的忌日。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①一生二句：唐骆宾王《代女道士王灵妃赠道士李荣》：“相怜相念倍相亲，一生一代一双人。”　争教，怎教。</p><p>②蓝桥：地名。在陕西蓝田县东南蓝溪上，传说此处有仙窟，为裴航遇仙女云英处。《太平广记》卷十五引裴硎《传奇·裴航》云：裴航从鄂渚回京途中，与樊夫人同舟，裴航赠诗致情意，后樊夫人答诗云：“一饮琼浆百感生，玄霜捣尽见云英。蓝桥便是神仙窟，何必崎岖上玉清。”后于蓝桥驿因求水喝，得遇云英，裴航向其母求婚，其母曰:“君约取此女者，得玉杆臼，吾当与之也。”后裴航终于寻得玉柞日，遂成婚，双双仙去。此处用这一典故是表明自己的“蓝桥之遇”曾经有过，且不为难得。</p><p>③药成句：《淮南子·览冥训》：“羿请不死之药于西王母，姮娥窃之，奔月宫。”高诱注：“姮娥，羿妻，羿请不死之药于西王母，未及服之。姮娥盗食之，得仙。奔入月宫，为月精。”李商隐《嫦娥》：“嫦娥应悔偷灵药，碧海青天夜夜心。”这里借用此典说，纵有不死之灵药，但却难像嫦娥那样飞入月宫去。意思是纵有深情却难以相见。</p><p>④饮牛津：晋张华《博物志》：“旧说云：天河与海通，近世有人居海诸者，年年八月，有浮搓来去，不失期。人有奇志，立飞阁于搓上，多资粮，乘搓而去。至一处，有城郭状，屋舍甚严，遥望宫中多织妇，见一丈夫牵牛诸次饮之，此人问此何处，答曰：‘君还至蜀郡问严君平则知之。”，故饮牛津系指传说中的天河边。这里是借指与恋人相会的地方。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="浣溪沙·睡起惺忪强自支"><a href="#浣溪沙·睡起惺忪强自支" class="headerlink" title="浣溪沙·睡起惺忪强自支"></a>浣溪沙·睡起惺忪强自支</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>睡起惺忪强自支。绿倾蝉鬓下帘时。夜来愁损小腰肢。</p><p>远信不归空伫望，幽期细数却参差。更兼何事耐寻思。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①惺松：清醒之意。</p><p>②绿倾蝉鬓：谓乌黑发亮的秀发覆盖下来。</p><p>③愁损：犹愁杀，过度之愁而令身体受损。</p><p>④幽期句：幽期，指男女间之幽会。参差，依约、仿佛，意谓不甚分明。<br>此句是说由于思念而暗自数着相会的时日，但心思太乱，故而数了又数，还是数不清。</p>]]></content>
       
       
       
@@ -668,6 +630,25 @@
       <url>/2025/07/06/%E7%9C%BC%E5%84%BF%E5%AA%9A%C2%B7%E7%8B%AC%E5%80%9A%E6%98%A5%E5%AF%92%E6%8E%A9%E5%A4%95%E6%89%89/</url>
       
         <content type="html"><![CDATA[<h3 id="眼儿媚·独倚春寒掩夕扉"><a href="#眼儿媚·独倚春寒掩夕扉" class="headerlink" title="眼儿媚·独倚春寒掩夕扉"></a>眼儿媚·独倚春寒掩夕扉</h3><p>词牌名：眼儿媚|朝代：清朝|作者：纳兰容若</p><p>独倚春寒掩夕扉，清露泣铢衣。玉萧吹梦，金钗划影，悔不同携。</p><p>刻残红烛曾相待，旧事总依稀。料应遗恨，月中教去，花底催归。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①铢衣：传说仙人所穿的衣裳，仅数铢重，故借指极薄极轻的衣衫。</p><p>②玉箫三句：意谓曾经有过幸福美好、相携相恋的时机，却偏偏失掉了。　<br>玉箫，见《采桑子》(土花曾染湘娥黛)注④。此处与“金钗”同借指所恋之人。　划影，指不真切之画像或美景。</p><p>③刻残红烛：古人在蜡烛上刻度，烧以计时。此谓在红蜡烛上的刻度.已经烧残，即夜已深沉。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>生查子·短焰剔残花</title>
+      <link href="/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E7%9F%AD%E7%84%B0%E5%89%94%E6%AE%8B%E8%8A%B1/"/>
+      <url>/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E7%9F%AD%E7%84%B0%E5%89%94%E6%AE%8B%E8%8A%B1/</url>
+      
+        <content type="html"><![CDATA[<h3 id="生查子·短焰剔残花"><a href="#生查子·短焰剔残花" class="headerlink" title="生查子·短焰剔残花"></a>生查子·短焰剔残花</h3><p>词牌名：生查子|朝代：清朝|作者：纳兰容若</p><p>短焰剔残花，夜久边声寂。</p><p>倦舞却闻鸡，暗觉青绫湿。</p><p>天水接冥蒙，一角西南白。</p><p>欲渡浣花溪，远梦轻无力。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①边声：参见《满江红》(代北燕南)注①。　②倦舞句：《晋书·祖逖传》：“(祖逖)与司空刘琨俱为司州主簿，情好绸缪，共被同寝。中夜闻荒鸡鸣，蹴琨觉曰：‘此恶声也。’因起舞。”后以此作为壮士奋发之典。这里则谓倦于“起舞”却偏偏“闻鸡”的矛盾心情。</p><p>③青绫：青色的有花纹的丝织物。古代贵族常以之制作被服帷帐等。</p><p>④冥蒙：幽暗不明。江淹《杂体诗·效颜延之侍宴》：“青林结冥蒙，丹嵘被葱蒨。”</p><h4 id="赏析-鉴赏"><a href="#赏析-鉴赏" class="headerlink" title="赏析&#x2F;鉴赏"></a>赏析&#x2F;鉴赏</h4><p>诗人身在边地，入夜起徘徊，离忧难禁，惆怅难眠。上片“倦舞”句用典出新出奇，深藏了诗人的隐怨。下片以浪漫之笔法出之，写梦里情景，于迷离倘恍中表达了怨情与离忧交织的款曲。</p>]]></content>
       
       
       
@@ -758,11 +739,11 @@
     
     
     <entry>
-      <title>生查子·散帙坐凝尘</title>
-      <link href="/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E6%95%A3%E5%B8%99%E5%9D%90%E5%87%9D%E5%B0%98/"/>
-      <url>/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E6%95%A3%E5%B8%99%E5%9D%90%E5%87%9D%E5%B0%98/</url>
+      <title>赤枣子·惊晓漏</title>
+      <link href="/2025/07/06/%E8%B5%A4%E6%9E%A3%E5%AD%90%C2%B7%E6%83%8A%E6%99%93%E6%BC%8F/"/>
+      <url>/2025/07/06/%E8%B5%A4%E6%9E%A3%E5%AD%90%C2%B7%E6%83%8A%E6%99%93%E6%BC%8F/</url>
       
-        <content type="html"><![CDATA[<h3 id="生查子·散帙坐凝尘"><a href="#生查子·散帙坐凝尘" class="headerlink" title="生查子·散帙坐凝尘"></a>生查子·散帙坐凝尘</h3><p>词牌名：生查子|朝代：清朝|作者：纳兰容若</p><p>散帙坐凝尘，吹气幽兰并。</p><p>茶名龙凤团，香字鸳鸯饼。</p><p>玉局类弹棋，颠倒双栖影。</p><p>花月不曾闲，莫放相思醒。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《生查子·散帙坐凝尘》是清代著名诗人纳兰性德的作品之一，词中生动地描绘了贵族之家绮艳优裕的生活。<br>这种内容的描写，在纳兰的词中是不多见的，应是纳兰性德的早期之作。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①生查子，唐教坊曲名，后用为词牌，《熟煌曲子词》中有此调，唐韩偓所作为最早。因朱希真词有“遥望楚云深”句，<br>故又名《楚云深》。生查子，生楂子，多少青涩，几多皱眉，历来，多抒写怨抑感伤之情。</p><p>②散帙二句：散帙，本指打开的书帙，此处借指读书。凝尘，尘土聚积。此处有不过分讲究居处之意。<br>《晋书·简文帝纪》：“帝少有风仪，善容止，留心典籍，不以居处为意，凝尘满席，湛如也。”　<br>吹气幽兰，谓美女气息之香胜于兰花。这二句意谓读书之时，身边有爱妻(或指美人)伴坐。</p><p>③茶名二句：谓品味着龙凤团名茶，燃着鸳鸯饼的香料。龙凤团，茶名，即龙团凤饼，为宋代著名的贡茶，<br>饼状，上有龙纹，故名。鸳鸯饼，形似鸳鸯的焚香饼。一饼之火，可熏燃一日。</p><p>④玉局二句：玉局，棋盘之美称。弹棋，古代一种博戏。据云始于汉代，李贤注《后汉书·梁冀传》引《艺经》<br>曰：“弹棋，两人对局，白黑棋各六枚，先列棋相当，更先弹之。其局以石为之。”<br>后至魏改为十六棋，唐为二十四棋。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="赤枣子·惊晓漏"><a href="#赤枣子·惊晓漏" class="headerlink" title="赤枣子·惊晓漏"></a>赤枣子·惊晓漏</h3><p>词牌名：赤枣子|朝代：清朝|作者：纳兰容若</p><p>惊晓漏，护春眠。格外娇慵只自怜。</p><p>寄语酿花风日好，绿窗来与上琴弦。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《赤枣子·惊晓漏》是清代词人纳兰性德的词作。此词以少女的形象、口吻写春愁春感，<br>写其春晓护眠，娇慵倦怠，又暗生自怜的情态与心理。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>清晨，滴漏声将春睡的佳人惊醒，但佳人却依然贪睡。娇慵倦怠又暗生自怜。<br>寄语给那催促鲜花盛开的和风丽日，到我的绿窗边上来与我一起拨弄琴弦。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①“惊晓漏”二句：意谓清晓，漏声将人惊醒，但却依然贪睡。</p><p>②酿花：催花开放。</p>]]></content>
       
       
       
@@ -777,11 +758,30 @@
     
     
     <entry>
-      <title>赤枣子·惊晓漏</title>
-      <link href="/2025/07/06/%E8%B5%A4%E6%9E%A3%E5%AD%90%C2%B7%E6%83%8A%E6%99%93%E6%BC%8F/"/>
-      <url>/2025/07/06/%E8%B5%A4%E6%9E%A3%E5%AD%90%C2%B7%E6%83%8A%E6%99%93%E6%BC%8F/</url>
+      <title>酒泉子·谢却荼蘼</title>
+      <link href="/2025/07/06/%E9%85%92%E6%B3%89%E5%AD%90%C2%B7%E8%B0%A2%E5%8D%B4%E8%8D%BC%E8%98%BC/"/>
+      <url>/2025/07/06/%E9%85%92%E6%B3%89%E5%AD%90%C2%B7%E8%B0%A2%E5%8D%B4%E8%8D%BC%E8%98%BC/</url>
       
-        <content type="html"><![CDATA[<h3 id="赤枣子·惊晓漏"><a href="#赤枣子·惊晓漏" class="headerlink" title="赤枣子·惊晓漏"></a>赤枣子·惊晓漏</h3><p>词牌名：赤枣子|朝代：清朝|作者：纳兰容若</p><p>惊晓漏，护春眠。格外娇慵只自怜。</p><p>寄语酿花风日好，绿窗来与上琴弦。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《赤枣子·惊晓漏》是清代词人纳兰性德的词作。此词以少女的形象、口吻写春愁春感，<br>写其春晓护眠，娇慵倦怠，又暗生自怜的情态与心理。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>清晨，滴漏声将春睡的佳人惊醒，但佳人却依然贪睡。娇慵倦怠又暗生自怜。<br>寄语给那催促鲜花盛开的和风丽日，到我的绿窗边上来与我一起拨弄琴弦。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①“惊晓漏”二句：意谓清晓，漏声将人惊醒，但却依然贪睡。</p><p>②酿花：催花开放。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="酒泉子·谢却荼蘼"><a href="#酒泉子·谢却荼蘼" class="headerlink" title="酒泉子·谢却荼蘼"></a>酒泉子·谢却荼蘼</h3><p>词牌名：酒泉子|朝代：清朝|作者：纳兰容若</p><p>谢却荼蘼，一片月明如水。<br>篆香消，犹未睡，早鸦啼。</p><p>嫩寒无赖罗衣薄，休傍阑干角。<br>最愁人，灯欲落，雁还飞。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《酒泉子·谢却荼蘼》是清代词人纳兰性德之作，写夏夜主人公倚栏远望伤感怀人。全词以清新流畅的白描笔调，表达情感真挚而深沉的感情。词句有穷，而意蕴难尽，直写情怀，却郁结难解，真挚可怜。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>在那一片月明如水的夜里，白色的茶蘼花凋谢了。篆香已经燃尽，可是我却还没有睡着，早起的乌鸦已经开始啼叫，又是一夜不成眠。丝丝的寒冷透过微薄的锦衣，不要再倚靠栏杆远望了。那灯要燃尽，鸿雁犹飞的情景是最让人伤怀的啊！</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>⑴谢却茶蘼（túmí）：荼蘼：落叶或半常绿蔓生小灌木，攀缘茎，茎绿色，茎上有钩状的刺，上面有多个侧脉，形似皱纹，夏季开白花。王琪《春暮游小园》：“开到荼蘼花事了，丝丝天棘出莓墙。”</p><p>⑵篆香（zhuànxiānɡ）：盘香，为篆字形状。</p><p>⑶嫩寒：轻寒，春寒。秦观《浣溪沙》：“漠漠轻寒上小楼，晓阴无赖似穷秋。”</p><p>⑷无赖：无奈。</p><p>⑸阑干：同“栏杆”。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>画堂春·一生一代一双人</title>
+      <link href="/2025/07/06/%E7%94%BB%E5%A0%82%E6%98%A5%C2%B7%E4%B8%80%E7%94%9F%E4%B8%80%E4%BB%A3%E4%B8%80%E5%8F%8C%E4%BA%BA/"/>
+      <url>/2025/07/06/%E7%94%BB%E5%A0%82%E6%98%A5%C2%B7%E4%B8%80%E7%94%9F%E4%B8%80%E4%BB%A3%E4%B8%80%E5%8F%8C%E4%BA%BA/</url>
+      
+        <content type="html"><![CDATA[<h4 id="画堂春·一生一代一双人"><a href="#画堂春·一生一代一双人" class="headerlink" title="画堂春·一生一代一双人"></a>画堂春·一生一代一双人</h4><p>词牌名：画堂春|朝代：清朝|作者：纳兰容若</p><p>一生一代一双人，争教两处销魂。<br>相思相望不相亲，天为谁春。</p><p>浆向蓝桥易乞，药成碧海难奔。<br>若容相访饮牛津，相对忘贫。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>纳兰性德曾多次表达过他愿意追随卢氏而去的心情，如这首《画堂春》。他和卢氏虽不能同生，但却能同死。他死的那天正好也是5月30日，卢氏的忌日。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①一生二句：唐骆宾王《代女道士王灵妃赠道士李荣》：“相怜相念倍相亲，一生一代一双人。”　争教，怎教。</p><p>②蓝桥：地名。在陕西蓝田县东南蓝溪上，传说此处有仙窟，为裴航遇仙女云英处。《太平广记》卷十五引裴硎《传奇·裴航》云：裴航从鄂渚回京途中，与樊夫人同舟，裴航赠诗致情意，后樊夫人答诗云：“一饮琼浆百感生，玄霜捣尽见云英。蓝桥便是神仙窟，何必崎岖上玉清。”后于蓝桥驿因求水喝，得遇云英，裴航向其母求婚，其母曰:“君约取此女者，得玉杆臼，吾当与之也。”后裴航终于寻得玉柞日，遂成婚，双双仙去。此处用这一典故是表明自己的“蓝桥之遇”曾经有过，且不为难得。</p><p>③药成句：《淮南子·览冥训》：“羿请不死之药于西王母，姮娥窃之，奔月宫。”高诱注：“姮娥，羿妻，羿请不死之药于西王母，未及服之。姮娥盗食之，得仙。奔入月宫，为月精。”李商隐《嫦娥》：“嫦娥应悔偷灵药，碧海青天夜夜心。”这里借用此典说，纵有不死之灵药，但却难像嫦娥那样飞入月宫去。意思是纵有深情却难以相见。</p><p>④饮牛津：晋张华《博物志》：“旧说云：天河与海通，近世有人居海诸者，年年八月，有浮搓来去，不失期。人有奇志，立飞阁于搓上，多资粮，乘搓而去。至一处，有城郭状，屋舍甚严，遥望宫中多织妇，见一丈夫牵牛诸次饮之，此人问此何处，答曰：‘君还至蜀郡问严君平则知之。”，故饮牛津系指传说中的天河边。这里是借指与恋人相会的地方。</p>]]></content>
       
       
       
@@ -815,11 +815,30 @@
     
     
     <entry>
-      <title>酒泉子·谢却荼蘼</title>
-      <link href="/2025/07/06/%E9%85%92%E6%B3%89%E5%AD%90%C2%B7%E8%B0%A2%E5%8D%B4%E8%8D%BC%E8%98%BC/"/>
-      <url>/2025/07/06/%E9%85%92%E6%B3%89%E5%AD%90%C2%B7%E8%B0%A2%E5%8D%B4%E8%8D%BC%E8%98%BC/</url>
+      <title>长相思·山一程</title>
+      <link href="/2025/07/06/%E9%95%BF%E7%9B%B8%E6%80%9D%C2%B7%E5%B1%B1%E4%B8%80%E7%A8%8B/"/>
+      <url>/2025/07/06/%E9%95%BF%E7%9B%B8%E6%80%9D%C2%B7%E5%B1%B1%E4%B8%80%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<h3 id="酒泉子·谢却荼蘼"><a href="#酒泉子·谢却荼蘼" class="headerlink" title="酒泉子·谢却荼蘼"></a>酒泉子·谢却荼蘼</h3><p>词牌名：酒泉子|朝代：清朝|作者：纳兰容若</p><p>谢却荼蘼，一片月明如水。<br>篆香消，犹未睡，早鸦啼。</p><p>嫩寒无赖罗衣薄，休傍阑干角。<br>最愁人，灯欲落，雁还飞。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《酒泉子·谢却荼蘼》是清代词人纳兰性德之作，写夏夜主人公倚栏远望伤感怀人。全词以清新流畅的白描笔调，表达情感真挚而深沉的感情。词句有穷，而意蕴难尽，直写情怀，却郁结难解，真挚可怜。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>在那一片月明如水的夜里，白色的茶蘼花凋谢了。篆香已经燃尽，可是我却还没有睡着，早起的乌鸦已经开始啼叫，又是一夜不成眠。丝丝的寒冷透过微薄的锦衣，不要再倚靠栏杆远望了。那灯要燃尽，鸿雁犹飞的情景是最让人伤怀的啊！</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>⑴谢却茶蘼（túmí）：荼蘼：落叶或半常绿蔓生小灌木，攀缘茎，茎绿色，茎上有钩状的刺，上面有多个侧脉，形似皱纹，夏季开白花。王琪《春暮游小园》：“开到荼蘼花事了，丝丝天棘出莓墙。”</p><p>⑵篆香（zhuànxiānɡ）：盘香，为篆字形状。</p><p>⑶嫩寒：轻寒，春寒。秦观《浣溪沙》：“漠漠轻寒上小楼，晓阴无赖似穷秋。”</p><p>⑷无赖：无奈。</p><p>⑸阑干：同“栏杆”。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="长相思·山一程"><a href="#长相思·山一程" class="headerlink" title="长相思·山一程"></a>长相思·山一程</h3><p>词牌名：长相思|朝代：清朝|作者：纳兰容若</p><p>山一程，水一程，身向榆关那畔行，夜深千帐灯。</p><p>风一更，雪一更，聒碎乡心梦不成，故园无此声。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《长相思·山一程》是清代词人纳兰性德的作品。词中描写将士在外对故乡的思念，抒露着情思深苦的绵长心境。全词纯用自然真切、简朴清爽的白描语句，写得天然浑成，毫无雕琢之处，却格外真切感人。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>将士们不辞辛苦地跋山涉水，马不停蹄地向着山海关进发。夜已经深了，千万个帐篷里都点起了灯。</p><p>外面正刮着风、下着雪，惊醒了睡梦中的将士们，勾起了他们对故乡的思念，故乡是多么的温暖宁静呀，哪有这般狂风呼啸、雪花乱舞的聒噪之声。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>⑴长相思。唐教坊曲，双翅小令。又名《双红豆》。</p><p>⑵程：道路、路程，山一程、水一程，即山长水远。</p><p>⑶榆关：即今山海关，在今河北秦皇岛东北；那畔：即山海关的另一边，指身处关外。</p><p>⑷千帐灯：皇帝出巡临时住宿的行帐的灯火。千帐言军营之多。</p><p>⑸更：旧时一夜分五更，每更大约两小时。风一更、雪一更，即言整夜风雪交加也。</p><p>⑹聒（guō）：声音嘈杂，这里指风雪声。</p><p>⑺故园：故乡，这里指北京；此声：指风雪交加的声音。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>生查子·散帙坐凝尘</title>
+      <link href="/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E6%95%A3%E5%B8%99%E5%9D%90%E5%87%9D%E5%B0%98/"/>
+      <url>/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E6%95%A3%E5%B8%99%E5%9D%90%E5%87%9D%E5%B0%98/</url>
+      
+        <content type="html"><![CDATA[<h3 id="生查子·散帙坐凝尘"><a href="#生查子·散帙坐凝尘" class="headerlink" title="生查子·散帙坐凝尘"></a>生查子·散帙坐凝尘</h3><p>词牌名：生查子|朝代：清朝|作者：纳兰容若</p><p>散帙坐凝尘，吹气幽兰并。</p><p>茶名龙凤团，香字鸳鸯饼。</p><p>玉局类弹棋，颠倒双栖影。</p><p>花月不曾闲，莫放相思醒。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《生查子·散帙坐凝尘》是清代著名诗人纳兰性德的作品之一，词中生动地描绘了贵族之家绮艳优裕的生活。<br>这种内容的描写，在纳兰的词中是不多见的，应是纳兰性德的早期之作。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①生查子，唐教坊曲名，后用为词牌，《熟煌曲子词》中有此调，唐韩偓所作为最早。因朱希真词有“遥望楚云深”句，<br>故又名《楚云深》。生查子，生楂子，多少青涩，几多皱眉，历来，多抒写怨抑感伤之情。</p><p>②散帙二句：散帙，本指打开的书帙，此处借指读书。凝尘，尘土聚积。此处有不过分讲究居处之意。<br>《晋书·简文帝纪》：“帝少有风仪，善容止，留心典籍，不以居处为意，凝尘满席，湛如也。”　<br>吹气幽兰，谓美女气息之香胜于兰花。这二句意谓读书之时，身边有爱妻(或指美人)伴坐。</p><p>③茶名二句：谓品味着龙凤团名茶，燃着鸳鸯饼的香料。龙凤团，茶名，即龙团凤饼，为宋代著名的贡茶，<br>饼状，上有龙纹，故名。鸳鸯饼，形似鸳鸯的焚香饼。一饼之火，可熏燃一日。</p><p>④玉局二句：玉局，棋盘之美称。弹棋，古代一种博戏。据云始于汉代，李贤注《后汉书·梁冀传》引《艺经》<br>曰：“弹棋，两人对局，白黑棋各六枚，先列棋相当，更先弹之。其局以石为之。”<br>后至魏改为十六棋，唐为二十四棋。</p>]]></content>
       
       
       
@@ -858,25 +877,6 @@
       <url>/2025/07/06/%E9%9D%92%E8%A1%AB%E6%B9%BF%C2%B7%E6%82%BC%E4%BA%A1/</url>
       
         <content type="html"><![CDATA[<h3 id="青衫湿·悼亡"><a href="#青衫湿·悼亡" class="headerlink" title="青衫湿·悼亡"></a>青衫湿·悼亡</h3><p>词牌名：青衫湿|朝代：清朝|作者：纳兰容若</p><p>近来无限伤心事，谁与话长更？<br>从教分付，绿窗红泪，早雁初莺。</p><p>当时领略，而今断送，总负多情。<br>忽疑君到，漆灯风飐，痴数春星。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>词以小令见长，多感伤情调，间有雄浑之作。也能诗。有《通志堂集》。<br>这么美的景，我是多么爱慕，恬静，幽雅，轻灵，可是，可是，没有你，这一切的存在又有何意义！<br>你才是我的一切，才是我灵魂可以安逸，美丽，快乐的所在。你在我晶莹的泪光中浮现，那么美地笑着，<br>袭着前世的爱，袭今生的眷念，雁飞了，莺也飞了，只有一滴滴的泪水，在我的脸颊流淌。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>最近有太多的伤心事，我能与谁倾诉于这漫漫长夜？一切听从命运的安排，<br>早春时节，窗外绿影婆娑，大雁归来，黄莺歌舞，任凭泪流满面。</p><p>当年与你欣赏美景，如今却丧失了，辜负了往日的一片深情。<br>忽然一阵风吹，明灯随风摇动，我以为是你的魂魄回来了，罢了，我只能痴情地数星等待。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①从教分付：意思是一切都听任其安排。张元干《念奴娇》：“有谁伴我凄凉，除非分付，与杯中醽醁。”</p><p>②红泪：指伤离或死别的眼泪。参见《转应曲》(明月) 注①。</p><p>③漆灯：灯明亮如漆谓之“漆灯”。《世说新语》谓王羲之见杜宏治，叹曰：“面如凝脂，目如点漆，此真神仙中人。”<br>这里之““漆灯”语出唐李贺《南山田中行》：“石脉水流泉滴沙，鬼灯如漆点松花。”风飐（zhǎn)，风吹之意。<br>五代词人喜用此语。毛文锡《临江仙》：“岸泊渔灯风飐碎，白苹远散浓香。”</p><p>④痴数春星:谓痴情地数着天上的星斗。梁简文帝《神山寺碑》:“澄明离日，照影春星。”</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 诗词 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>长相思·山一程</title>
-      <link href="/2025/07/06/%E9%95%BF%E7%9B%B8%E6%80%9D%C2%B7%E5%B1%B1%E4%B8%80%E7%A8%8B/"/>
-      <url>/2025/07/06/%E9%95%BF%E7%9B%B8%E6%80%9D%C2%B7%E5%B1%B1%E4%B8%80%E7%A8%8B/</url>
-      
-        <content type="html"><![CDATA[<h3 id="长相思·山一程"><a href="#长相思·山一程" class="headerlink" title="长相思·山一程"></a>长相思·山一程</h3><p>词牌名：长相思|朝代：清朝|作者：纳兰容若</p><p>山一程，水一程，身向榆关那畔行，夜深千帐灯。</p><p>风一更，雪一更，聒碎乡心梦不成，故园无此声。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《长相思·山一程》是清代词人纳兰性德的作品。词中描写将士在外对故乡的思念，抒露着情思深苦的绵长心境。全词纯用自然真切、简朴清爽的白描语句，写得天然浑成，毫无雕琢之处，却格外真切感人。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>将士们不辞辛苦地跋山涉水，马不停蹄地向着山海关进发。夜已经深了，千万个帐篷里都点起了灯。</p><p>外面正刮着风、下着雪，惊醒了睡梦中的将士们，勾起了他们对故乡的思念，故乡是多么的温暖宁静呀，哪有这般狂风呼啸、雪花乱舞的聒噪之声。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>⑴长相思。唐教坊曲，双翅小令。又名《双红豆》。</p><p>⑵程：道路、路程，山一程、水一程，即山长水远。</p><p>⑶榆关：即今山海关，在今河北秦皇岛东北；那畔：即山海关的另一边，指身处关外。</p><p>⑷千帐灯：皇帝出巡临时住宿的行帐的灯火。千帐言军营之多。</p><p>⑸更：旧时一夜分五更，每更大约两小时。风一更、雪一更，即言整夜风雪交加也。</p><p>⑹聒（guō）：声音嘈杂，这里指风雪声。</p><p>⑺故园：故乡，这里指北京；此声：指风雪交加的声音。</p>]]></content>
       
       
       
