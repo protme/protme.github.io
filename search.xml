@@ -4,17 +4,17 @@
   
     
     <entry>
-      <title>追剧天堂！MoonTV Docker 部署！</title>
-      <link href="/2025/07/06/%E8%BF%BD%E5%89%A7%E5%A4%A9%E5%A0%82!MoonTV%20Docker%20%E9%83%A8%E7%BD%B2!/"/>
-      <url>/2025/07/06/%E8%BF%BD%E5%89%A7%E5%A4%A9%E5%A0%82!MoonTV%20Docker%20%E9%83%A8%E7%BD%B2!/</url>
+      <title></title>
+      <link href="/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(3)/"/>
+      <url>/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(3)/</url>
       
-        <content type="html"><![CDATA[<p>追剧天堂！MoonTV Docker 部署！</p><p>本项目是一个影视聚合型播放站点，可以聚合全网影视资源，实现在一个页面内搜索和观看。本次教程将演示如何在 NAS 上通过 Docker 进行部署。</p><p>项目来源: GitHub 上的开源项目： <a href="https://github.com/senshinya/MoonTV">https://github.com/senshinya/MoonTV</a><br>支持平台:<br>NAS (通过 Docker)<br>Vercel<br>Cloudflare</p><p>部署：<br>1.直接运行：docker run -d –name moontv -p 3000:3000 ghcr.io&#x2F;senshinya&#x2F;moontv:latest<br>访问 http:&#x2F;&#x2F;服务器 IP:3000 即可</p><p>默认端口为 3000，部署前需确认3000 端口未被其他服务占用。<br>如果端口被占用，需要修改映射端口，例如将 3000:3000 修改为 3001:3000。</p><p>2.使用 docker compose 部署</p><p>部署步骤：<a href="https://www.youtube.com/watch?v=riHqCnc221M">https://www.youtube.com/watch?v=riHqCnc221M</a></p><ol><li>创建文件夹</li></ol><p>在系统的文件管理器中，创建一个新的文件夹用于存放项目文件，名称可自定义。</p><ol start="2"><li>准备 config.json 文件</li></ol><p>访问项目的 GitHub 页面，找到 config.json 文件并下载<br>将下载好的 config.json 文件上传到创建的文件夹内</p><p>{<br>  “cache_time”: 7200,<br>  “api_site”: {<br>    “dyttzy”: {<br>      “api”: “<a href="http://caiji.dyttzyapi.com/api.php/provide/vod">http://caiji.dyttzyapi.com/api.php/provide/vod</a>“,<br>      “name”: “电影天堂资源”,<br>      “detail”: “<a href="http://caiji.dyttzyapi.com/">http://caiji.dyttzyapi.com</a>“<br>    },<br>    “heimuer”: {<br>      “api”: “<a href="https://json.heimuer.xyz/api.php/provide/vod">https://json.heimuer.xyz/api.php/provide/vod</a>“,<br>      “name”: “黑木耳”,<br>      “detail”: “<a href="https://heimuer.tv/">https://heimuer.tv</a>“<br>    },<br>    “ruyi”: {<br>      “api”: “<a href="https://cj.rycjapi.com/api.php/provide/vod">https://cj.rycjapi.com/api.php/provide/vod</a>“,<br>      “name”: “如意资源”<br>    },<br>    “bfzy”: {<br>      “api”: “<a href="https://bfzyapi.com/api.php/provide/vod">https://bfzyapi.com/api.php/provide/vod</a>“,<br>      “name”: “暴风资源”<br>    },<br>    “tyyszy”: {<br>      “api”: “<a href="https://tyyszy.com/api.php/provide/vod">https://tyyszy.com/api.php/provide/vod</a>“,<br>      “name”: “天涯资源”<br>    },<br>    “ffzy”: {<br>      “api”: “<a href="http://ffzy5.tv/api.php/provide/vod">http://ffzy5.tv/api.php/provide/vod</a>“,<br>      “name”: “非凡影视”,<br>      “detail”: “<a href="http://ffzy5.tv/">http://ffzy5.tv</a>“<br>    },<br>    “zy360”: {<br>      “api”: “<a href="https://360zy.com/api.php/provide/vod">https://360zy.com/api.php/provide/vod</a>“,<br>      “name”: “360资源”<br>    },<br>    “iqiyi”: {<br>      “api”: “<a href="https://www.iqiyizyapi.com/api.php/provide/vod">https://www.iqiyizyapi.com/api.php/provide/vod</a>“,<br>      “name”: “iqiyi资源”<br>    },<br>    “wolong”: {<br>      “api”: “<a href="https://wolongzyw.com/api.php/provide/vod">https://wolongzyw.com/api.php/provide/vod</a>“,<br>      “name”: “卧龙资源”<br>    },<br>    “jisu”: {<br>      “api”: “<a href="https://jszyapi.com/api.php/provide/vod">https://jszyapi.com/api.php/provide/vod</a>“,<br>      “name”: “极速资源”,<br>      “detail”: “<a href="https://jszyapi.com/">https://jszyapi.com</a>“<br>    },<br>    “dbzy”: {<br>      “api”: “<a href="https://dbzy.tv/api.php/provide/vod">https://dbzy.tv/api.php/provide/vod</a>“,<br>      “name”: “豆瓣资源”<br>    },<br>    “mozhua”: {<br>      “api”: “<a href="https://mozhuazy.com/api.php/provide/vod">https://mozhuazy.com/api.php/provide/vod</a>“,<br>      “name”: “魔爪资源”<br>    },<br>    “mdzy”: {<br>      “api”: “<a href="https://www.mdzyapi.com/api.php/provide/vod">https://www.mdzyapi.com/api.php/provide/vod</a>“,<br>      “name”: “魔都资源”<br>    },<br>    “zuid”: {<br>      “api”: “<a href="https://api.zuidapi.com/api.php/provide/vod">https://api.zuidapi.com/api.php/provide/vod</a>“,<br>      “name”: “最大资源”<br>    },<br>    “yinghua”: {<br>      “api”: “<a href="https://m3u8.apiyhzy.com/api.php/provide/vod">https://m3u8.apiyhzy.com/api.php/provide/vod</a>“,<br>      “name”: “樱花资源”<br>    },<br>    “wujin”: {<br>      “api”: “<a href="https://api.wujinapi.me/api.php/provide/vod">https://api.wujinapi.me/api.php/provide/vod</a>“,<br>      “name”: “无尽资源”<br>    },<br>    “wwzy”: {<br>      “api”: “<a href="https://wwzy.tv/api.php/provide/vod">https://wwzy.tv/api.php/provide/vod</a>“,<br>      “name”: “旺旺短剧”<br>    },<br>    “ikun”: {<br>      “api”: “<a href="https://ikunzyapi.com/api.php/provide/vod">https://ikunzyapi.com/api.php/provide/vod</a>“,<br>      “name”: “iKun资源”<br>    }<br>  }<br>}</p><ol start="3"><li>设置文件权限</li></ol><p>使用 SSH 工具连接<br>进入（cd）到存放 config.json 的文件夹。<br>执行以下命令赋予文件权限：<br>复制代码chmod 777 config.json</p><ol start="4"><li>创建 Docker Compose 项目</li></ol><p>进入 Docker 管理界面，选择新增项目，项目名称可自定义。<br>将项目路径指向第一步创建的文件夹。<br>选择“创建 Compose 文件”的方式。</p><ol start="5"><li>配置并启动容器</li></ol><p>将 docker-compose.yml 文件的内容复制并粘贴到配置框中:</p><p>services:<br>  moontv-core:<br>    image: ghcr.io&#x2F;senshinya&#x2F;moontv:latest<br>    container_name: moontv<br>    restart: unless-stopped<br>    ports:<br>      - ‘3000:3000’<br>    environment:<br>      - USERNAME&#x3D;admin<br>      - PASSWORD&#x3D;admin_password<br>      - NEXT_PUBLIC_STORAGE_TYPE&#x3D;redis<br>      - REDIS_URL&#x3D;redis:&#x2F;&#x2F;moontv-redis:6379<br>      - NEXT_PUBLIC_ENABLE_REGISTER&#x3D;true<br>    networks:<br>      - moontv-network<br>    depends_on:<br>      - moontv-redis<br>    # 如需自定义配置，可挂载文件<br>    # volumes:<br>    #   - .&#x2F;config.json:&#x2F;app&#x2F;config.json:ro<br>  moontv-redis:<br>    image: redis<br>    container_name: moontv-redis<br>    restart: unless-stopped<br>    networks:<br>      - moontv-network<br>    # 如需持久化<br>    # volumes:<br>    #   - .&#x2F;data:&#x2F;data<br>networks:<br>  moontv-network:<br>    driver: bridge</p><p>修改配置:<br>端口：根据需要修改为未被占用的端口。<br>用户名&#x2F;密码：根据需要修改。<br>自定义配置：如果你选择自定义接口，请取消 volumes 部分关于 config.json 的注释。<br>注意：取消注释后，必须确保代码对齐（缩进）正确，否则会出错。<br>点击确定保存配置。<br>在项目列表中，点击“构建”或“启动”来拉取镜像并运行容器。</p><p>访问站点<br>当容器成功运行后，通过浏览器访问 http:&#x2F;&#x2F;&lt;你的NAS_IP&gt;:&lt;你设置的端口&gt;。<br>输入你设置的用户名和密码即可登录。</p><p>LibreTV Compose 文件代码：</p><p>version: ‘3’<br>services:<br>  libretv:<br>    image: bestzwei&#x2F;libretv:latest  # 使用 libretv 的最新镜像<br>    container_name: libretv         # 容器名称为 libretv<br>    ports:<br>      - “8899:80”                   # 将主机的 8899 端口映射到容器的 80 端口<br>    environment:<br>      - PASSWORD&#x3D;123456             # 设置访问密码（留空表示不启用密码保护）<br>    restart: always                 # 容器异常退出后自动重启</p><p>自定义接口地址<br>视频数据采集站<br>非凡采集站：<a href="http://ffzy5.tv/">http://ffzy5.tv/</a></p><p>爱坤资源：<a href="https://www.ikunzy.com/ikun/help.html">https://www.ikunzy.com/ikun/help.html</a></p><p>暴风资源：<a href="https://bfzy.tv/help/?home">https://bfzy.tv/help/?home</a></p><p>苹果cms官方：<a href="https://www.applecms.cc/">https://www.applecms.cc</a></p><p>赞片cms官网：<a href="https://www.zanpiancms.com/">https://www.zanpiancms.com/</a></p><p>量子资源网：<a href="http://lzizy.net/help/">http://lzizy.net/help/</a></p><p>新浪资源网：<a href="https://www.xinlangzy.com/help/">https://www.xinlangzy.com/help/</a></p><p>虎牙资源网：<a href="http://huyazy.net/help/">http://huyazy.net/help/</a></p><p>光速资源网：<a href="https://www.guangsuzy.com/help/">https://www.guangsuzy.com/help/</a></p><p>极速资源网：<a href="https://www.jisuzy.com/index.php/help/index.html">https://www.jisuzy.com/index.php/help/index.html</a></p><p>红牛资源网：<a href="https://hongniuzy.net/help/">https://hongniuzy.net/help/</a></p><p>如意资源网：<a href="https://www.ryzy3.tv/">https://www.ryzy3.tv/</a></p><p>魔爪资源网：<a href="https://mzzy.me/">https://mzzy.me/</a></p><p>华为吧资源：<a href="https://huawei8.live/">https://huawei8.live/</a></p><p>豆瓣资源站：<a href="https://dbzy.com/">https://dbzy.com/</a></p><p>茅台资源站：<a href="https://mtzy.me/">https://mtzy.me/</a></p><p>索尼资源：<a href="https://suonizy.net/">https://suonizy.net/</a></p><p>U酷资源站：<a href="https://ukuzy0.com/">https://ukuzy0.com/</a></p><p>快车资源站：<a href="https://kuaichezy.com/">https://kuaichezy.com/</a></p><p>金鹰资源站：<a href="https://jinyingzy.com/">https://jinyingzy.com/</a></p><p>淘片资源站：<a href="https://www.taopianzy.com/">https://www.taopianzy.com/</a></p><p>卧龙资源站：<a href="https://wolongzyw.com/">https://wolongzyw.com/</a></p><p>牛牛资源站：<a href="https://niuniuzy.cc/">https://niuniuzy.cc/</a></p><p>小绵羊资源站：<a href="https://vs.okcdn100.top/">https://vs.okcdn100.top/</a></p><p>虾米资源站：<a href="https://zy.hls.one/">https://zy.hls.one/</a></p><p>麒麟资源站：<a href="https://www.qilinzyz.com/">https://www.qilinzyz.com/</a></p><p>蜂巢资源站：<a href="https://fczy908.com/">https://fczy908.com/</a></p><p>豪华资源站：<a href="https://haohuazy.com/">https://haohuazy.com/</a></p><p>魔都资源站：<a href="https://moduzy.com/">https://moduzy.com/</a></p><p>火花资源站：<a href="https://cj.huohua.live/">https://cj.huohua.live/</a></p><p>速播资源站：<a href="https://www.suboziyuan.net/">https://www.suboziyuan.net/</a></p><p>黑木耳资源站：<a href="https://heimuer.tv/">https://heimuer.tv/</a></p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
       
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 诗词 </tag>
             
         </tags>
       
@@ -43,46 +43,8 @@
     
     <entry>
       <title></title>
-      <link href="/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(3)/"/>
-      <url>/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(3)/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 诗词 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(4)/"/>
       <url>/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(4)/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 诗词 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(5)/"/>
-      <url>/2025/07/06/0008%20-%20%E5%89%AF%E6%9C%AC%20(5)/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -156,11 +118,11 @@
     
     
     <entry>
-      <title>好事近·何路向家园</title>
-      <link href="/2025/07/06/%E5%A5%BD%E4%BA%8B%E8%BF%91%C2%B7%E4%BD%95%E8%B7%AF%E5%90%91%E5%AE%B6%E5%9B%AD/"/>
-      <url>/2025/07/06/%E5%A5%BD%E4%BA%8B%E8%BF%91%C2%B7%E4%BD%95%E8%B7%AF%E5%90%91%E5%AE%B6%E5%9B%AD/</url>
+      <title>太常引·自题小照</title>
+      <link href="/2025/07/06/%E5%A4%AA%E5%B8%B8%E5%BC%95%C2%B7%E8%87%AA%E9%A2%98%E5%B0%8F%E7%85%A7/"/>
+      <url>/2025/07/06/%E5%A4%AA%E5%B8%B8%E5%BC%95%C2%B7%E8%87%AA%E9%A2%98%E5%B0%8F%E7%85%A7/</url>
       
-        <content type="html"><![CDATA[<h3 id="好事近·何路向家园"><a href="#好事近·何路向家园" class="headerlink" title="好事近·何路向家园"></a>好事近·何路向家园</h3><p>词牌名：好事近|朝代：清朝|作者：纳兰容若</p><p>何路向家园，历历残山剩水。都把一春冷淡，到麦秋天气。</p><p>料应重发隔年花，莫问花前事。纵使东风依旧，怕红颜不似。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①历历：零落貌。</p><p>②麦秋天气：谓农历四五月麦熟时节。</p><p>③隔年花：去年之花。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="太常引·自题小照"><a href="#太常引·自题小照" class="headerlink" title="太常引·自题小照"></a>太常引·自题小照</h3><p>词牌名： 太常引|朝代：清朝|作者：纳兰容若</p><p>西风乍起峭寒生，惊雁避移营。千里暮云平，休回首、长亭短亭。</p><p>无穷山色，无边往事，一例冷清清。试倩玉萧声，唤千古、英雄梦醒。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①峭寒：严寒，常形容春寒。此处则谓“西风乍起”，是为初秋之日。</p><p>②惊雁句：意谓惊飞的大雁避开了营地。移营，转移营地。</p><p>③玉箫：指玉制的箫，亦为箫的美称。</p>]]></content>
       
       
       
@@ -175,11 +137,11 @@
     
     
     <entry>
-      <title>太常引·自题小照</title>
-      <link href="/2025/07/06/%E5%A4%AA%E5%B8%B8%E5%BC%95%C2%B7%E8%87%AA%E9%A2%98%E5%B0%8F%E7%85%A7/"/>
-      <url>/2025/07/06/%E5%A4%AA%E5%B8%B8%E5%BC%95%C2%B7%E8%87%AA%E9%A2%98%E5%B0%8F%E7%85%A7/</url>
+      <title></title>
+      <link href="/2025/07/06/%E5%87%8F%E5%AD%97%E6%9C%A8%E5%85%B0%E8%8A%B1%C2%B7%E7%9B%B8%E9%80%A2%E4%B8%8D%E8%AF%AD/"/>
+      <url>/2025/07/06/%E5%87%8F%E5%AD%97%E6%9C%A8%E5%85%B0%E8%8A%B1%C2%B7%E7%9B%B8%E9%80%A2%E4%B8%8D%E8%AF%AD/</url>
       
-        <content type="html"><![CDATA[<h3 id="太常引·自题小照"><a href="#太常引·自题小照" class="headerlink" title="太常引·自题小照"></a>太常引·自题小照</h3><p>词牌名： 太常引|朝代：清朝|作者：纳兰容若</p><p>西风乍起峭寒生，惊雁避移营。千里暮云平，休回首、长亭短亭。</p><p>无穷山色，无边往事，一例冷清清。试倩玉萧声，唤千古、英雄梦醒。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①峭寒：严寒，常形容春寒。此处则谓“西风乍起”，是为初秋之日。</p><p>②惊雁句：意谓惊飞的大雁避开了营地。移营，转移营地。</p><p>③玉箫：指玉制的箫，亦为箫的美称。</p>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
       
       
@@ -213,11 +175,11 @@
     
     
     <entry>
-      <title>忆秦娥·山重叠</title>
-      <link href="/2025/07/06/%E5%BF%86%E7%A7%A6%E5%A8%A5%C2%B7%E5%B1%B1%E9%87%8D%E5%8F%A0/"/>
-      <url>/2025/07/06/%E5%BF%86%E7%A7%A6%E5%A8%A5%C2%B7%E5%B1%B1%E9%87%8D%E5%8F%A0/</url>
+      <title>忆王孙·西风一夜剪芭蕉</title>
+      <link href="/2025/07/06/%E5%BF%86%E7%8E%8B%E5%AD%99%C2%B7%E8%A5%BF%E9%A3%8E%E4%B8%80%E5%A4%9C%E5%89%AA%E8%8A%AD%E8%95%89/"/>
+      <url>/2025/07/06/%E5%BF%86%E7%8E%8B%E5%AD%99%C2%B7%E8%A5%BF%E9%A3%8E%E4%B8%80%E5%A4%9C%E5%89%AA%E8%8A%AD%E8%95%89/</url>
       
-        <content type="html"><![CDATA[<h3 id="忆秦娥·山重叠"><a href="#忆秦娥·山重叠" class="headerlink" title="忆秦娥·山重叠"></a>忆秦娥·山重叠</h3><p>词牌名：忆秦娥|朝代：清朝|作者：纳兰容若</p><p>山重叠。悬崖一线天疑裂。天疑裂。断碑题字，苔痕横啮。</p><p>风声雷动鸣金铁。阴森潭底蛟龙窟。蛟龙窟。兴亡满眼，旧时明月。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①龙潭口：龙潭山口，地在清代吉林府伊通州西南，即今吉林市东郊龙潭山。此处有“龙潭印月”之胜景。<br>康熙二十一年(1682)春，作者扈驾东巡过经此地。又，今山西省盂县北之盂山亦有“龙潭”，又称“黑龙池”。<br>作者曾几度赴山西五台山，本篇所指或为此地。　　</p><p>②悬崖句：谓群山环绕，举头望去，天空只露一线，仿佛是天幕裂开了。</p><p>③古苔横啮：意谓断碑上长满了苍苔，那苍苔好像是啃咬着碑文。</p><p>④风声句：谓龙潭口处如同风雷大作，发出了金征戈矛撞击般的巨大声响、　鸣金铁，<br>形容风雷声如同金征戈矛撞击之声。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="忆王孙·西风一夜剪芭蕉"><a href="#忆王孙·西风一夜剪芭蕉" class="headerlink" title="忆王孙·西风一夜剪芭蕉"></a>忆王孙·西风一夜剪芭蕉</h3><p>词牌名：忆王孙|朝代：清朝|作者：纳兰容若</p><p>西风一夜剪芭蕉，倦眼经秋耐寂寥？　</p><p>强把心情付浊醪。读《离骚》。愁似湘江日夜潮。</p>]]></content>
       
       
       
@@ -232,11 +194,30 @@
     
     
     <entry>
-      <title>忆王孙·西风一夜剪芭蕉</title>
-      <link href="/2025/07/06/%E5%BF%86%E7%8E%8B%E5%AD%99%C2%B7%E8%A5%BF%E9%A3%8E%E4%B8%80%E5%A4%9C%E5%89%AA%E8%8A%AD%E8%95%89/"/>
-      <url>/2025/07/06/%E5%BF%86%E7%8E%8B%E5%AD%99%C2%B7%E8%A5%BF%E9%A3%8E%E4%B8%80%E5%A4%9C%E5%89%AA%E8%8A%AD%E8%95%89/</url>
+      <title>好事近·何路向家园</title>
+      <link href="/2025/07/06/%E5%A5%BD%E4%BA%8B%E8%BF%91%C2%B7%E4%BD%95%E8%B7%AF%E5%90%91%E5%AE%B6%E5%9B%AD/"/>
+      <url>/2025/07/06/%E5%A5%BD%E4%BA%8B%E8%BF%91%C2%B7%E4%BD%95%E8%B7%AF%E5%90%91%E5%AE%B6%E5%9B%AD/</url>
       
-        <content type="html"><![CDATA[<h3 id="忆王孙·西风一夜剪芭蕉"><a href="#忆王孙·西风一夜剪芭蕉" class="headerlink" title="忆王孙·西风一夜剪芭蕉"></a>忆王孙·西风一夜剪芭蕉</h3><p>词牌名：忆王孙|朝代：清朝|作者：纳兰容若</p><p>西风一夜剪芭蕉，倦眼经秋耐寂寥？　</p><p>强把心情付浊醪。读《离骚》。愁似湘江日夜潮。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="好事近·何路向家园"><a href="#好事近·何路向家园" class="headerlink" title="好事近·何路向家园"></a>好事近·何路向家园</h3><p>词牌名：好事近|朝代：清朝|作者：纳兰容若</p><p>何路向家园，历历残山剩水。都把一春冷淡，到麦秋天气。</p><p>料应重发隔年花，莫问花前事。纵使东风依旧，怕红颜不似。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①历历：零落貌。</p><p>②麦秋天气：谓农历四五月麦熟时节。</p><p>③隔年花：去年之花。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>忆秦娥·山重叠</title>
+      <link href="/2025/07/06/%E5%BF%86%E7%A7%A6%E5%A8%A5%C2%B7%E5%B1%B1%E9%87%8D%E5%8F%A0/"/>
+      <url>/2025/07/06/%E5%BF%86%E7%A7%A6%E5%A8%A5%C2%B7%E5%B1%B1%E9%87%8D%E5%8F%A0/</url>
+      
+        <content type="html"><![CDATA[<h3 id="忆秦娥·山重叠"><a href="#忆秦娥·山重叠" class="headerlink" title="忆秦娥·山重叠"></a>忆秦娥·山重叠</h3><p>词牌名：忆秦娥|朝代：清朝|作者：纳兰容若</p><p>山重叠。悬崖一线天疑裂。天疑裂。断碑题字，苔痕横啮。</p><p>风声雷动鸣金铁。阴森潭底蛟龙窟。蛟龙窟。兴亡满眼，旧时明月。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①龙潭口：龙潭山口，地在清代吉林府伊通州西南，即今吉林市东郊龙潭山。此处有“龙潭印月”之胜景。<br>康熙二十一年(1682)春，作者扈驾东巡过经此地。又，今山西省盂县北之盂山亦有“龙潭”，又称“黑龙池”。<br>作者曾几度赴山西五台山，本篇所指或为此地。　　</p><p>②悬崖句：谓群山环绕，举头望去，天空只露一线，仿佛是天幕裂开了。</p><p>③古苔横啮：意谓断碑上长满了苍苔，那苍苔好像是啃咬着碑文。</p><p>④风声句：谓龙潭口处如同风雷大作，发出了金征戈矛撞击般的巨大声响、　鸣金铁，<br>形容风雷声如同金征戈矛撞击之声。</p>]]></content>
       
       
       
@@ -264,6 +245,19 @@
             <tag> 诗词 </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>忆秦娥·春深浅</title>
+      <link href="/2025/07/06/%E5%BF%86%E7%A7%A6%E5%A8%A5%C2%B7%E6%98%A5%E6%B7%B1%E6%B5%85/"/>
+      <url>/2025/07/06/%E5%BF%86%E7%A7%A6%E5%A8%A5%C2%B7%E6%98%A5%E6%B7%B1%E6%B5%85/</url>
+      
+        <content type="html"><![CDATA[<h3 id="忆秦娥·春深浅"><a href="#忆秦娥·春深浅" class="headerlink" title="忆秦娥·春深浅"></a>忆秦娥·春深浅</h3><p>词牌名：忆秦娥|朝代：清朝|作者：纳兰容若</p><p>春深浅，一痕摇漾青如剪。青如剪。鹭鸶立处，烟芜平远。</p><p>吹开吹谢东风倦，缃桃自惜红颜变。红颜变。兔葵燕麦，重来相见。 </p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①春深浅二句：谓春已深，春水摇荡着，岸边露出整齐如剪的青绿色的涨痕。<br>深浅，偏义词，指深。宋李持正《明月逐人来》：“星河明淡，春来深浅，红莲正满城开遍。”</p><p>②缃桃：即缃核桃，省作缃桃，结浅红色果实的桃树。亦指此树的花或果实。<br>宋陈允平《恋绣衾》：“缃桃红浅柳退黄，燕初来、宫漏渐长。”</p><p>③兔葵燕麦：形容荒凉景象。唐刘禹锡《再游玄都观绝句》引：“重游玄都，<br>荡然无复一树，唯兔葵燕麦，动摇于春风耳。”</p>]]></content>
+      
+      
       
     </entry>
     
@@ -365,6 +359,25 @@
     
     
     <entry>
+      <title>浣溪沙·一半残阳下小楼</title>
+      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E4%B8%80%E5%8D%8A%E6%AE%8B%E9%98%B3%E4%B8%8B%E5%B0%8F%E6%A5%BC/"/>
+      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E4%B8%80%E5%8D%8A%E6%AE%8B%E9%98%B3%E4%B8%8B%E5%B0%8F%E6%A5%BC/</url>
+      
+        <content type="html"><![CDATA[<h3 id="浣溪沙·一半残阳下小楼"><a href="#浣溪沙·一半残阳下小楼" class="headerlink" title="浣溪沙·一半残阳下小楼"></a>浣溪沙·一半残阳下小楼</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>一半残阳下小楼，朱帘斜控软金钩。倚阑无绪不能愁。</p><p>有个盈盈骑马过，薄妆浅黛亦风流。见人羞涩却回头。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①斜控：斜斜地垂挂。控，下垂、弯曲貌。</p><p>②倚阑句：意谓倚靠着阑杆，心绪无聊，，又不能控制心中的忧愁。</p><p>③盈盈：谓仪态美好。此处代指仪态美好之人。盈，与“赢”同，容貌之意。<br>《玉台新咏·日出东南隅行》：“盈盈公府步，冉冉府中趋。”</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>江城子·咏史</title>
       <link href="/2025/07/06/%E6%B1%9F%E5%9F%8E%E5%AD%90%C2%B7%E5%92%8F%E5%8F%B2/"/>
       <url>/2025/07/06/%E6%B1%9F%E5%9F%8E%E5%AD%90%C2%B7%E5%92%8F%E5%8F%B2/</url>
@@ -403,11 +416,11 @@
     
     
     <entry>
-      <title>浣溪沙·一半残阳下小楼</title>
-      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E4%B8%80%E5%8D%8A%E6%AE%8B%E9%98%B3%E4%B8%8B%E5%B0%8F%E6%A5%BC/"/>
-      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E4%B8%80%E5%8D%8A%E6%AE%8B%E9%98%B3%E4%B8%8B%E5%B0%8F%E6%A5%BC/</url>
+      <title>浣溪沙·凤髻抛残秋草生</title>
+      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E5%87%A4%E9%AB%BB%E6%8A%9B%E6%AE%8B%E7%A7%8B%E8%8D%89%E7%94%9F/"/>
+      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E5%87%A4%E9%AB%BB%E6%8A%9B%E6%AE%8B%E7%A7%8B%E8%8D%89%E7%94%9F/</url>
       
-        <content type="html"><![CDATA[<h3 id="浣溪沙·一半残阳下小楼"><a href="#浣溪沙·一半残阳下小楼" class="headerlink" title="浣溪沙·一半残阳下小楼"></a>浣溪沙·一半残阳下小楼</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>一半残阳下小楼，朱帘斜控软金钩。倚阑无绪不能愁。</p><p>有个盈盈骑马过，薄妆浅黛亦风流。见人羞涩却回头。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①斜控：斜斜地垂挂。控，下垂、弯曲貌。</p><p>②倚阑句：意谓倚靠着阑杆，心绪无聊，，又不能控制心中的忧愁。</p><p>③盈盈：谓仪态美好。此处代指仪态美好之人。盈，与“赢”同，容貌之意。<br>《玉台新咏·日出东南隅行》：“盈盈公府步，冉冉府中趋。”</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="浣溪沙·凤髻抛残秋草生"><a href="#浣溪沙·凤髻抛残秋草生" class="headerlink" title="浣溪沙·凤髻抛残秋草生"></a>浣溪沙·凤髻抛残秋草生</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>凤髻抛残秋草生。高梧湿月冷无声。当时七夕记深盟。</p><p>信得羽衣传钿合，悔教罗袜葬倾城。人间空唱雨淋铃。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①凤髻抛残：谓凤髻散乱。比喻为爱妻逝去，掩埋了。凤髻，古代女子的一种发型。<br>唐宇文氏《妆台记》载：“周文王于髻上加珠翠翘花，傅之铅粉，其髻高名曰凤髻。”此处借指亡妻。</p><p>②湿月：湿润之月。形容月亮给人以湿润的感觉。</p><p>③信得二句：意谓原来相信仙人可以传递亡妻的信物，但后悔的是她的遗物都与她一同埋葬了。　<br>羽衣，原指鸟羽毛所织之衣，后代指道士或神仙所著之衣，此处借指神仙。钿合，镶有金、银、玉、贝等之首饰合。<br>古代常以之作为表示爱情的信物。白居易《长恨歌》：“唯将旧物表深情，钿合金钗寄将去。”罗袜，丝罗织成之袜。<br>此处代指亡妻的遗物。倾城，美女之代称，语出《汉书·外戚传上·李夫人》。这里代指亡妻。</p><p>④雨淋铃：即雨霖铃。唐教坊曲名。据唐郑处诲《唐明皇杂录补遗》云：“明皇既幸蜀，西南行初入斜谷，属霖雨涉旬，<br>于栈道雨中闻铃，音与山相应。上既悼念贵妃，采其声为《雨霖铃》曲，以寄恨焉。”这里是说亡妻已逝，如今唯有自己空自怅痛了。</p>]]></content>
       
       
       
@@ -441,11 +454,11 @@
     
     
     <entry>
-      <title>浣溪沙·凤髻抛残秋草生</title>
-      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E5%87%A4%E9%AB%BB%E6%8A%9B%E6%AE%8B%E7%A7%8B%E8%8D%89%E7%94%9F/"/>
-      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E5%87%A4%E9%AB%BB%E6%8A%9B%E6%AE%8B%E7%A7%8B%E8%8D%89%E7%94%9F/</url>
+      <title>浣溪沙·欲问江梅瘦几分</title>
+      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E6%AC%B2%E9%97%AE%E6%B1%9F%E6%A2%85%E7%98%A6%E5%87%A0%E5%88%86/"/>
+      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E6%AC%B2%E9%97%AE%E6%B1%9F%E6%A2%85%E7%98%A6%E5%87%A0%E5%88%86/</url>
       
-        <content type="html"><![CDATA[<h3 id="浣溪沙·凤髻抛残秋草生"><a href="#浣溪沙·凤髻抛残秋草生" class="headerlink" title="浣溪沙·凤髻抛残秋草生"></a>浣溪沙·凤髻抛残秋草生</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>凤髻抛残秋草生。高梧湿月冷无声。当时七夕记深盟。</p><p>信得羽衣传钿合，悔教罗袜葬倾城。人间空唱雨淋铃。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①凤髻抛残：谓凤髻散乱。比喻为爱妻逝去，掩埋了。凤髻，古代女子的一种发型。<br>唐宇文氏《妆台记》载：“周文王于髻上加珠翠翘花，傅之铅粉，其髻高名曰凤髻。”此处借指亡妻。</p><p>②湿月：湿润之月。形容月亮给人以湿润的感觉。</p><p>③信得二句：意谓原来相信仙人可以传递亡妻的信物，但后悔的是她的遗物都与她一同埋葬了。　<br>羽衣，原指鸟羽毛所织之衣，后代指道士或神仙所著之衣，此处借指神仙。钿合，镶有金、银、玉、贝等之首饰合。<br>古代常以之作为表示爱情的信物。白居易《长恨歌》：“唯将旧物表深情，钿合金钗寄将去。”罗袜，丝罗织成之袜。<br>此处代指亡妻的遗物。倾城，美女之代称，语出《汉书·外戚传上·李夫人》。这里代指亡妻。</p><p>④雨淋铃：即雨霖铃。唐教坊曲名。据唐郑处诲《唐明皇杂录补遗》云：“明皇既幸蜀，西南行初入斜谷，属霖雨涉旬，<br>于栈道雨中闻铃，音与山相应。上既悼念贵妃，采其声为《雨霖铃》曲，以寄恨焉。”这里是说亡妻已逝，如今唯有自己空自怅痛了。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="浣溪沙·欲问江梅瘦几分"><a href="#浣溪沙·欲问江梅瘦几分" class="headerlink" title="浣溪沙·欲问江梅瘦几分"></a>浣溪沙·欲问江梅瘦几分</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>欲问江梅瘦几分，只看愁损翠罗裙。麝篝衾冷惜余熏。</p><p>可耐暮寒长倚竹，便教春好不开门。枇杷花底校书人。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《浣溪沙·欲问江梅瘦几分》由清代著名词人纳兰性德所写，该词是纳兰性德写给沈宛的。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>相思的时节，不期而至。梅花一样消瘦的女子，独伫在?边。静静地，脉脉地。春风来时，她立在风中，裙也翩翩，发也翩翩。春风来时，她凝睇远方，思念如河，涟漪如歌。黄昏。她寂寂地弹着琵琶，衣上酒痕诗里字，点点行行，总是凄凉意。月满西楼的时候，她还恋恋地等着，那个说过“曾经沧海难为水”的男子，来敲门。却不知，在那株枇杷树下，青春?是一本伤感的书，爱情?是一只没有桨的小船。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①江梅：野梅。此处以江梅喻离去的侍妾沈宛。</p><p>②愁损：因愁情而使人消瘦。</p><p>③麝篝：燃烧麝香的熏笼。余熏：麝香燃后的余热。</p><p>④可耐：可奈，无可奈何。杜甫《佳人》诗：“天寒翠袖薄，日暮倚修竹。”</p><p>⑤便教：即便是，纵然是。</p><p>⑥校书人：唐王建《寄蜀中薛涛校书》诗：“万里桥边女校书，枇杷花里闭门居。”薛涛是唐代名妓，能诗，故后世称能诗文的妓女为女校书。这里借指花下读书人。</p>]]></content>
       
       
       
@@ -460,24 +473,11 @@
     
     
     <entry>
-      <title>忆秦娥·春深浅</title>
-      <link href="/2025/07/06/%E5%BF%86%E7%A7%A6%E5%A8%A5%C2%B7%E6%98%A5%E6%B7%B1%E6%B5%85/"/>
-      <url>/2025/07/06/%E5%BF%86%E7%A7%A6%E5%A8%A5%C2%B7%E6%98%A5%E6%B7%B1%E6%B5%85/</url>
+      <title>浣溪沙·庚申除夜</title>
+      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E5%BA%9A%E7%94%B3%E9%99%A4%E5%A4%9C/"/>
+      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E5%BA%9A%E7%94%B3%E9%99%A4%E5%A4%9C/</url>
       
-        <content type="html"><![CDATA[<h3 id="忆秦娥·春深浅"><a href="#忆秦娥·春深浅" class="headerlink" title="忆秦娥·春深浅"></a>忆秦娥·春深浅</h3><p>词牌名：忆秦娥|朝代：清朝|作者：纳兰容若</p><p>春深浅，一痕摇漾青如剪。青如剪。鹭鸶立处，烟芜平远。</p><p>吹开吹谢东风倦，缃桃自惜红颜变。红颜变。兔葵燕麦，重来相见。 </p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①春深浅二句：谓春已深，春水摇荡着，岸边露出整齐如剪的青绿色的涨痕。<br>深浅，偏义词，指深。宋李持正《明月逐人来》：“星河明淡，春来深浅，红莲正满城开遍。”</p><p>②缃桃：即缃核桃，省作缃桃，结浅红色果实的桃树。亦指此树的花或果实。<br>宋陈允平《恋绣衾》：“缃桃红浅柳退黄，燕初来、宫漏渐长。”</p><p>③兔葵燕麦：形容荒凉景象。唐刘禹锡《再游玄都观绝句》引：“重游玄都，<br>荡然无复一树，唯兔葵燕麦，动摇于春风耳。”</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>浣溪沙·睡起惺忪强自支</title>
-      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E7%9D%A1%E8%B5%B7%E6%83%BA%E5%BF%AA%E5%BC%BA%E8%87%AA%E6%94%AF/"/>
-      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E7%9D%A1%E8%B5%B7%E6%83%BA%E5%BF%AA%E5%BC%BA%E8%87%AA%E6%94%AF/</url>
-      
-        <content type="html"><![CDATA[<h3 id="浣溪沙·睡起惺忪强自支"><a href="#浣溪沙·睡起惺忪强自支" class="headerlink" title="浣溪沙·睡起惺忪强自支"></a>浣溪沙·睡起惺忪强自支</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>睡起惺忪强自支。绿倾蝉鬓下帘时。夜来愁损小腰肢。</p><p>远信不归空伫望，幽期细数却参差。更兼何事耐寻思。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①惺松：清醒之意。</p><p>②绿倾蝉鬓：谓乌黑发亮的秀发覆盖下来。</p><p>③愁损：犹愁杀，过度之愁而令身体受损。</p><p>④幽期句：幽期，指男女间之幽会。参差，依约、仿佛，意谓不甚分明。<br>此句是说由于思念而暗自数着相会的时日，但心思太乱，故而数了又数，还是数不清。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="浣溪沙·庚申除夜"><a href="#浣溪沙·庚申除夜" class="headerlink" title="浣溪沙·庚申除夜"></a>浣溪沙·庚申除夜</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>收取闲心冷处浓，舞裙犹忆柘枝红。谁家刻烛待春风。</p><p>竹叶樽空翻采燕，九枝灯灺颤金虫。风流端合倚天公。</p><h4 id="赏析-鉴赏"><a href="#赏析-鉴赏" class="headerlink" title="赏析&#x2F;鉴赏"></a>赏析&#x2F;鉴赏</h4><p>①庚申除夜：即康熙十九年（1680）除夜。</p><p>②收取二句：柘枝，即柘枝舞。此舞唐代由西域传入内地，初为独舞，后演化为双人舞，宋时发展为多人舞。<br>范文澜、蔡美彪《中国通史》谓：“柘枝舞女着窄袖薄罗衫。”<br>此二句谓把寒冷除夜里浓郁的闲情收起，那优关的柘枝舞是多么令人追忆怀恋的啊。</p><p>③谁家句：谓当年自家于此除夜曾刻烛静待新春的到来。谁家，哪一家，此处指自家。<br>刻烛，在蜡烛上刻度数，点燃时以计时间。</p><p>④竹叶二句：意谓竹叶青酒喝尽了，人人头饰采燕，个个兴高采烈，灯烛熄了，那灯蕊仿佛是一条条颤动的金虫。<br>竹叶，指竹叶酒。采燕，旧俗于立春时剪彩绸为燕子形，饰于头上。九枝灯，一干九枝的烛灯。灺（xiè），熄灭。</p><p>⑤风流句：端合，应该、应当。倚天公，依靠老天爷。此谓风流应是自然天成，非人力能所为的。</p>]]></content>
       
       
       
@@ -511,11 +511,11 @@
     
     
     <entry>
-      <title>浣溪沙·脂粉塘空遍绿苔</title>
-      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E8%84%82%E7%B2%89%E5%A1%98%E7%A9%BA%E9%81%8D%E7%BB%BF%E8%8B%94/"/>
-      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E8%84%82%E7%B2%89%E5%A1%98%E7%A9%BA%E9%81%8D%E7%BB%BF%E8%8B%94/</url>
+      <title>浣溪沙·睡起惺忪强自支</title>
+      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E7%9D%A1%E8%B5%B7%E6%83%BA%E5%BF%AA%E5%BC%BA%E8%87%AA%E6%94%AF/"/>
+      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E7%9D%A1%E8%B5%B7%E6%83%BA%E5%BF%AA%E5%BC%BA%E8%87%AA%E6%94%AF/</url>
       
-        <content type="html"><![CDATA[<h3 id="浣溪沙·脂粉塘空遍绿苔"><a href="#浣溪沙·脂粉塘空遍绿苔" class="headerlink" title="浣溪沙·脂粉塘空遍绿苔"></a>浣溪沙·脂粉塘空遍绿苔</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>脂粉塘空遍绿苔。掠泥营垒燕相催。妒他飞去却飞回。</p><p>一骑近从梅里过，片帆遥自藕溪来。博山香烬未全灰。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>闺中女子思念自己的心上人，脂粉塘已长满了绿苔，但见小燕子飞来飞去衔泥建巢，心生忌妒。<br>想自己的心上人却不能归来，她多么想自己的爱人能飞回到她的身边。于是想象着，自己的爱人<br>骑着骏马从近处的梅里出或是驾一片白帆从遥远的藕花深处而来。那是多么浪漫多么令惊喜的事情呀。<br>可惜这仅有的一点愿望只是想象罢了。只能对着那博山炉中似尽非尽的香烬发呆。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①脂粉二句：谓脂粉塘长满了绿苔，已非昔时的景象，垒巢的燕子掠泥而飞，好像是奔忙相催。<br>脂粉塘，传说为春秋时西施沐浴之溪塘。南朝梁任舫《述异记》：“吴故宫有香水溪，俗云西施浴处，又呼为脂粉塘。<br>吴王宫人灌妆于此溪上源，至今馨香。”这里指闺阁之外的溪塘。②博山炉烬：博山炉中的香已烧完。</p><h4 id="赏析-鉴赏"><a href="#赏析-鉴赏" class="headerlink" title="赏析&#x2F;鉴赏"></a>赏析&#x2F;鉴赏</h4><p>此篇写闺中女子的离怨。上下片的结构相同，都是前二句写景，后一句写情。但值得注意的是上片写的是实景，<br>女主人公见到大地春回，小燕双双来去，于是触发了思念之情。下片之景则是虚出，是从女主人公的幻象化出，<br>即她盼望着所思念的人，或从近处梅林里出现，或从藕溪中归来。这想象之景寓含了她相思近痴的情结，更其感人。<br>最后之句既是景句又是情语，香未燃烬也意味着心犹未泯的内蕴，含婉凄清之至。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="浣溪沙·睡起惺忪强自支"><a href="#浣溪沙·睡起惺忪强自支" class="headerlink" title="浣溪沙·睡起惺忪强自支"></a>浣溪沙·睡起惺忪强自支</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>睡起惺忪强自支。绿倾蝉鬓下帘时。夜来愁损小腰肢。</p><p>远信不归空伫望，幽期细数却参差。更兼何事耐寻思。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①惺松：清醒之意。</p><p>②绿倾蝉鬓：谓乌黑发亮的秀发覆盖下来。</p><p>③愁损：犹愁杀，过度之愁而令身体受损。</p><p>④幽期句：幽期，指男女间之幽会。参差，依约、仿佛，意谓不甚分明。<br>此句是说由于思念而暗自数着相会的时日，但心思太乱，故而数了又数，还是数不清。</p>]]></content>
       
       
       
@@ -530,11 +530,11 @@
     
     
     <entry>
-      <title>浣溪沙·欲问江梅瘦几分</title>
-      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E6%AC%B2%E9%97%AE%E6%B1%9F%E6%A2%85%E7%98%A6%E5%87%A0%E5%88%86/"/>
-      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E6%AC%B2%E9%97%AE%E6%B1%9F%E6%A2%85%E7%98%A6%E5%87%A0%E5%88%86/</url>
+      <title>浣溪沙·脂粉塘空遍绿苔</title>
+      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E8%84%82%E7%B2%89%E5%A1%98%E7%A9%BA%E9%81%8D%E7%BB%BF%E8%8B%94/"/>
+      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E8%84%82%E7%B2%89%E5%A1%98%E7%A9%BA%E9%81%8D%E7%BB%BF%E8%8B%94/</url>
       
-        <content type="html"><![CDATA[<h3 id="浣溪沙·欲问江梅瘦几分"><a href="#浣溪沙·欲问江梅瘦几分" class="headerlink" title="浣溪沙·欲问江梅瘦几分"></a>浣溪沙·欲问江梅瘦几分</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>欲问江梅瘦几分，只看愁损翠罗裙。麝篝衾冷惜余熏。</p><p>可耐暮寒长倚竹，便教春好不开门。枇杷花底校书人。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《浣溪沙·欲问江梅瘦几分》由清代著名词人纳兰性德所写，该词是纳兰性德写给沈宛的。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>相思的时节，不期而至。梅花一样消瘦的女子，独伫在?边。静静地，脉脉地。春风来时，她立在风中，裙也翩翩，发也翩翩。春风来时，她凝睇远方，思念如河，涟漪如歌。黄昏。她寂寂地弹着琵琶，衣上酒痕诗里字，点点行行，总是凄凉意。月满西楼的时候，她还恋恋地等着，那个说过“曾经沧海难为水”的男子，来敲门。却不知，在那株枇杷树下，青春?是一本伤感的书，爱情?是一只没有桨的小船。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①江梅：野梅。此处以江梅喻离去的侍妾沈宛。</p><p>②愁损：因愁情而使人消瘦。</p><p>③麝篝：燃烧麝香的熏笼。余熏：麝香燃后的余热。</p><p>④可耐：可奈，无可奈何。杜甫《佳人》诗：“天寒翠袖薄，日暮倚修竹。”</p><p>⑤便教：即便是，纵然是。</p><p>⑥校书人：唐王建《寄蜀中薛涛校书》诗：“万里桥边女校书，枇杷花里闭门居。”薛涛是唐代名妓，能诗，故后世称能诗文的妓女为女校书。这里借指花下读书人。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="浣溪沙·脂粉塘空遍绿苔"><a href="#浣溪沙·脂粉塘空遍绿苔" class="headerlink" title="浣溪沙·脂粉塘空遍绿苔"></a>浣溪沙·脂粉塘空遍绿苔</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>脂粉塘空遍绿苔。掠泥营垒燕相催。妒他飞去却飞回。</p><p>一骑近从梅里过，片帆遥自藕溪来。博山香烬未全灰。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>闺中女子思念自己的心上人，脂粉塘已长满了绿苔，但见小燕子飞来飞去衔泥建巢，心生忌妒。<br>想自己的心上人却不能归来，她多么想自己的爱人能飞回到她的身边。于是想象着，自己的爱人<br>骑着骏马从近处的梅里出或是驾一片白帆从遥远的藕花深处而来。那是多么浪漫多么令惊喜的事情呀。<br>可惜这仅有的一点愿望只是想象罢了。只能对着那博山炉中似尽非尽的香烬发呆。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①脂粉二句：谓脂粉塘长满了绿苔，已非昔时的景象，垒巢的燕子掠泥而飞，好像是奔忙相催。<br>脂粉塘，传说为春秋时西施沐浴之溪塘。南朝梁任舫《述异记》：“吴故宫有香水溪，俗云西施浴处，又呼为脂粉塘。<br>吴王宫人灌妆于此溪上源，至今馨香。”这里指闺阁之外的溪塘。②博山炉烬：博山炉中的香已烧完。</p><h4 id="赏析-鉴赏"><a href="#赏析-鉴赏" class="headerlink" title="赏析&#x2F;鉴赏"></a>赏析&#x2F;鉴赏</h4><p>此篇写闺中女子的离怨。上下片的结构相同，都是前二句写景，后一句写情。但值得注意的是上片写的是实景，<br>女主人公见到大地春回，小燕双双来去，于是触发了思念之情。下片之景则是虚出，是从女主人公的幻象化出，<br>即她盼望着所思念的人，或从近处梅林里出现，或从藕溪中归来。这想象之景寓含了她相思近痴的情结，更其感人。<br>最后之句既是景句又是情语，香未燃烬也意味着心犹未泯的内蕴，含婉凄清之至。</p>]]></content>
       
       
       
@@ -568,11 +568,11 @@
     
     
     <entry>
-      <title>浣溪沙·庚申除夜</title>
-      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E5%BA%9A%E7%94%B3%E9%99%A4%E5%A4%9C/"/>
-      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E5%BA%9A%E7%94%B3%E9%99%A4%E5%A4%9C/</url>
+      <title>浣溪沙·郊游联句</title>
+      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E9%83%8A%E6%B8%B8%E8%81%94%E5%8F%A5/"/>
+      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E9%83%8A%E6%B8%B8%E8%81%94%E5%8F%A5/</url>
       
-        <content type="html"><![CDATA[<h3 id="浣溪沙·庚申除夜"><a href="#浣溪沙·庚申除夜" class="headerlink" title="浣溪沙·庚申除夜"></a>浣溪沙·庚申除夜</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>收取闲心冷处浓，舞裙犹忆柘枝红。谁家刻烛待春风。</p><p>竹叶樽空翻采燕，九枝灯灺颤金虫。风流端合倚天公。</p><h4 id="赏析-鉴赏"><a href="#赏析-鉴赏" class="headerlink" title="赏析&#x2F;鉴赏"></a>赏析&#x2F;鉴赏</h4><p>①庚申除夜：即康熙十九年（1680）除夜。</p><p>②收取二句：柘枝，即柘枝舞。此舞唐代由西域传入内地，初为独舞，后演化为双人舞，宋时发展为多人舞。<br>范文澜、蔡美彪《中国通史》谓：“柘枝舞女着窄袖薄罗衫。”<br>此二句谓把寒冷除夜里浓郁的闲情收起，那优关的柘枝舞是多么令人追忆怀恋的啊。</p><p>③谁家句：谓当年自家于此除夜曾刻烛静待新春的到来。谁家，哪一家，此处指自家。<br>刻烛，在蜡烛上刻度数，点燃时以计时间。</p><p>④竹叶二句：意谓竹叶青酒喝尽了，人人头饰采燕，个个兴高采烈，灯烛熄了，那灯蕊仿佛是一条条颤动的金虫。<br>竹叶，指竹叶酒。采燕，旧俗于立春时剪彩绸为燕子形，饰于头上。九枝灯，一干九枝的烛灯。灺（xiè），熄灭。</p><p>⑤风流句：端合，应该、应当。倚天公，依靠老天爷。此谓风流应是自然天成，非人力能所为的。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="浣溪沙·郊游联句"><a href="#浣溪沙·郊游联句" class="headerlink" title="浣溪沙·郊游联句"></a>浣溪沙·郊游联句</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>出郭寻春春已阑(陈维崧)，东风吹面不成寒(秦松龄)，青村几曲到西山(严绳孙)。　</p><p>并马未须愁路远(姜宸英)，看花且莫放杯闲(朱彝尊)，人生别易会常难(纳兰性德)。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>此篇是纳兰与友人合作的一首词。见冯统《天风阁丛书·饮水词》补遗。此次“郊游”是在何年何地，未详。<br>从词意看，大约是在北京西郊的一次春游。词共六句，陈、秦、严、姜、朱、纳兰各成一句。<br>这一首联句之作既可以看出诗人之间亲密的友清，亦可看到纳兰在其中所表现出的伤感意绪。</p>]]></content>
       
       
       
@@ -701,30 +701,11 @@
     
     
     <entry>
-      <title>浣溪沙·郊游联句</title>
-      <link href="/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E9%83%8A%E6%B8%B8%E8%81%94%E5%8F%A5/"/>
-      <url>/2025/07/06/%E6%B5%A3%E6%BA%AA%E6%B2%99%C2%B7%E9%83%8A%E6%B8%B8%E8%81%94%E5%8F%A5/</url>
+      <title>生查子·散帙坐凝尘</title>
+      <link href="/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E6%95%A3%E5%B8%99%E5%9D%90%E5%87%9D%E5%B0%98/"/>
+      <url>/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E6%95%A3%E5%B8%99%E5%9D%90%E5%87%9D%E5%B0%98/</url>
       
-        <content type="html"><![CDATA[<h3 id="浣溪沙·郊游联句"><a href="#浣溪沙·郊游联句" class="headerlink" title="浣溪沙·郊游联句"></a>浣溪沙·郊游联句</h3><p>词牌名：浣溪沙|朝代：清朝|作者：纳兰容若</p><p>出郭寻春春已阑(陈维崧)，东风吹面不成寒(秦松龄)，青村几曲到西山(严绳孙)。　</p><p>并马未须愁路远(姜宸英)，看花且莫放杯闲(朱彝尊)，人生别易会常难(纳兰性德)。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>此篇是纳兰与友人合作的一首词。见冯统《天风阁丛书·饮水词》补遗。此次“郊游”是在何年何地，未详。<br>从词意看，大约是在北京西郊的一次春游。词共六句，陈、秦、严、姜、朱、纳兰各成一句。<br>这一首联句之作既可以看出诗人之间亲密的友清，亦可看到纳兰在其中所表现出的伤感意绪。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 诗词 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>生查子·鞭影落春堤</title>
-      <link href="/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E9%9E%AD%E5%BD%B1%E8%90%BD%E6%98%A5%E5%A0%A4/"/>
-      <url>/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E9%9E%AD%E5%BD%B1%E8%90%BD%E6%98%A5%E5%A0%A4/</url>
-      
-        <content type="html"><![CDATA[<h3 id="生查子·鞭影落春堤"><a href="#生查子·鞭影落春堤" class="headerlink" title="生查子·鞭影落春堤"></a>生查子·鞭影落春堤</h3><p>词牌名：生查子|朝代：清朝|作者：纳兰容若</p><p>鞭影落春堤，绿锦鄣泥卷。脉脉逗菱丝，嫩水吴姬眼。</p><p>啮膝带香归，谁整樱桃宴。蜡泪恼东风，旧垒眠新燕。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《生查子·鞭影落春堤》是清代词人纳兰性德的作品。<br>此词上片写作者骑马游经春堤，堤岸与春水之景；下片写归来面对樱桃宴时落寞的心情。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①“鞭影”二句：意谓马鞭的影子投落在春堤上，鄣泥微卷，春日的水面碧绿如锦。鞭影，马鞭之影。鄣泥，即马鞯。<br>因垫在马鞍下，垂于马背的两旁以挡尘土，故称。</p><p>②“脉脉”二句：谓菱丝蔓蔓，缠绕交织，仿佛脉脉含情，嫩绿的春水好像是吴姬的眼波。菱丝，即菱蔓。吴姬，指吴地的美女。</p><p>③啮膝：良马名。元末高明《琵琶记·杏园春宴》：“飞龙、赤兔、啮膝……正是青海月氏生下，大宛越睒将来。”</p><p>④樱桃宴：科举时代庆贺新进士及第的宴席。始于唐僖宗时期。<br>王定保《唐摭言·慈恩寺题书游赏赋咏杂记》：“新进士尤重樱桃宴。乾符四年，永宁刘公第二子覃及第……独置是宴，大会公卿，时京国樱桃初出，虽贵达未适。<br>而覃山积铺席，复和以糖酪者，人享蛮榼一小盎，亦不啻数升。”</p><p>⑤“蜡泪”二句：意谓面对蜡灯烛泪伤春的意绪又油然而起，那梁上的旧巢依然，只是宿巢的却是一双新燕。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="生查子·散帙坐凝尘"><a href="#生查子·散帙坐凝尘" class="headerlink" title="生查子·散帙坐凝尘"></a>生查子·散帙坐凝尘</h3><p>词牌名：生查子|朝代：清朝|作者：纳兰容若</p><p>散帙坐凝尘，吹气幽兰并。</p><p>茶名龙凤团，香字鸳鸯饼。</p><p>玉局类弹棋，颠倒双栖影。</p><p>花月不曾闲，莫放相思醒。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《生查子·散帙坐凝尘》是清代著名诗人纳兰性德的作品之一，词中生动地描绘了贵族之家绮艳优裕的生活。<br>这种内容的描写，在纳兰的词中是不多见的，应是纳兰性德的早期之作。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①生查子，唐教坊曲名，后用为词牌，《熟煌曲子词》中有此调，唐韩偓所作为最早。因朱希真词有“遥望楚云深”句，<br>故又名《楚云深》。生查子，生楂子，多少青涩，几多皱眉，历来，多抒写怨抑感伤之情。</p><p>②散帙二句：散帙，本指打开的书帙，此处借指读书。凝尘，尘土聚积。此处有不过分讲究居处之意。<br>《晋书·简文帝纪》：“帝少有风仪，善容止，留心典籍，不以居处为意，凝尘满席，湛如也。”　<br>吹气幽兰，谓美女气息之香胜于兰花。这二句意谓读书之时，身边有爱妻(或指美人)伴坐。</p><p>③茶名二句：谓品味着龙凤团名茶，燃着鸳鸯饼的香料。龙凤团，茶名，即龙团凤饼，为宋代著名的贡茶，<br>饼状，上有龙纹，故名。鸳鸯饼，形似鸳鸯的焚香饼。一饼之火，可熏燃一日。</p><p>④玉局二句：玉局，棋盘之美称。弹棋，古代一种博戏。据云始于汉代，李贤注《后汉书·梁冀传》引《艺经》<br>曰：“弹棋，两人对局，白黑棋各六枚，先列棋相当，更先弹之。其局以石为之。”<br>后至魏改为十六棋，唐为二十四棋。</p>]]></content>
       
       
       
@@ -796,6 +777,25 @@
     
     
     <entry>
+      <title>眼儿媚·独倚春寒掩夕扉</title>
+      <link href="/2025/07/06/%E7%9C%BC%E5%84%BF%E5%AA%9A%C2%B7%E7%8B%AC%E5%80%9A%E6%98%A5%E5%AF%92%E6%8E%A9%E5%A4%95%E6%89%89/"/>
+      <url>/2025/07/06/%E7%9C%BC%E5%84%BF%E5%AA%9A%C2%B7%E7%8B%AC%E5%80%9A%E6%98%A5%E5%AF%92%E6%8E%A9%E5%A4%95%E6%89%89/</url>
+      
+        <content type="html"><![CDATA[<h3 id="眼儿媚·独倚春寒掩夕扉"><a href="#眼儿媚·独倚春寒掩夕扉" class="headerlink" title="眼儿媚·独倚春寒掩夕扉"></a>眼儿媚·独倚春寒掩夕扉</h3><p>词牌名：眼儿媚|朝代：清朝|作者：纳兰容若</p><p>独倚春寒掩夕扉，清露泣铢衣。玉萧吹梦，金钗划影，悔不同携。</p><p>刻残红烛曾相待，旧事总依稀。料应遗恨，月中教去，花底催归。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①铢衣：传说仙人所穿的衣裳，仅数铢重，故借指极薄极轻的衣衫。</p><p>②玉箫三句：意谓曾经有过幸福美好、相携相恋的时机，却偏偏失掉了。　<br>玉箫，见《采桑子》(土花曾染湘娥黛)注④。此处与“金钗”同借指所恋之人。　划影，指不真切之画像或美景。</p><p>③刻残红烛：古人在蜡烛上刻度，烧以计时。此谓在红蜡烛上的刻度.已经烧残，即夜已深沉。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>眼儿媚·重见星娥碧海槎</title>
       <link href="/2025/07/06/%E7%9C%BC%E5%84%BF%E5%AA%9A%C2%B7%E9%87%8D%E8%A7%81%E6%98%9F%E5%A8%A5%E7%A2%A7%E6%B5%B7%E6%A7%8E/"/>
       <url>/2025/07/06/%E7%9C%BC%E5%84%BF%E5%AA%9A%C2%B7%E9%87%8D%E8%A7%81%E6%98%9F%E5%A8%A5%E7%A2%A7%E6%B5%B7%E6%A7%8E/</url>
@@ -815,11 +815,11 @@
     
     
     <entry>
-      <title>眼儿媚·独倚春寒掩夕扉</title>
-      <link href="/2025/07/06/%E7%9C%BC%E5%84%BF%E5%AA%9A%C2%B7%E7%8B%AC%E5%80%9A%E6%98%A5%E5%AF%92%E6%8E%A9%E5%A4%95%E6%89%89/"/>
-      <url>/2025/07/06/%E7%9C%BC%E5%84%BF%E5%AA%9A%C2%B7%E7%8B%AC%E5%80%9A%E6%98%A5%E5%AF%92%E6%8E%A9%E5%A4%95%E6%89%89/</url>
+      <title>生查子·鞭影落春堤</title>
+      <link href="/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E9%9E%AD%E5%BD%B1%E8%90%BD%E6%98%A5%E5%A0%A4/"/>
+      <url>/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E9%9E%AD%E5%BD%B1%E8%90%BD%E6%98%A5%E5%A0%A4/</url>
       
-        <content type="html"><![CDATA[<h3 id="眼儿媚·独倚春寒掩夕扉"><a href="#眼儿媚·独倚春寒掩夕扉" class="headerlink" title="眼儿媚·独倚春寒掩夕扉"></a>眼儿媚·独倚春寒掩夕扉</h3><p>词牌名：眼儿媚|朝代：清朝|作者：纳兰容若</p><p>独倚春寒掩夕扉，清露泣铢衣。玉萧吹梦，金钗划影，悔不同携。</p><p>刻残红烛曾相待，旧事总依稀。料应遗恨，月中教去，花底催归。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①铢衣：传说仙人所穿的衣裳，仅数铢重，故借指极薄极轻的衣衫。</p><p>②玉箫三句：意谓曾经有过幸福美好、相携相恋的时机，却偏偏失掉了。　<br>玉箫，见《采桑子》(土花曾染湘娥黛)注④。此处与“金钗”同借指所恋之人。　划影，指不真切之画像或美景。</p><p>③刻残红烛：古人在蜡烛上刻度，烧以计时。此谓在红蜡烛上的刻度.已经烧残，即夜已深沉。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="生查子·鞭影落春堤"><a href="#生查子·鞭影落春堤" class="headerlink" title="生查子·鞭影落春堤"></a>生查子·鞭影落春堤</h3><p>词牌名：生查子|朝代：清朝|作者：纳兰容若</p><p>鞭影落春堤，绿锦鄣泥卷。脉脉逗菱丝，嫩水吴姬眼。</p><p>啮膝带香归，谁整樱桃宴。蜡泪恼东风，旧垒眠新燕。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《生查子·鞭影落春堤》是清代词人纳兰性德的作品。<br>此词上片写作者骑马游经春堤，堤岸与春水之景；下片写归来面对樱桃宴时落寞的心情。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①“鞭影”二句：意谓马鞭的影子投落在春堤上，鄣泥微卷，春日的水面碧绿如锦。鞭影，马鞭之影。鄣泥，即马鞯。<br>因垫在马鞍下，垂于马背的两旁以挡尘土，故称。</p><p>②“脉脉”二句：谓菱丝蔓蔓，缠绕交织，仿佛脉脉含情，嫩绿的春水好像是吴姬的眼波。菱丝，即菱蔓。吴姬，指吴地的美女。</p><p>③啮膝：良马名。元末高明《琵琶记·杏园春宴》：“飞龙、赤兔、啮膝……正是青海月氏生下，大宛越睒将来。”</p><p>④樱桃宴：科举时代庆贺新进士及第的宴席。始于唐僖宗时期。<br>王定保《唐摭言·慈恩寺题书游赏赋咏杂记》：“新进士尤重樱桃宴。乾符四年，永宁刘公第二子覃及第……独置是宴，大会公卿，时京国樱桃初出，虽贵达未适。<br>而覃山积铺席，复和以糖酪者，人享蛮榼一小盎，亦不啻数升。”</p><p>⑤“蜡泪”二句：意谓面对蜡灯烛泪伤春的意绪又油然而起，那梁上的旧巢依然，只是宿巢的却是一双新燕。</p>]]></content>
       
       
       
@@ -872,17 +872,36 @@
     
     
     <entry>
-      <title>生查子·散帙坐凝尘</title>
-      <link href="/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E6%95%A3%E5%B8%99%E5%9D%90%E5%87%9D%E5%B0%98/"/>
-      <url>/2025/07/06/%E7%94%9F%E6%9F%A5%E5%AD%90%C2%B7%E6%95%A3%E5%B8%99%E5%9D%90%E5%87%9D%E5%B0%98/</url>
+      <title>赤枣子·惊晓漏</title>
+      <link href="/2025/07/06/%E8%B5%A4%E6%9E%A3%E5%AD%90%C2%B7%E6%83%8A%E6%99%93%E6%BC%8F/"/>
+      <url>/2025/07/06/%E8%B5%A4%E6%9E%A3%E5%AD%90%C2%B7%E6%83%8A%E6%99%93%E6%BC%8F/</url>
       
-        <content type="html"><![CDATA[<h3 id="生查子·散帙坐凝尘"><a href="#生查子·散帙坐凝尘" class="headerlink" title="生查子·散帙坐凝尘"></a>生查子·散帙坐凝尘</h3><p>词牌名：生查子|朝代：清朝|作者：纳兰容若</p><p>散帙坐凝尘，吹气幽兰并。</p><p>茶名龙凤团，香字鸳鸯饼。</p><p>玉局类弹棋，颠倒双栖影。</p><p>花月不曾闲，莫放相思醒。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《生查子·散帙坐凝尘》是清代著名诗人纳兰性德的作品之一，词中生动地描绘了贵族之家绮艳优裕的生活。<br>这种内容的描写，在纳兰的词中是不多见的，应是纳兰性德的早期之作。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①生查子，唐教坊曲名，后用为词牌，《熟煌曲子词》中有此调，唐韩偓所作为最早。因朱希真词有“遥望楚云深”句，<br>故又名《楚云深》。生查子，生楂子，多少青涩，几多皱眉，历来，多抒写怨抑感伤之情。</p><p>②散帙二句：散帙，本指打开的书帙，此处借指读书。凝尘，尘土聚积。此处有不过分讲究居处之意。<br>《晋书·简文帝纪》：“帝少有风仪，善容止，留心典籍，不以居处为意，凝尘满席，湛如也。”　<br>吹气幽兰，谓美女气息之香胜于兰花。这二句意谓读书之时，身边有爱妻(或指美人)伴坐。</p><p>③茶名二句：谓品味着龙凤团名茶，燃着鸳鸯饼的香料。龙凤团，茶名，即龙团凤饼，为宋代著名的贡茶，<br>饼状，上有龙纹，故名。鸳鸯饼，形似鸳鸯的焚香饼。一饼之火，可熏燃一日。</p><p>④玉局二句：玉局，棋盘之美称。弹棋，古代一种博戏。据云始于汉代，李贤注《后汉书·梁冀传》引《艺经》<br>曰：“弹棋，两人对局，白黑棋各六枚，先列棋相当，更先弹之。其局以石为之。”<br>后至魏改为十六棋，唐为二十四棋。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="赤枣子·惊晓漏"><a href="#赤枣子·惊晓漏" class="headerlink" title="赤枣子·惊晓漏"></a>赤枣子·惊晓漏</h3><p>词牌名：赤枣子|朝代：清朝|作者：纳兰容若</p><p>惊晓漏，护春眠。格外娇慵只自怜。</p><p>寄语酿花风日好，绿窗来与上琴弦。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《赤枣子·惊晓漏》是清代词人纳兰性德的词作。此词以少女的形象、口吻写春愁春感，<br>写其春晓护眠，娇慵倦怠，又暗生自怜的情态与心理。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>清晨，滴漏声将春睡的佳人惊醒，但佳人却依然贪睡。娇慵倦怠又暗生自怜。<br>寄语给那催促鲜花盛开的和风丽日，到我的绿窗边上来与我一起拨弄琴弦。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①“惊晓漏”二句：意谓清晓，漏声将人惊醒，但却依然贪睡。</p><p>②酿花：催花开放。</p>]]></content>
       
       
       
         <tags>
             
             <tag> 诗词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>追剧天堂！MoonTV Docker 部署！</title>
+      <link href="/2025/07/06/%E8%BF%BD%E5%89%A7%E5%A4%A9%E5%A0%82!MoonTV%20Docker%20%E9%83%A8%E7%BD%B2!/"/>
+      <url>/2025/07/06/%E8%BF%BD%E5%89%A7%E5%A4%A9%E5%A0%82!MoonTV%20Docker%20%E9%83%A8%E7%BD%B2!/</url>
+      
+        <content type="html"><![CDATA[<p>追剧天堂！MoonTV Docker 部署！</p><p>本项目是一个影视聚合型播放站点，可以聚合全网影视资源，实现在一个页面内搜索和观看。本次教程将演示如何在 NAS 上通过 Docker 进行部署。</p><p>项目来源: GitHub 上的开源项目： <a href="https://github.com/senshinya/MoonTV">https://github.com/senshinya/MoonTV</a><br>支持平台:<br>NAS (通过 Docker)<br>Vercel<br>Cloudflare</p><p>部署：<br>1.直接运行：docker run -d –name moontv -p 3000:3000 ghcr.io&#x2F;senshinya&#x2F;moontv:latest<br>访问 http:&#x2F;&#x2F;服务器 IP:3000 即可</p><p>默认端口为 3000，部署前需确认3000 端口未被其他服务占用。<br>如果端口被占用，需要修改映射端口，例如将 3000:3000 修改为 3001:3000。</p><p>2.使用 docker compose 部署</p><p>部署步骤：<a href="https://www.youtube.com/watch?v=riHqCnc221M">https://www.youtube.com/watch?v=riHqCnc221M</a></p><ol><li>创建文件夹</li></ol><p>在系统的文件管理器中，创建一个新的文件夹用于存放项目文件，名称可自定义。</p><ol start="2"><li>准备 config.json 文件</li></ol><p>访问项目的 GitHub 页面，找到 config.json 文件并下载<br>将下载好的 config.json 文件上传到创建的文件夹内</p><p>{<br>  “cache_time”: 7200,<br>  “api_site”: {<br>    “dyttzy”: {<br>      “api”: “<a href="http://caiji.dyttzyapi.com/api.php/provide/vod">http://caiji.dyttzyapi.com/api.php/provide/vod</a>“,<br>      “name”: “电影天堂资源”,<br>      “detail”: “<a href="http://caiji.dyttzyapi.com/">http://caiji.dyttzyapi.com</a>“<br>    },<br>    “heimuer”: {<br>      “api”: “<a href="https://json.heimuer.xyz/api.php/provide/vod">https://json.heimuer.xyz/api.php/provide/vod</a>“,<br>      “name”: “黑木耳”,<br>      “detail”: “<a href="https://heimuer.tv/">https://heimuer.tv</a>“<br>    },<br>    “ruyi”: {<br>      “api”: “<a href="https://cj.rycjapi.com/api.php/provide/vod">https://cj.rycjapi.com/api.php/provide/vod</a>“,<br>      “name”: “如意资源”<br>    },<br>    “bfzy”: {<br>      “api”: “<a href="https://bfzyapi.com/api.php/provide/vod">https://bfzyapi.com/api.php/provide/vod</a>“,<br>      “name”: “暴风资源”<br>    },<br>    “tyyszy”: {<br>      “api”: “<a href="https://tyyszy.com/api.php/provide/vod">https://tyyszy.com/api.php/provide/vod</a>“,<br>      “name”: “天涯资源”<br>    },<br>    “ffzy”: {<br>      “api”: “<a href="http://ffzy5.tv/api.php/provide/vod">http://ffzy5.tv/api.php/provide/vod</a>“,<br>      “name”: “非凡影视”,<br>      “detail”: “<a href="http://ffzy5.tv/">http://ffzy5.tv</a>“<br>    },<br>    “zy360”: {<br>      “api”: “<a href="https://360zy.com/api.php/provide/vod">https://360zy.com/api.php/provide/vod</a>“,<br>      “name”: “360资源”<br>    },<br>    “iqiyi”: {<br>      “api”: “<a href="https://www.iqiyizyapi.com/api.php/provide/vod">https://www.iqiyizyapi.com/api.php/provide/vod</a>“,<br>      “name”: “iqiyi资源”<br>    },<br>    “wolong”: {<br>      “api”: “<a href="https://wolongzyw.com/api.php/provide/vod">https://wolongzyw.com/api.php/provide/vod</a>“,<br>      “name”: “卧龙资源”<br>    },<br>    “jisu”: {<br>      “api”: “<a href="https://jszyapi.com/api.php/provide/vod">https://jszyapi.com/api.php/provide/vod</a>“,<br>      “name”: “极速资源”,<br>      “detail”: “<a href="https://jszyapi.com/">https://jszyapi.com</a>“<br>    },<br>    “dbzy”: {<br>      “api”: “<a href="https://dbzy.tv/api.php/provide/vod">https://dbzy.tv/api.php/provide/vod</a>“,<br>      “name”: “豆瓣资源”<br>    },<br>    “mozhua”: {<br>      “api”: “<a href="https://mozhuazy.com/api.php/provide/vod">https://mozhuazy.com/api.php/provide/vod</a>“,<br>      “name”: “魔爪资源”<br>    },<br>    “mdzy”: {<br>      “api”: “<a href="https://www.mdzyapi.com/api.php/provide/vod">https://www.mdzyapi.com/api.php/provide/vod</a>“,<br>      “name”: “魔都资源”<br>    },<br>    “zuid”: {<br>      “api”: “<a href="https://api.zuidapi.com/api.php/provide/vod">https://api.zuidapi.com/api.php/provide/vod</a>“,<br>      “name”: “最大资源”<br>    },<br>    “yinghua”: {<br>      “api”: “<a href="https://m3u8.apiyhzy.com/api.php/provide/vod">https://m3u8.apiyhzy.com/api.php/provide/vod</a>“,<br>      “name”: “樱花资源”<br>    },<br>    “wujin”: {<br>      “api”: “<a href="https://api.wujinapi.me/api.php/provide/vod">https://api.wujinapi.me/api.php/provide/vod</a>“,<br>      “name”: “无尽资源”<br>    },<br>    “wwzy”: {<br>      “api”: “<a href="https://wwzy.tv/api.php/provide/vod">https://wwzy.tv/api.php/provide/vod</a>“,<br>      “name”: “旺旺短剧”<br>    },<br>    “ikun”: {<br>      “api”: “<a href="https://ikunzyapi.com/api.php/provide/vod">https://ikunzyapi.com/api.php/provide/vod</a>“,<br>      “name”: “iKun资源”<br>    }<br>  }<br>}</p><ol start="3"><li>设置文件权限</li></ol><p>使用 SSH 工具连接<br>进入（cd）到存放 config.json 的文件夹。<br>执行以下命令赋予文件权限：<br>复制代码chmod 777 config.json</p><ol start="4"><li>创建 Docker Compose 项目</li></ol><p>进入 Docker 管理界面，选择新增项目，项目名称可自定义。<br>将项目路径指向第一步创建的文件夹。<br>选择“创建 Compose 文件”的方式。</p><ol start="5"><li>配置并启动容器</li></ol><p>将 docker-compose.yml 文件的内容复制并粘贴到配置框中:</p><p>services:<br>  moontv-core:<br>    image: ghcr.io&#x2F;senshinya&#x2F;moontv:latest<br>    container_name: moontv<br>    restart: unless-stopped<br>    ports:<br>      - ‘3000:3000’<br>    environment:<br>      - USERNAME&#x3D;admin<br>      - PASSWORD&#x3D;admin_password<br>      - NEXT_PUBLIC_STORAGE_TYPE&#x3D;redis<br>      - REDIS_URL&#x3D;redis:&#x2F;&#x2F;moontv-redis:6379<br>      - NEXT_PUBLIC_ENABLE_REGISTER&#x3D;true<br>    networks:<br>      - moontv-network<br>    depends_on:<br>      - moontv-redis<br>    # 如需自定义配置，可挂载文件<br>    # volumes:<br>    #   - .&#x2F;config.json:&#x2F;app&#x2F;config.json:ro<br>  moontv-redis:<br>    image: redis<br>    container_name: moontv-redis<br>    restart: unless-stopped<br>    networks:<br>      - moontv-network<br>    # 如需持久化<br>    # volumes:<br>    #   - .&#x2F;data:&#x2F;data<br>networks:<br>  moontv-network:<br>    driver: bridge</p><p>修改配置:<br>端口：根据需要修改为未被占用的端口。<br>用户名&#x2F;密码：根据需要修改。<br>自定义配置：如果你选择自定义接口，请取消 volumes 部分关于 config.json 的注释。<br>注意：取消注释后，必须确保代码对齐（缩进）正确，否则会出错。<br>点击确定保存配置。<br>在项目列表中，点击“构建”或“启动”来拉取镜像并运行容器。</p><p>访问站点<br>当容器成功运行后，通过浏览器访问 http:&#x2F;&#x2F;&lt;你的NAS_IP&gt;:&lt;你设置的端口&gt;。<br>输入你设置的用户名和密码即可登录。</p><p>LibreTV Compose 文件代码：</p><p>version: ‘3’<br>services:<br>  libretv:<br>    image: bestzwei&#x2F;libretv:latest  # 使用 libretv 的最新镜像<br>    container_name: libretv         # 容器名称为 libretv<br>    ports:<br>      - “8899:80”                   # 将主机的 8899 端口映射到容器的 80 端口<br>    environment:<br>      - PASSWORD&#x3D;123456             # 设置访问密码（留空表示不启用密码保护）<br>    restart: always                 # 容器异常退出后自动重启</p><p>自定义接口地址<br>视频数据采集站<br>非凡采集站：<a href="http://ffzy5.tv/">http://ffzy5.tv/</a></p><p>爱坤资源：<a href="https://www.ikunzy.com/ikun/help.html">https://www.ikunzy.com/ikun/help.html</a></p><p>暴风资源：<a href="https://bfzy.tv/help/?home">https://bfzy.tv/help/?home</a></p><p>苹果cms官方：<a href="https://www.applecms.cc/">https://www.applecms.cc</a></p><p>赞片cms官网：<a href="https://www.zanpiancms.com/">https://www.zanpiancms.com/</a></p><p>量子资源网：<a href="http://lzizy.net/help/">http://lzizy.net/help/</a></p><p>新浪资源网：<a href="https://www.xinlangzy.com/help/">https://www.xinlangzy.com/help/</a></p><p>虎牙资源网：<a href="http://huyazy.net/help/">http://huyazy.net/help/</a></p><p>光速资源网：<a href="https://www.guangsuzy.com/help/">https://www.guangsuzy.com/help/</a></p><p>极速资源网：<a href="https://www.jisuzy.com/index.php/help/index.html">https://www.jisuzy.com/index.php/help/index.html</a></p><p>红牛资源网：<a href="https://hongniuzy.net/help/">https://hongniuzy.net/help/</a></p><p>如意资源网：<a href="https://www.ryzy3.tv/">https://www.ryzy3.tv/</a></p><p>魔爪资源网：<a href="https://mzzy.me/">https://mzzy.me/</a></p><p>华为吧资源：<a href="https://huawei8.live/">https://huawei8.live/</a></p><p>豆瓣资源站：<a href="https://dbzy.com/">https://dbzy.com/</a></p><p>茅台资源站：<a href="https://mtzy.me/">https://mtzy.me/</a></p><p>索尼资源：<a href="https://suonizy.net/">https://suonizy.net/</a></p><p>U酷资源站：<a href="https://ukuzy0.com/">https://ukuzy0.com/</a></p><p>快车资源站：<a href="https://kuaichezy.com/">https://kuaichezy.com/</a></p><p>金鹰资源站：<a href="https://jinyingzy.com/">https://jinyingzy.com/</a></p><p>淘片资源站：<a href="https://www.taopianzy.com/">https://www.taopianzy.com/</a></p><p>卧龙资源站：<a href="https://wolongzyw.com/">https://wolongzyw.com/</a></p><p>牛牛资源站：<a href="https://niuniuzy.cc/">https://niuniuzy.cc/</a></p><p>小绵羊资源站：<a href="https://vs.okcdn100.top/">https://vs.okcdn100.top/</a></p><p>虾米资源站：<a href="https://zy.hls.one/">https://zy.hls.one/</a></p><p>麒麟资源站：<a href="https://www.qilinzyz.com/">https://www.qilinzyz.com/</a></p><p>蜂巢资源站：<a href="https://fczy908.com/">https://fczy908.com/</a></p><p>豪华资源站：<a href="https://haohuazy.com/">https://haohuazy.com/</a></p><p>魔都资源站：<a href="https://moduzy.com/">https://moduzy.com/</a></p><p>火花资源站：<a href="https://cj.huohua.live/">https://cj.huohua.live/</a></p><p>速播资源站：<a href="https://www.suboziyuan.net/">https://www.suboziyuan.net/</a></p><p>黑木耳资源站：<a href="https://heimuer.tv/">https://heimuer.tv/</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -910,11 +929,11 @@
     
     
     <entry>
-      <title>赤枣子·惊晓漏</title>
-      <link href="/2025/07/06/%E8%B5%A4%E6%9E%A3%E5%AD%90%C2%B7%E6%83%8A%E6%99%93%E6%BC%8F/"/>
-      <url>/2025/07/06/%E8%B5%A4%E6%9E%A3%E5%AD%90%C2%B7%E6%83%8A%E6%99%93%E6%BC%8F/</url>
+      <title>采桑子·拨灯书尽红笺也</title>
+      <link href="/2025/07/06/%E9%87%87%E6%A1%91%E5%AD%90%C2%B7%E6%8B%A8%E7%81%AF%E4%B9%A6%E5%B0%BD%E7%BA%A2%E7%AC%BA%E4%B9%9F/"/>
+      <url>/2025/07/06/%E9%87%87%E6%A1%91%E5%AD%90%C2%B7%E6%8B%A8%E7%81%AF%E4%B9%A6%E5%B0%BD%E7%BA%A2%E7%AC%BA%E4%B9%9F/</url>
       
-        <content type="html"><![CDATA[<h3 id="赤枣子·惊晓漏"><a href="#赤枣子·惊晓漏" class="headerlink" title="赤枣子·惊晓漏"></a>赤枣子·惊晓漏</h3><p>词牌名：赤枣子|朝代：清朝|作者：纳兰容若</p><p>惊晓漏，护春眠。格外娇慵只自怜。</p><p>寄语酿花风日好，绿窗来与上琴弦。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>《赤枣子·惊晓漏》是清代词人纳兰性德的词作。此词以少女的形象、口吻写春愁春感，<br>写其春晓护眠，娇慵倦怠，又暗生自怜的情态与心理。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>清晨，滴漏声将春睡的佳人惊醒，但佳人却依然贪睡。娇慵倦怠又暗生自怜。<br>寄语给那催促鲜花盛开的和风丽日，到我的绿窗边上来与我一起拨弄琴弦。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①“惊晓漏”二句：意谓清晓，漏声将人惊醒，但却依然贪睡。</p><p>②酿花：催花开放。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="采桑子·拨灯书尽红笺也"><a href="#采桑子·拨灯书尽红笺也" class="headerlink" title="采桑子·拨灯书尽红笺也"></a>采桑子·拨灯书尽红笺也</h3><p>词牌名：采桑子|朝代：清朝|作者：纳兰容若</p><p>拨灯书尽红笺也，依旧无聊。玉漏迢迢，梦里寒花隔玉箫。</p><p>几竿修竹三更雨，叶叶萧萧。分付秋潮，莫误双鱼到谢桥。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>夜深，把油灯拨亮，在红笺上写满思念，却依然感到空虚无聊。<br>长夜漫漫，时钟滴答作响，即使在梦中与爱人相会也总有所阻隔，三更了，窗外的雨打在修竹上，一片风雨之声。<br>将我的思念交付给秋潮，千万不要误了双鱼到谢桥之期（这里的秋潮、双鱼、谢桥，都不是实物，全都是典故和比喻）。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①红笺：一种制做精美的小幅红纸，常作为题写诗词、请柬等用。</p><p>②玉漏：玉制的计时器，即漏壶。苏味道《王月十五 日》:“金吾不禁夜，玉漏莫相催。”</p><p>③梦里句：寒花，寒冷时节所开的花，一般多指菊花。晋张协《杂诗》：“寒花发黄采，秋草含绿滋。”玉箫，人名。<br>唐范摅《云溪友议》卷三：“韦以旷觐日久，不敢偕行，乃固辞之。遂与言约，少则五载，多则七年，取玉箫。<br>因留玉指环一枚，并诗一首遗之。暨五年不至，玉箫乃默祷于鹦鹉洲，又逾二年，泊八年春，玉箫叹曰:‘韦家郎君，<br>一别七年，是不来矣。’遂绝食而殒。姜氏悯其节操，以玉环著于中指而同殡焉。”后人以此为情人订盟之典。亦称玉箫侣约，<br>如周密《霓裳中序第一》：“人何在，玉箫旧约，忍对素娥说。”此句是说仿佛在梦中与她相见，朦朦胧胧不甚分明。</p><p>④分付秋潮：谓将这孤独寂寞的苦情都付与此时的秋声秋雨中。</p><p>⑤莫误句：双鱼，代指书信。参见《清平乐》(烟轻雨小)注③。谢桥，谢娘桥，借指情人所居之处。<br>参见《采桑子》(谁翻乐府凄凉曲)注③。</p>]]></content>
       
       
       
@@ -929,11 +948,11 @@
     
     
     <entry>
-      <title>采桑子·拨灯书尽红笺也</title>
-      <link href="/2025/07/06/%E9%87%87%E6%A1%91%E5%AD%90%C2%B7%E6%8B%A8%E7%81%AF%E4%B9%A6%E5%B0%BD%E7%BA%A2%E7%AC%BA%E4%B9%9F/"/>
-      <url>/2025/07/06/%E9%87%87%E6%A1%91%E5%AD%90%C2%B7%E6%8B%A8%E7%81%AF%E4%B9%A6%E5%B0%BD%E7%BA%A2%E7%AC%BA%E4%B9%9F/</url>
+      <title>采桑子·彤霞久绝飞琼字</title>
+      <link href="/2025/07/06/%E9%87%87%E6%A1%91%E5%AD%90%C2%B7%E5%BD%A4%E9%9C%9E%E4%B9%85%E7%BB%9D%E9%A3%9E%E7%90%BC%E5%AD%97/"/>
+      <url>/2025/07/06/%E9%87%87%E6%A1%91%E5%AD%90%C2%B7%E5%BD%A4%E9%9C%9E%E4%B9%85%E7%BB%9D%E9%A3%9E%E7%90%BC%E5%AD%97/</url>
       
-        <content type="html"><![CDATA[<h3 id="采桑子·拨灯书尽红笺也"><a href="#采桑子·拨灯书尽红笺也" class="headerlink" title="采桑子·拨灯书尽红笺也"></a>采桑子·拨灯书尽红笺也</h3><p>词牌名：采桑子|朝代：清朝|作者：纳兰容若</p><p>拨灯书尽红笺也，依旧无聊。玉漏迢迢，梦里寒花隔玉箫。</p><p>几竿修竹三更雨，叶叶萧萧。分付秋潮，莫误双鱼到谢桥。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>夜深，把油灯拨亮，在红笺上写满思念，却依然感到空虚无聊。<br>长夜漫漫，时钟滴答作响，即使在梦中与爱人相会也总有所阻隔，三更了，窗外的雨打在修竹上，一片风雨之声。<br>将我的思念交付给秋潮，千万不要误了双鱼到谢桥之期（这里的秋潮、双鱼、谢桥，都不是实物，全都是典故和比喻）。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①红笺：一种制做精美的小幅红纸，常作为题写诗词、请柬等用。</p><p>②玉漏：玉制的计时器，即漏壶。苏味道《王月十五 日》:“金吾不禁夜，玉漏莫相催。”</p><p>③梦里句：寒花，寒冷时节所开的花，一般多指菊花。晋张协《杂诗》：“寒花发黄采，秋草含绿滋。”玉箫，人名。<br>唐范摅《云溪友议》卷三：“韦以旷觐日久，不敢偕行，乃固辞之。遂与言约，少则五载，多则七年，取玉箫。<br>因留玉指环一枚，并诗一首遗之。暨五年不至，玉箫乃默祷于鹦鹉洲，又逾二年，泊八年春，玉箫叹曰:‘韦家郎君，<br>一别七年，是不来矣。’遂绝食而殒。姜氏悯其节操，以玉环著于中指而同殡焉。”后人以此为情人订盟之典。亦称玉箫侣约，<br>如周密《霓裳中序第一》：“人何在，玉箫旧约，忍对素娥说。”此句是说仿佛在梦中与她相见，朦朦胧胧不甚分明。</p><p>④分付秋潮：谓将这孤独寂寞的苦情都付与此时的秋声秋雨中。</p><p>⑤莫误句：双鱼，代指书信。参见《清平乐》(烟轻雨小)注③。谢桥，谢娘桥，借指情人所居之处。<br>参见《采桑子》(谁翻乐府凄凉曲)注③。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="采桑子·彤霞久绝飞琼字"><a href="#采桑子·彤霞久绝飞琼字" class="headerlink" title="采桑子·彤霞久绝飞琼字"></a>采桑子·彤霞久绝飞琼字</h3><p>词牌名：采桑子|朝代：清朝|作者：纳兰容若</p><p>彤霞久绝飞琼字，人在谁边。人在谁边，今夜玉清眠不眠。</p><p>香销被冷残灯灭，静数秋天。静数秋天，又误心期到下弦。</p>]]></content>
       
       
       
@@ -991,25 +1010,6 @@
       <url>/2025/07/06/%E9%9D%92%E8%A1%AB%E6%B9%BF%C2%B7%E6%82%BC%E4%BA%A1/</url>
       
         <content type="html"><![CDATA[<h3 id="青衫湿·悼亡"><a href="#青衫湿·悼亡" class="headerlink" title="青衫湿·悼亡"></a>青衫湿·悼亡</h3><p>词牌名：青衫湿|朝代：清朝|作者：纳兰容若</p><p>近来无限伤心事，谁与话长更？<br>从教分付，绿窗红泪，早雁初莺。</p><p>当时领略，而今断送，总负多情。<br>忽疑君到，漆灯风飐，痴数春星。</p><h4 id="古诗简介"><a href="#古诗简介" class="headerlink" title="古诗简介"></a>古诗简介</h4><p>词以小令见长，多感伤情调，间有雄浑之作。也能诗。有《通志堂集》。<br>这么美的景，我是多么爱慕，恬静，幽雅，轻灵，可是，可是，没有你，这一切的存在又有何意义！<br>你才是我的一切，才是我灵魂可以安逸，美丽，快乐的所在。你在我晶莹的泪光中浮现，那么美地笑着，<br>袭着前世的爱，袭今生的眷念，雁飞了，莺也飞了，只有一滴滴的泪水，在我的脸颊流淌。</p><h4 id="翻译-译文"><a href="#翻译-译文" class="headerlink" title="翻译&#x2F;译文"></a>翻译&#x2F;译文</h4><p>最近有太多的伤心事，我能与谁倾诉于这漫漫长夜？一切听从命运的安排，<br>早春时节，窗外绿影婆娑，大雁归来，黄莺歌舞，任凭泪流满面。</p><p>当年与你欣赏美景，如今却丧失了，辜负了往日的一片深情。<br>忽然一阵风吹，明灯随风摇动，我以为是你的魂魄回来了，罢了，我只能痴情地数星等待。</p><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>①从教分付：意思是一切都听任其安排。张元干《念奴娇》：“有谁伴我凄凉，除非分付，与杯中醽醁。”</p><p>②红泪：指伤离或死别的眼泪。参见《转应曲》(明月) 注①。</p><p>③漆灯：灯明亮如漆谓之“漆灯”。《世说新语》谓王羲之见杜宏治，叹曰：“面如凝脂，目如点漆，此真神仙中人。”<br>这里之““漆灯”语出唐李贺《南山田中行》：“石脉水流泉滴沙，鬼灯如漆点松花。”风飐（zhǎn)，风吹之意。<br>五代词人喜用此语。毛文锡《临江仙》：“岸泊渔灯风飐碎，白苹远散浓香。”</p><p>④痴数春星:谓痴情地数着天上的星斗。梁简文帝《神山寺碑》:“澄明离日，照影春星。”</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 诗词 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>采桑子·彤霞久绝飞琼字</title>
-      <link href="/2025/07/06/%E9%87%87%E6%A1%91%E5%AD%90%C2%B7%E5%BD%A4%E9%9C%9E%E4%B9%85%E7%BB%9D%E9%A3%9E%E7%90%BC%E5%AD%97/"/>
-      <url>/2025/07/06/%E9%87%87%E6%A1%91%E5%AD%90%C2%B7%E5%BD%A4%E9%9C%9E%E4%B9%85%E7%BB%9D%E9%A3%9E%E7%90%BC%E5%AD%97/</url>
-      
-        <content type="html"><![CDATA[<h3 id="采桑子·彤霞久绝飞琼字"><a href="#采桑子·彤霞久绝飞琼字" class="headerlink" title="采桑子·彤霞久绝飞琼字"></a>采桑子·彤霞久绝飞琼字</h3><p>词牌名：采桑子|朝代：清朝|作者：纳兰容若</p><p>彤霞久绝飞琼字，人在谁边。人在谁边，今夜玉清眠不眠。</p><p>香销被冷残灯灭，静数秋天。静数秋天，又误心期到下弦。</p>]]></content>
       
       
       
